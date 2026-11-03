@@ -23,6 +23,177 @@ footer{background:#18080f;padding:95px 0 25px}.footer-top{display:grid;grid-temp
 @media(max-width:1000px){.navlinks{display:none;position:absolute;top:92px;left:0;right:0;background:#260d19;border-bottom:1px solid #d6a969;padding:22px 5vw;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.hero-stamp{right:8%;width:120px;height:120px;font-size:1.1rem}.two,.visit-grid,.support-grid{grid-template-columns:1fr;gap:65px}.invite figure img{height:510px}.visit-intro{position:static}.support-photo{order:2}.game-list{grid-template-columns:repeat(2,1fr)}.game:nth-child(n){padding-left:20px}.game:nth-child(2n+1){padding-left:0}.game:after{display:none}.footer-top{gap:25px}}
 @media(max-width:650px){.wrap{width:calc(100% - 38px)}nav{height:77px}.navlinks{top:77px}.logo img{width:45px;height:45px}.logo strong{font-size:1.55rem}.hero{height:91svh;min-height:640px}.hero::after{inset:9px}.hero-content{padding-bottom:95px}.hero h1{font-size:clamp(4.7rem,17vw,7.6rem)}.hero .lead{margin:23px 0}.hero-stamp,.vertical{display:none}.banner{gap:20px;justify-content:flex-start}.invite,.gallery,.games,.visit,.support{padding:87px 0}.invite figure{padding:0 0 18px 18px}.invite figure img{height:420px}.section-head{display:block}.section-head p{margin-top:25px}.photo,.photo.wide,.photo.tall,.photo.span8{grid-column:span 12;grid-row:auto;min-height:345px}.photo.tall{min-height:460px}.gallery-foot{display:block}.gallery-foot .btn{margin-top:25px}.game-list{grid-template-columns:1fr}.game:nth-child(n){padding:27px 0}.game-photo{grid-template-columns:1fr}.game-photo img{height:270px}.game-photo>div{padding:37px}.event{grid-template-columns:1fr;gap:8px}.event .date{font-size:1.8rem}.ways{grid-template-columns:1fr}.support-photo img{height:450px}.marquee .wrap{display:block}.marquee a{display:inline-block;margin-top:10px}.footer-top{grid-template-columns:1fr;gap:40px;margin-bottom:65px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-bottom:13px}.modal-content{padding:27px}.peek{bottom:10px;right:10px}.note{right:10px;bottom:75px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* November 3 review: mobile stagecraft, not a stack of overlapping banners.
+   Kept in a review branch; public GitHub Pages 'main' remains unchanged. */
+footer .peek {
+  position:static;
+  inset:auto;
+  width:max-content;
+  max-width:calc(100% - 32px);
+  margin:0 auto 28px;
+  padding:11px 17px;
+  box-shadow:none;
+  border:1px solid #d6a969;
+  outline-offset:4px;
+  background:linear-gradient(140deg,#511d30,#240d17);
+  color:#f7e4be;
+  clip-path:polygon(11px 0,100% 0,100% calc(100% - 11px),calc(100% - 11px) 100%,0 100%,0 11px);
+}
+footer .peek:hover,footer .peek:focus-visible {background:#6a233a}
+@media(max-width:650px){
+  /* A real masthead in the document flow: the eyebrow/title cannot rise under it. */
+  header {
+    position:relative;
+    background:#1d0a14;
+    border-top:3px solid #b88b54;
+    border-bottom:1px solid #be925b;
+    box-shadow:0 6px 22px #0003;
+  }
+  header nav {
+    height:auto;
+    min-height:78px;
+    padding:12px 0;
+    border:0;
+    gap:10px;
+  }
+  .logo {min-width:0; flex:1 1 auto; gap:10px}
+  .logo img {width:43px; height:43px;flex:0 0 43px}
+  .logo strong {
+    white-space:normal;
+    font-size:1.46rem;
+    line-height:.85;
+    letter-spacing:-.03em;
+  }
+  .logo strong em {
+    font-size:.48rem;
+    letter-spacing:.24em;
+    line-height:1.8;
+    margin-top:4px;
+  }
+  .menu {
+    flex:0 0 auto;
+    white-space:nowrap;
+    font-size:.76rem;
+    min-height:43px;
+    padding:10px 13px;
+    border-color:#d6a96990;
+  }
+  .navlinks {top:100%;padding:20px 5vw 24px;box-shadow:0 12px 28px #0007}
+  .navlinks a {min-height:40px;display:flex;align-items:center}
+  /* Stage height follows the story instead of forcing the story to overlap. */
+  .hero {
+    display:block;
+    height:auto;
+    max-height:none;
+    min-height:0;
+    overflow:hidden;
+  }
+  .hero::before {
+    background:
+      linear-gradient(180deg,#200b1490 0%,#200b148f 23%,#200b14bf 57%,#1c0a14f0 100%),
+      url('photos/25.jpg') center 41%/cover no-repeat;
+  }
+  .hero::after {inset:12px; border-color:#ddb98082}
+  .hero-content {
+    position:relative;
+    min-height:0;
+    padding-top:66px;
+    padding-bottom:66px;
+  }
+  .hero .eyebrow {
+    max-width:30ch;
+    font-size:.58rem;
+    line-height:1.7;
+    letter-spacing:.17em;
+    margin:0 0 28px;
+    color:#ffe0a5;
+    text-wrap:balance;
+  }
+  .hero h1 {
+    max-width:100%;
+    font-size:clamp(3.65rem,14.8vw,4.7rem);
+    letter-spacing:-.06em;
+    line-height:.95;
+    text-wrap:balance;
+  }
+  .hero h1 em {margin-top:.08em}
+  .hero .lead {
+    max-width:33ch;
+    font-size:1rem;
+    line-height:1.62;
+    margin:30px 0 27px;
+    color:#f6e5d9;
+  }
+  .hero .actions {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    width:min(100%,295px);
+  }
+  .hero .actions .btn {
+    justify-content:space-between;
+    min-height:48px;
+    padding:14px 17px;
+    font-size:.64rem;
+    letter-spacing:.12em;
+  }
+  .hero .actions .btn span {font-size:.95rem}
+  .hero-content::after {
+    content:'◆   ✦   ◆';
+    color:#dfb56f;
+    display:block;
+    font:1rem Georgia,serif;
+    letter-spacing:.52em;
+    margin-top:36px;
+  }
+  /* Keep the heraldic ribbon intact without horizontal clipping. */
+  .banner {
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:9px 18px;
+    padding:17px 12px 19px;
+    white-space:normal;
+    text-align:center;
+    background:#c19a61;
+    border-top:4px double #40202b;
+    border-bottom:4px double #40202b;
+  }
+  .banner span {font-size:1.2rem;line-height:1.2}
+  .banner b {font-size:.65rem}
+  .banner span:nth-of-type(n+3),
+  .banner b:nth-of-type(n+2) {display:none}
+  /* A composed cabinet of curiosities, not endless identical photo blocks. */
+  .invite,.gallery,.games,.visit,.support {padding:78px 0}
+  h2 {font-size:clamp(2.7rem,11vw,4.2rem);line-height:.99}
+  .section-head {margin-bottom:32px}
+  .gallery-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .photo,.photo.wide,.photo.tall,.photo.span8 {
+    grid-column:span 1;
+    grid-row:auto;
+    min-height:245px;
+    border-color:#e0b47988;
+  }
+  .photo.wide,.photo.span8 {grid-column:span 2;min-height:310px}
+  .photo.tall {min-height:310px}
+  .photo button {padding:14px}
+  .photo button span {font-size:clamp(1.3rem,5vw,1.8rem)}
+  .photo button small {font-size:.53rem;letter-spacing:.14em}
+  .gallery-foot {margin-top:27px}
+  .note {bottom:18px;right:18px}
+  .modal {width:calc(100% - 24px);max-height:90svh}
+  .modal-content {padding:26px}
+  .footer-top h2 {font-size:3.4rem}
+}
+@media(max-width:380px){
+  .logo strong {font-size:1.25rem}
+  .logo strong em {font-size:.43rem;letter-spacing:.18em}
+  .logo img {width:39px;height:39px;flex-basis:39px}
+  .menu {padding:9px 10px;font-size:.71rem}
+  .hero h1 {font-size:clamp(3.05rem,14vw,3.65rem)}
+  .hero-content {padding-top:56px}
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Cat v. Canary Foundation","alternateName":"Cat v. Canary Guild","url":"https://www.cvcguild.com/","description":"Washington-based 501(c)(3) nonprofit teaching historical board games through free public living-history demonstrations.","areaServed":"Washington State"}</script>
 </head><body>
@@ -58,8 +229,8 @@ footer{background:#18080f;padding:95px 0 25px}.footer-top{display:grid;grid-temp
 </div></div></section>
 <section class="support" id="support"><div class="wrap support-grid"><div class="support-photo"><img src="photos/26.jpg" alt="Visitors smiling together while playing a historical game" loading="lazy"></div><div><span class="eyebrow">Keep the lamps burning</span><h2>Help us carry<br><em>the wonder onward.</em></h2><p>The Cat v. Canary Guild is the public educational program of the <strong>Cat v. Canary Foundation</strong>, a Washington-based 501(c)(3) nonprofit. Our volunteers build welcoming spaces where history is accessible, learning is free, and no traveler sits alone.</p><p>Gifts help maintain handmade historical games, our traveling pavilion, seating, costumes, and the equipment needed to take accessible living history on the road.</p><div class="ways"><div><strong>Workplace giving</strong><p>Find Cat v. Canary Foundation through your employer's Benevity giving program; matching may be available.</p></div><div><strong>Help in kind</strong><p>Furniture, equipment, craftsmanship, and a quiet temporary space for caring for canvas and historic-style furnishings make a difference.</p></div></div><a class="btn" href="https://www.benevity.com/" target="_blank" rel="noopener noreferrer">Explore workplace giving ↗</a><p class="notice">Additional donation links and the Guild's Venmo QR code will be placed here once their exact destinations are verified.</p></div></div></section>
 <div class="marquee"><div class="wrap"><strong>Curiosity travels well. Bring a friend.</strong><a href="#top">Back to the top ↑</a></div></div>
-</main><footer><div class="wrap"><div class="footer-top"><div><h2>Cat v. Canary<br><em>Guild</em></h2><p>A traveling house of historical games and good company. Washington, USA.</p></div><div class="foot-links"><span class="eyebrow">Explore</span><a href="#story">Our story</a><a href="#gallery">The pavilion</a><a href="#games">The games</a><a href="#visit">The calendar</a><a href="#support">Support us</a></div><div><span class="eyebrow">The Foundation</span><p>Cat v. Canary Foundation is a volunteer-led 501(c)(3) educational nonprofit. Every public game demonstration is free.</p></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Cat v. Canary Foundation. All rights reserved.</span><span>Crafted with curiosity, kindness & a little mischief. <button id="footer-secret" aria-label="Reveal an Easter egg">✦</button></span></div></div></footer>
-<button class="peek" id="peek" aria-label="Reveal an Easter egg"><span>♢</span> A little secret?</button><aside class="note" id="note" role="status" aria-live="polite"><button id="note-close" aria-label="Close">×</button><h3 id="note-title"></h3><p id="note-text"></p></aside>
+</main><footer><div class="wrap"><div class="footer-top"><div><h2>Cat v. Canary<br><em>Guild</em></h2><p>A traveling house of historical games and good company. Washington, USA.</p></div><div class="foot-links"><span class="eyebrow">Explore</span><a href="#story">Our story</a><a href="#gallery">The pavilion</a><a href="#games">The games</a><a href="#visit">The calendar</a><a href="#support">Support us</a></div><div><span class="eyebrow">The Foundation</span><p>Cat v. Canary Foundation is a volunteer-led 501(c)(3) educational nonprofit. Every public game demonstration is free.</p></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Cat v. Canary Foundation. All rights reserved.</span><span>Crafted with curiosity, kindness & a little mischief. <button id="footer-secret" aria-label="Reveal an Easter egg">✦</button></span></div></div><button class="peek" id="peek" aria-label="Reveal a hidden Guild message"><span aria-hidden="true">♢</span> A little secret?</button>
+</footer><aside class="note" id="note" role="status" aria-live="polite"><button id="note-close" aria-label="Close">×</button><h3 id="note-title"></h3><p id="note-text"></p></aside>
 <dialog class="modal" id="modal" aria-label="Guild detail"><button class="modal-close" id="modal-close" aria-label="Close detail">×</button><div class="modal-content" id="modal-content"></div></dialog>
 <script>
 const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'✕ Close':'☰ Menu'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰ Menu'}));document.getElementById('year').textContent=new Date().getFullYear();
