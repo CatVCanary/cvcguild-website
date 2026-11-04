@@ -23,6 +23,32 @@ footer{background:#18080f;padding:95px 0 25px}.footer-top{display:grid;grid-temp
 @media(max-width:1000px){.navlinks{display:none;position:absolute;top:92px;left:0;right:0;background:#260d19;border-bottom:1px solid #d6a969;padding:22px 5vw;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.hero-stamp{right:8%;width:120px;height:120px;font-size:1.1rem}.two,.visit-grid,.support-grid{grid-template-columns:1fr;gap:65px}.invite figure img{height:510px}.visit-intro{position:static}.support-photo{order:2}.game-list{grid-template-columns:repeat(2,1fr)}.game:nth-child(n){padding-left:20px}.game:nth-child(2n+1){padding-left:0}.game:after{display:none}.footer-top{gap:25px}}
 @media(max-width:650px){.wrap{width:calc(100% - 38px)}nav{height:77px}.navlinks{top:77px}.logo img{width:45px;height:45px}.logo strong{font-size:1.55rem}.hero{height:91svh;min-height:640px}.hero::after{inset:9px}.hero-content{padding-bottom:95px}.hero h1{font-size:clamp(4.7rem,17vw,7.6rem)}.hero .lead{margin:23px 0}.hero-stamp,.vertical{display:none}.banner{gap:20px;justify-content:flex-start}.invite,.gallery,.games,.visit,.support{padding:87px 0}.invite figure{padding:0 0 18px 18px}.invite figure img{height:420px}.section-head{display:block}.section-head p{margin-top:25px}.photo,.photo.wide,.photo.tall,.photo.span8{grid-column:span 12;grid-row:auto;min-height:345px}.photo.tall{min-height:460px}.gallery-foot{display:block}.gallery-foot .btn{margin-top:25px}.game-list{grid-template-columns:1fr}.game:nth-child(n){padding:27px 0}.game-photo{grid-template-columns:1fr}.game-photo img{height:270px}.game-photo>div{padding:37px}.event{grid-template-columns:1fr;gap:8px}.event .date{font-size:1.8rem}.ways{grid-template-columns:1fr}.support-photo img{height:450px}.marquee .wrap{display:block}.marquee a{display:inline-block;margin-top:10px}.footer-top{grid-template-columns:1fr;gap:40px;margin-bottom:65px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-bottom:13px}.modal-content{padding:27px}.peek{bottom:10px;right:10px}.note{right:10px;bottom:75px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Mobile-first corrections: prevent masthead collisions and keep hero readable */
+@media(max-width:650px){
+ header nav.wrap{width:calc(100% - 38px);min-width:0;gap:8px}
+ .logo{min-width:0;flex:1;gap:9px}
+ .logo img{width:42px;height:42px;flex:none}
+ .logo strong{font-size:clamp(1.05rem,5vw,1.42rem);line-height:1;white-space:normal}
+ .logo strong em{font-size:.46rem;letter-spacing:.18em;line-height:1.5}
+ .menu{flex:none;padding:9px 11px;font-size:.9rem}
+ .hero{height:auto;min-height:100svh;max-height:none;align-items:center;padding:115px 0 105px}
+ .hero-content{padding-bottom:0;min-width:0}
+ .hero .eyebrow{font-size:.59rem;letter-spacing:.14em;line-height:1.5;max-width:95%;margin-bottom:20px}
+ .hero h1{font-size:clamp(3.45rem,13.5vw,5.4rem);line-height:.94;letter-spacing:-.055em;overflow-wrap:normal}
+ .hero h1 em{font-size:.88em;line-height:1.05;margin-top:10px}
+ .hero .lead{font-size:1rem;line-height:1.6;margin:27px 0 26px}
+ .actions{gap:11px}
+ .actions .btn{width:100%;min-height:52px;padding:14px 18px}
+ .peek{font-size:.56rem;padding:9px 11px;bottom:8px;right:8px;max-width:46vw}
+ .banner{padding-right:140px}
+}
+@media(max-width:370px){
+ .logo strong{font-size:1.02rem}
+ .logo strong em{font-size:.4rem}
+ .hero h1{font-size:clamp(3.1rem,13vw,4rem)}
+ .hero{padding-top:108px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Cat v. Canary Foundation","alternateName":"Cat v. Canary Guild","url":"https://www.cvcguild.com/","description":"Washington-based 501(c)(3) nonprofit teaching historical board games through free public living-history demonstrations.","areaServed":"Washington State"}</script>
 </head><body>
