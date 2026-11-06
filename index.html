@@ -49,6 +49,37 @@ footer{background:#18080f;padding:95px 0 25px}.footer-top{display:grid;grid-temp
  .hero h1{font-size:clamp(3.1rem,13vw,4rem)}
  .hero{padding-top:108px}
 }
+
+/* Codex scrapbook edition: layered physical-paper details; real Guild photos retained. */
+:root{--paper:#ead6b1;--paper-light:#fff0ce;--oxblood:#641a2a;--ink-brown:#392318}
+body{background:#28131a}
+.hero{isolation:isolate}
+.hero-content{position:relative;z-index:2}
+.hero-content:before{content:"";position:absolute;inset:-35px -38px -30px -35px;z-index:-1;background:linear-gradient(125deg,rgba(34,12,17,.89),rgba(55,17,25,.65) 72%,transparent);border-left:5px solid #d8a45b;box-shadow:-12px 12px 0 rgba(23,8,13,.18);transform:rotate(-.6deg);pointer-events:none}
+.hero-stamp{transform:rotate(10deg);border:3px double #e3bc78;background:#561b2cd9;box-shadow:5px 7px 0 #14080b88}
+.banner{background:repeating-linear-gradient(45deg,#23121a 0 16px,#e9d5ac 16px 32px,#711d32 32px 48px,#e9d5ac 48px 64px);border-top:5px solid #c59a5b;border-bottom:5px solid #c59a5b}
+.banner span,.banner b{background:#38141fe8;padding:5px 12px;text-shadow:0 2px 4px #000}
+.invite{background-color:#ead8b8;background-image:radial-gradient(#784b3320 .8px,transparent .8px),linear-gradient(110deg,#f2e4c9,#d5b58b);background-size:7px 7px,auto;color:#321b1a}
+.invite .eyebrow,.invite h2 em{color:#812a36}
+.invite figure{padding:12px 12px 36px;background:#f9edda;box-shadow:8px 12px 0 #6c3e3140,0 14px 35px #3b221b55;transform:rotate(2deg);border:1px solid #b38c67}
+.invite figure img{border:1px solid #d2b38c}
+.invite figure figcaption{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:#5b3032}
+.gallery{background-color:#3b1825;background-image:radial-gradient(circle at 10% 20%,#aa754a2a,transparent 35%),repeating-linear-gradient(90deg,transparent 0 79px,#ffffff08 80px 81px)}
+.gallery .photo{border:9px solid #ead5b3;box-shadow:7px 9px 0 #13070e9c;transition:transform .25s}
+.gallery .photo:nth-child(3n+1){transform:rotate(-1.3deg)}
+.gallery .photo:nth-child(3n+2){transform:rotate(1.2deg)}
+.gallery .photo:nth-child(3n){transform:rotate(-.5deg)}
+.gallery .photo:hover{transform:rotate(0) translateY(-5px);z-index:2}
+.games{background-color:#e9d5b2;background-image:radial-gradient(#85593c24 .9px,transparent .9px);background-size:8px 8px;color:#33201d}
+.games .eyebrow,.games h2 em{color:#80263a}
+.game{border-bottom:2px dashed #9e755f}
+.game h3{color:#5b2432}
+.visit{background-color:#311521;background-image:repeating-linear-gradient(135deg,transparent 0 21px,#d6aa6210 22px 23px)}
+.support{background-color:#e6cfaa;background-image:linear-gradient(160deg,#f2e2c7,#cda982);color:#35201d}
+.support .eyebrow,.support h2 em{color:#7d2639}
+.support-photo img{border:10px solid #f6e5c8;box-shadow:8px 9px 0 #6b403c50;transform:rotate(1.5deg)}
+@media(max-width:650px){.hero-content:before{inset:-15px -14px -20px -14px;transform:none}.gallery .photo:nth-child(n){transform:none;border-width:6px}.invite figure{transform:rotate(1deg)}.banner{padding-right:0}.hero-stamp{display:none}}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Cat v. Canary Foundation","alternateName":"Cat v. Canary Guild","url":"https://www.cvcguild.com/","description":"Washington-based 501(c)(3) nonprofit teaching historical board games through free public living-history demonstrations.","areaServed":"Washington State"}</script>
 </head><body>
