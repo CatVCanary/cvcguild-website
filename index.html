@@ -138,6 +138,31 @@ body{color:var(--guild-light)}
 .support .btn:not(.filled):hover,.invite .btn.dark:hover{background:#92253e;color:#fff4df}
 .support .btn.filled{background:#ffe0a0;border-color:#bd863e}
 .support .btn.filled:hover{background:#fff0c5}
+
+/* Mobile legibility and jewel-tone polish — November 2026 */
+:root{--night:#280c19;--red:#981f39;--ruby:#b22b46;--gold:#f0bb57;--pale:#ffe3a1}
+.banner{background:repeating-linear-gradient(45deg,#29101b 0 16px,#f5d58b 16px 32px,#98243c 32px 48px,#f5d58b 48px 64px);border-color:#edb750}
+.banner span,.banner b{background:#2a0e19f5;color:#ffe4a1;text-shadow:none}
+.invite{background-color:#f2dfbf;background-image:radial-gradient(#784b3320 .8px,transparent .8px),linear-gradient(110deg,#f8e9cd,#e4c79e)}
+.invite figure figcaption{background:#35141f;color:#ffe6b0;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.25rem,3vw,1.65rem);font-weight:600;letter-spacing:.12em;line-height:1.2;text-shadow:none}
+.invite figure{background:#fff1d8}
+.invite h2 em{color:#a32240}
+.gallery{background-color:#481426}
+.gallery .photo .caption,.gallery .photo figcaption{color:#fff1d9}
+.games{background-color:#f2dcb7}
+.visit{background-color:#451528}
+.visit h2,.visit h3,.visit .visit-intro p,.visit .event p{color:#fff0db}
+.visit .event a,.visit .event .date,.visit .eyebrow{color:#ffd07b}
+.support{background-color:#f0d8b3;background-image:linear-gradient(160deg,#f8e9ce,#dfba8e)}
+.peek{background:#3c1221f7;color:#ffe2a1;border-color:#edb750}
+@media(max-width:650px){
+ .banner{gap:7px;flex-wrap:wrap;justify-content:center;padding:12px 10px}
+ .banner span,.banner b{font-size:.68rem;line-height:1.4;letter-spacing:.06em;padding:4px 6px}
+ .peek{position:static;display:flex;width:max-content;max-width:calc(100% - 38px);margin:12px auto 0;font-size:.6rem;padding:11px 15px;box-shadow:none}
+ .note{bottom:16px;right:10px}
+ .invite figure figcaption{left:12px;right:12px;bottom:12px;padding:15px 12px;text-align:center}
+ .invite figure{padding-bottom:76px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Cat v. Canary Foundation","alternateName":"Cat v. Canary Guild","url":"https://www.cvcguild.com/","description":"Washington-based 501(c)(3) nonprofit teaching historical board games through free public living-history demonstrations.","areaServed":"Washington State"}</script>
 </head><body>
