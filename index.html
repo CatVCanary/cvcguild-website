@@ -18,6 +18,19 @@ footer{background:#100b0b;color:#f5e9d5;padding:50px 0 30px;border-top:5px solid
 @media(max-width:850px){.menu{display:block}.navlinks{display:none;position:absolute;top:86px;left:20px;right:20px;background:#1d1012;padding:24px;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.hero{min-height:700px}.hero-side{display:none}.split,.visit .split{grid-template-columns:1fr}.gamegrid{grid-template-columns:repeat(2,1fr)}.intro .portrait img{height:450px}.gallery figure,.gallery figure:nth-child(1),.gallery figure:nth-child(2){grid-column:span 6;min-height:310px}}
 @media(max-width:560px){section{padding:75px 0}.wrap{width:calc(100% - 32px)}.brand strong{font-size:1.4rem}.brand img{width:47px;height:47px}.hero h1{font-size:clamp(4.4rem,17vw,7rem)}.hero p{font-size:1rem}.gamegrid{grid-template-columns:1fr}.game{min-height:0}.gallery figure,.gallery figure:nth-child(1),.gallery figure:nth-child(2){grid-column:span 12;min-height:300px}.sectionheading{display:block}.hero:before{background:linear-gradient(90deg,#140b0de5,#170b0d9b),url('photos/25.jpg') center/cover}#trick{right:10px;bottom:10px}#bubble{max-width:215px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Guild visual identity: scarlet, mustard, ink and harlequin diamonds. */
+:root{--red:#b5122c;--scarlet:#df2636;--gold:#e5b52c;--black:#151313;--paper:#f8f2e4;--cream:#fffaf0;--ink:#211b1b}
+.ribbon{position:relative;background:repeating-linear-gradient(135deg,#171313 0 18px,#fffaf0 18px 36px);border-block:7px solid var(--red);padding:9px 0}
+.ribbon .wrap{background:var(--gold);border:2px solid var(--black);padding:13px 22px;box-shadow:5px 5px 0 var(--red)}
+.intro,.photos,.visit{background-image:radial-gradient(circle at 15% 10%,#e5b52c14,transparent 30%)}
+.gamegrid{background:var(--gold);border-color:var(--gold)}
+.game{border-top:4px solid var(--red)}
+.gallery figure{border:5px solid var(--cream);outline:1px solid #241b19;box-shadow:6px 6px 0 #b5122c44}
+.mischief{border-block:10px solid var(--gold)}
+.mischief:after{content:'◆ ◇ ◆ ◇ ◆ ◇ ◆';position:absolute;bottom:10px;left:0;right:0;color:var(--gold);letter-spacing:.7em;pointer-events:none}
+.hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:13px;background:repeating-linear-gradient(45deg,var(--black) 0 15px,var(--cream) 15px 30px,var(--red) 30px 45px,var(--gold) 45px 60px)}
+@media(max-width:560px){.ribbon .wrap{padding:12px;gap:10px}.ribbon .wrap span{font-size:.67rem}.gallery figure{box-shadow:3px 3px 0 #b5122c44}}
 </style></head><body><a class="skip" href="#main">Skip to content</a>
 <header><nav class="wrap"><a class="brand" href="#top"><img src="crest.svg" alt=""><strong>Cat v. Canary<small>THE TRAVELING GUILD</small></strong></a><button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">☰ Menu</button><div class="navlinks" id="navlinks"><a href="#welcome">Our story</a><a href="#games">The games</a><a href="#gallery">The pavilion</a><a href="#visit">Visit</a><a href="#help">How to help</a><a class="nav-donate" href="#support">Support the Guild</a></div></nav></header>
 <main id="main"><div class="hero" id="top"><div class="wrap"><span class="eyebrow">A traveling house of games · Washington State</span><h1>Come curious.<em>Leave legendary.</em></h1><p>Take a seat beneath the canvas. Play a game older than kingdoms. Meet strangers who become friends. No experience, no entry fee, and absolutely no requirement to be good at winning.</p><div class="actions"><a class="btn" href="#welcome">Enter the pavilion</a><a class="btn outline" href="#gallery">See the Guild</a></div></div><div class="hero-side">All are welcome.<br>Even the cat.<br><b>Especially the canary.</b></div></div>
