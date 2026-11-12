@@ -7,12 +7,12 @@ Status: **Not cleared for resubmission**. Review branch only; no production chan
 - Foundation identity, 501(c)(3) status, EIN 33-4166947, contact email.
 - Single-page anchor navigation IDs match links: welcome, games, gallery, visit, help, support.
 - Responsive CSS breakpoints and reduced-motion support.
-- Donation link uses https://venmo.com/code?user_id=3312769638072320934; **ownership and payment flow unverified**.
+- Donation link uses https://venmo.com/code?user_id=3312769638072320934. User-provided mobile screenshot confirms destination displays **Cat v Canary Foundation (@CvCfoundation)** and a Venmo sign-in-to-pay page. A completed payment was not tested.
 - CNAME is www.cvcguild.com; robots.txt points to https://www.cvcguild.com/sitemap.xml.
 - README says GitHub Pages deployment and DNS migration need verification; do not assume Squarespace cancellation is safe.
 
 ## Required checks before resubmission
-1. Verify the Venmo destination against Foundation-controlled account records; test on mobile and desktop. If it cannot be verified, remove or replace the link with an approved secure donation destination.
+1. Venmo mobile destination visually confirmed by user screenshot as Cat v Canary Foundation (@CvCfoundation). Still verify Foundation control of the account and optionally test desktop; do not require a test donation solely for this audit.
 2. Verify domain DNS, GitHub Pages deployment, HTTPS for root and www, and no mixed-content errors. Preserve mail DNS records.
 3. Test mobile menu, every anchor, contact link, external faire link, and interactive buttons in a real browser.
 4. Run Google PageSpeed Insights on the published URL, mobile and desktop. Compress the large JPG photographs if needed.
