@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Guild theatre | review only</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#cdb88f;color:#302115;font-family:Georgia,serif}
+#stage{position:fixed;inset:0;overflow:hidden;background:#e6d2ab}
+.scene{position:absolute;inset:0;display:grid;place-items:center;padding:20vh 18vw 25vh;text-align:center;background:radial-gradient(ellipse,#f3e5c6,#bda079);transform:translateX(110%);visibility:hidden}
+.scene.active{transform:translateX(0);visibility:visible}.scene h1{font-size:clamp(1.6rem,5vw,3.5rem);font-variant:small-caps;font-weight:normal}.scene p{max-width:520px;line-height:1.5}
+.scene.enter{visibility:visible;animation:enter 1.2s cubic-bezier(.6,.05,.25,1) both}.scene.exit{visibility:visible;animation:exit 1.2s cubic-bezier(.6,.05,.25,1) both}
+@keyframes enter{from{transform:translateX(110%)}to{transform:translateX(0)}}@keyframes exit{from{transform:translateX(0)}to{transform:translateX(-110%)}}
+#sign{position:fixed;z-index:3;top:19%;left:50%;transform:translateX(-50%);background:#e6cf9b;border:4px double #422a1b;padding:8px 22px;font-variant:small-caps;font-size:clamp(1rem,2.4vw,2rem);white-space:nowrap}
+#sign:before,#sign:after{content:"";position:absolute;top:-80px;width:2px;height:76px;background:#5b432c}#sign:before{left:12px}#sign:after{right:12px}
+#sign.retract{animation:retract .42s ease-in both}#sign.deploy{animation:deploy .9s ease-out both}
+@keyframes retract{to{transform:translate(-50%,-250%) rotate(10deg)}}
+@keyframes deploy{0%{transform:translate(-50%,-250%) rotate(-9deg)}55%{transform:translate(-50%,9%) rotate(6deg)}75%{transform:translate(-50%,-8%) rotate(-4deg)}90%{transform:translate(-50%,3%) rotate(2deg)}100%{transform:translate(-50%,0) rotate(0)}}
+#frame{position:fixed;inset:0;z-index:5;pointer-events:none}#frame picture,#frame img{width:100%;height:100%;display:block}#frame img{object-fit:fill}
+nav{position:fixed;z-index:7;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;padding:7px;background:#302115ed;border-radius:30px}button{background:#ebd4a1;border:1px solid #c09c55;color:#302115;padding:9px 13px;border-radius:20px;cursor:pointer}button[aria-current=true]{background:#9c2c25;color:white}
+#asset-warning{position:fixed;top:0;left:0;right:0;z-index:10;background:#fff5db;color:#412a19;padding:8px;text-align:center;font-size:12px;display:none}
+@media(max-width:650px){.scene{padding:24vh 15vw 26vh}#sign{top:22%;font-size:1.1rem;padding:5px 10px}nav{bottom:5px}button{padding:8px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition:none!important}}
+</style></head><body>
+<div id="stage">
+<section class="scene active" data-sign="Welcome!"><div><h1>Come, Play a While</h1><p>The Cat v. Canary Guild welcomes you to a traveling house of ancient games.</p></div></section>
+<section class="scene" data-sign="Games!"><div><h1>The Games</h1><p>Senet, the Royal Game of Ur, Hnefatafl, Nine Men's Morris and more.</p></div></section>
+<section class="scene" data-sign="The Guild!"><div><h1>Our Guild</h1><p>Living history, curiosity, and a place at the table for everyone.</p></div></section>
+<section class="scene" data-sign="Support!"><div><h1>Keep the Games Alive</h1><p>Help preserve and teach the games of the past.</p></div></section>
+</div>
+<div id="sign">Welcome!</div>
+<div id="frame" aria-hidden="true"><picture><source media="(max-width:650px)" srcset="assets/Q-approved-mobile-frame.png"><img src="assets/Q-approved-desktop-frame.png" alt=""></picture></div>
+<div id="asset-warning">Approved frame images have not yet been committed to this review branch. This is a motion-only staging page until the exact locked artwork is attached.</div>
+<nav aria-label="Theatre scenes"><button data-scene="0" aria-current="true">Home</button><button data-scene="1">Games</button><button data-scene="2">Guild</button><button data-scene="3">Support</button></nav>
+<script>
+const scenes=[...document.querySelectorAll('.scene')],buttons=[...document.querySelectorAll('button[data-scene]')],sign=document.getElementById('sign');let current=0,busy=false;
+document.querySelector('#frame img').addEventListener('error',()=>document.querySelector('#asset-warning').style.display='block');
+function change(next){if(busy||next===current)return;busy=true;const old=scenes[current],fresh=scenes[next];sign.className='retract';old.classList.remove('active');old.classList.add('exit');fresh.classList.add('enter');buttons.forEach((b,i)=>b.setAttribute('aria-current',String(i===next)));current=next;
+setTimeout(()=>{sign.textContent=fresh.dataset.sign;sign.className='';void sign.offsetWidth;sign.className='deploy'},530);
+setTimeout(()=>{old.classList.remove('exit');fresh.classList.remove('enter');fresh.classList.add('active');sign.className='';busy=false},1550)}
+buttons.forEach(b=>b.addEventListener('click',()=>change(Number(b.dataset.scene))));
+</script></body></html>
