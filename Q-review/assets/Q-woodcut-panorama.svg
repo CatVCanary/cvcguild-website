@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs><pattern id="etch" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(19)"><path d="M0 0V18" stroke="#4b4137" stroke-width=".6" opacity=".23"/></pattern><radialGradient id="page"><stop stop-color="#fffdf5"/><stop offset=".62" stop-color="#f8f4e9"/><stop offset="1" stop-color="#ede3cc"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="url(#page)"/>
+<!-- Long panoramic Tudor engraving: paper sky, relief-cut clouds, distant architecture -->
+<g fill="none" stroke="#514739" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".70">
+<path d="M-50 170q90-74 177-32 55-81 163-37 92 9 141 83m-430 10q140-58 280-30M1135 140q84-85 184-29 74-84 169-6 65-11 154 66m-464 19q148-57 294-30"/>
+<path d="M-40 210q155-44 336 5M1210 219q204-45 421-4" stroke-width="1"/>
+<path d="M-40 664Q250 571 501 672T1080 686T1640 618 M-60 724Q280 652 540 736T1130 713T1650 690" stroke="#75644e" stroke-width="3"/>
+<!-- Left Tudor gabled houses and roof hatch -->
+<path d="M-40 682V387L110 261 261 386V669 M-10 418H243M20 414V647M92 414V647M172 414V647M227 414V647M20 500H240M27 590H233"/>
+<path d="M110 261v-84m-38 126 37-44 44 45 M10 410l100-114 107 114M32 460h52v44H32z M135 460h55v44h-55z" stroke-width="3.5"/>
+<!-- Right gatehouse with half-timber woodcut texture -->
+<path d="M1295 687V357L1432 254 1572 360V687M1320 387h229M1337 410v260m188-260v260M1355 408l149 238m2-238-149 238 M1340 522h196 M1430 254V156"/>
+<path d="M1290 358q-8-49 33-63m234 63q8-49-33-63"/>
+<!-- Distant small town and roofs at horizon -->
+<path d="M310 677V566l65-50 67 50v111m-121-93h110M347 577v94m53-94v94M1090 690V580l83-63 77 63v108m-151-88h137m-113 5v80m75-80v80"/>
+<path d="M500 710q80-103 176-12m260 0q70-84 139 0" stroke-width="1.7"/>
+</g>
+<g fill="#5e4b3b" opacity=".13"><path d="M-70 745q335-126 620 6t580-37q260-95 550 34V1000H-70Z"/><path d="M-60 830q320-90 635 18t610-31q245-67 495 21V1000H-60Z"/></g>
+<g fill="url(#etch)" opacity=".56"><path d="M-60 700Q280 608 540 742T1120 725T1660 689V1000H-60Z"/></g>
+<g fill="none" stroke="#3c332a" stroke-width="1.7" opacity=".25"><path d="M-20 990q-10 -25 -12 -57"/><path d="M52 990q-5 -25 18 -57"/><path d="M124 990q0 -25 -12 -57"/><path d="M196 990q-10 -25 18 -57"/><path d="M268 990q-5 -25 -12 -57"/><path d="M340 990q0 -25 18 -57"/><path d="M412 990q-10 -25 -12 -57"/><path d="M484 990q-5 -25 18 -57"/><path d="M556 990q0 -25 -12 -57"/><path d="M628 990q-10 -25 18 -57"/><path d="M700 990q-5 -25 -12 -57"/><path d="M772 990q0 -25 18 -57"/><path d="M844 990q-10 -25 -12 -57"/><path d="M916 990q-5 -25 18 -57"/><path d="M988 990q0 -25 -12 -57"/><path d="M1060 990q-10 -25 18 -57"/><path d="M1132 990q-5 -25 -12 -57"/><path d="M1204 990q0 -25 18 -57"/><path d="M1276 990q-10 -25 -12 -57"/><path d="M1348 990q-5 -25 18 -57"/><path d="M1420 990q0 -25 -12 -57"/><path d="M1492 990q-10 -25 18 -57"/><path d="M1564 990q-5 -25 -12 -57"/><path d="M1636 990q0 -25 18 -57"/><path d="M1708 990q-10 -25 -12 -57"/></g>
+<g fill="#a6312c" stroke="#4a3026" stroke-width="2" opacity=".79"><path d="M290 663l18-62 19 62zM1254 667l17-66 19 66z"/></g>
+<g fill="#a98838" stroke="#4f4432" stroke-width="1.5" opacity=".65"><circle cx="110" cy="263" r="8"/><circle cx="1432" cy="252" r="7"/></g>
+</svg>
