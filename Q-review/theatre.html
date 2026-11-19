@@ -57,13 +57,15 @@ button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-
 @media(max-width:720px),(max-aspect-ratio:3/4){
  body{min-height:100svh}.theatre{width:100%;height:100dvh;aspect-ratio:auto;top:0;left:0;transform:none}.frame-desktop{display:none}
  .frame-mobile-parts{display:block;position:absolute;inset:0;z-index:8;pointer-events:none;filter:drop-shadow(0 2px 3px #33231077)}
- .frame-mobile-parts .top{position:absolute;top:0;left:0;width:100%;aspect-ratio:1024/490;background:url('assets/Q-mobile-top.png') top center / 100% 100% no-repeat}
- .frame-mobile-parts .rails{position:absolute;left:0;right:0;top:calc(100vw * 490 / 1024 - 1px);bottom:calc(100vw * 546 / 1024 - 1px);background:url('assets/Q-mobile-rails.png') top left / 100% auto repeat-y}
- .frame-mobile-parts .bottom{position:absolute;bottom:0;left:0;width:100%;aspect-ratio:1024/546;background:url('assets/Q-mobile-bottom.png') bottom center / 100% 100% no-repeat}
+ /* Exact approved source artwork is cropped at the top and bottom: no rescaling of faces, no repeated frame rails. */
+ .frame-mobile-parts{mix-blend-mode:multiply}
+ .frame-mobile-parts .top{position:absolute;top:0;left:0;width:100%;height:calc(100vw * 550 / 1024);background-image:url('assets/Q-approved-mobile-frame.png');background-position:top center;background-size:100% auto;background-repeat:no-repeat}
+ .frame-mobile-parts .rails{position:absolute;left:0;right:0;top:calc(100vw * 550 / 1024 - 1px);bottom:calc(100vw * 590 / 1024 - 1px);background-image:url('assets/Q-mobile-continuous-posts.svg');background-position:center;background-size:100% 100%;background-repeat:no-repeat}
+ .frame-mobile-parts .bottom{position:absolute;bottom:0;left:0;width:100%;height:calc(100vw * 590 / 1024);background-image:url('assets/Q-approved-mobile-frame.png');background-position:bottom center;background-size:100% auto;background-repeat:no-repeat}
  .scene-panel{top:43%;height:29%;left:19%;width:62%;padding:0 5px}.scene-panel h1{font-size:clamp(21px,5.8vw,29px);margin-bottom:9px}.scene-panel p{font-size:clamp(13px,3.6vw,17px);line-height:1.4}
  .banner-title{top:33%;padding:5px 12px;font-size:clamp(17px,5vw,25px)}.banner-title:before,.banner-title:after{height:80px}
  .stage-nav{top:24%;width:77%;gap:3px}.nav-sign{font-size:clamp(10px,2.5vw,13px);min-height:34px;padding:7px 1px 4px}
- .badge-preview{right:6px;top:calc(100vw * 490 / 1024);padding:3px 6px;font-size:9px}.instructions{right:6px;bottom:6px;font-size:9px}
+ .badge-preview{display:none}.instructions{display:none}
 }
 @media(max-width:350px){.scene-panel{top:46%;height:25%}.stage-nav{width:82%}.banner-title{top:36%}}
 @media(max-height:580px) and (min-width:721px){.scene-panel{top:50%;height:29%}.nav-sign{min-height:30px;font-size:11px}.banner-title{font-size:16px;padding:3px 8px}}
