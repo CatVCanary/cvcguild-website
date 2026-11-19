@@ -60,7 +60,7 @@ button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-
  /* Exact approved source artwork is cropped at the top and bottom: no rescaling of faces, no repeated frame rails. */
  .frame-mobile-parts{mix-blend-mode:multiply}
  .frame-mobile-parts .top{position:absolute;top:0;left:0;width:100%;height:calc(100vw * 550 / 1024 + 4px);background-image:url('assets/Q-approved-mobile-frame.png');background-position:top center;background-size:100% auto;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 10px),transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 10px),transparent 100%)}
- .frame-mobile-parts .rails{position:absolute;left:0;right:0;top:calc(100vw * 550 / 1024 - 10px);bottom:calc(100vw * 590 / 1024 - 10px);background-image:url('assets/Q-mobile-continuous-posts-v2.svg');background-position:center;background-size:100% 100%;background-repeat:no-repeat}
+ .frame-mobile-parts .rails{position:absolute;left:0;right:0;top:calc(100vw * 550 / 1024 - 10px);bottom:calc(100vw * 590 / 1024 - 10px);background-image:url('assets/Q-continuous-carved-rails.svg');background-position:center;background-size:100% 100%;background-repeat:no-repeat}
  .frame-mobile-parts .bottom{position:absolute;bottom:0;left:0;width:100%;height:calc(100vw * 590 / 1024 + 4px);background-image:url('assets/Q-approved-mobile-frame.png');background-position:bottom center;background-size:100% auto;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 10px,#000 100%)}
  .scene-panel{top:43%;height:29%;left:19%;width:62%;padding:0 5px}.scene-panel h1{font-size:clamp(21px,5.8vw,29px);margin-bottom:9px}.scene-panel p{font-size:clamp(13px,3.6vw,17px);line-height:1.4}
  .banner-title{top:33%;padding:5px 12px;font-size:clamp(17px,5vw,25px)}.banner-title:before,.banner-title:after{height:80px}
@@ -70,6 +70,39 @@ button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-
 @media(max-width:350px){.scene-panel{top:46%;height:25%}.stage-nav{width:82%}.banner-title{top:36%}}
 @media(max-height:580px) and (min-width:721px){.scene-panel{top:50%;height:29%}.nav-sign{min-height:30px;font-size:11px}.banner-title{font-size:16px;padding:3px 8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}.panorama{transform:none!important}.scene{transition:none!important}}
+
+/* Q REVISION 19 NOV — remove the beige slab; quiet, high-contrast theatrical woodcuts. */
+html,body{background:#f9f6ed}
+.paper-world{background:#f8f6ed}
+.paper-world:before{opacity:.30}
+.panorama{opacity:.25}
+.vignette{background:radial-gradient(ellipse at center,transparent 42%,#3b2d1b1b 100%)}
+.scene,.scene[data-scene="games"],.scene[data-scene="guild"],.scene[data-scene="visit"],.scene[data-scene="support"]{
+ background:#faf8ef url('assets/Q-woodcut-panorama.svg') center center/100% 100% no-repeat!important;
+}
+.scene .engraving{opacity:.34;mix-blend-mode:multiply}
+.scene:after{opacity:.13}
+.scene-panel h1{color:#32251c;text-shadow:0 2px 0 #fff9ed,0 0 14px #fffdf7}
+.scene-panel p{color:#2d2722;text-shadow:0 0 8px #fffefa,0 1px 0 #fff7}
+.scene-panel small{color:#5c4035;text-shadow:0 1px 0 #fff7}
+.banner-title{background:#f3e7cd;border-color:#483020;color:#532d21;box-shadow:0 4px 0 #21181332}
+.nav-sign{background:#f9edcd;color:#38251b;border-color:#5a3424}
+.nav-sign[aria-current="page"]{background:#902822;color:#ffefc8}
+@media(max-width:720px),(max-aspect-ratio:3/4){
+ .frame-mobile-parts{mix-blend-mode:normal;filter:drop-shadow(0 2px 2px #3f2b1a55)}
+ .frame-mobile-parts .top{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 22px),transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 22px),transparent 100%)}
+ .frame-mobile-parts .bottom{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 22px,#000 100%)}
+ .frame-mobile-parts .rails{top:calc(100vw * 550 / 1024 - 22px);bottom:calc(100vw * 590 / 1024 - 22px)}
+ .scene,.scene[data-scene="games"],.scene[data-scene="guild"],.scene[data-scene="visit"],.scene[data-scene="support"]{
+  background:#faf8f0 url('assets/Q-portrait-woodcut-scene.svg') center center/100% 100% no-repeat!important;
+ }
+ .scene .engraving{opacity:.17}
+ .scene-panel{top:43%;height:29%;}
+ .scene-panel h1{color:#30221b;text-shadow:0 1px #fff,0 0 15px #fffefa}
+ .scene-panel p{color:#30251c;text-shadow:0 0 11px #fffdf6,0 1px #fff}
+ .banner-title{background:#f8e9c9}
+ .badge-preview,.instructions{display:none}
+}
 </style>
 </head>
 <body>
