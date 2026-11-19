@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536" preserveAspectRatio="none">
+<defs><radialGradient id="paper"><stop stop-color="#fffdf7"/><stop offset=".66" stop-color="#f9f6ec"/><stop offset="1" stop-color="#ece1cb"/></radialGradient>
+<pattern id="hatch" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(22)"><path d="M0 0V11" stroke="#695749" stroke-width=".9" opacity=".32"/></pattern></defs>
+<rect width="1024" height="1536" fill="url(#paper)"/>
+<!-- Illustrated Tudor village behind stage actors: no humans and no grass foreground -->
+<g stroke="#443b32" stroke-linejoin="round" stroke-linecap="round" fill="none">
+<path d="M100 560q68-67 145-23 55-52 118 6m305-11q73-68 139-15 49-40 97 17" stroke-width="3.2" opacity=".45"/>
+<path d="M90 590q129-34 256-9m351-2q103-31 234-14" stroke-width="1.8" opacity=".32"/>
+<!-- Two small Tudor buildings; the middle is clear for scene text -->
+<path d="M93 1112V763l152-108 145 106v352 M104 792H379 M143 797v305m98-305v305m102-305v305 M139 892h206M139 997h206" stroke-width="4.2" opacity=".53"/>
+<path d="M88 767l157-135 155 132M245 640v-79M171 758l74-67 71 67" stroke-width="4.7" opacity=".57"/>
+<path d="M122 821h89v57h-89zM273 821h79v57h-79zM123 932h88v61h-88zM273 933h79v61h-79z" stroke-width="3" opacity=".53"/>
+<path d="M629 1118V773l150-108 149 108v345 M645 800H914 M679 802v307m100-307v307m98-307v307 M670 889h229M675 996h222" stroke-width="4.4" opacity=".52"/>
+<path d="M623 773l158-135 156 133m-158-130v-81M711 773l70-60 70 60" stroke-width="4.7" opacity=".57"/>
+<path d="M656 824h89v59h-89zM810 824h91v59h-91zM669 929h80v61h-80zM815 932h78v62h-78z" stroke-width="3" opacity=".52"/>
+<!-- distant crest line and engraving of travels -->
+<path d="M55 1106q210-82 415-16 231 72 498-27M30 1180q231-115 445-39t540-46M-25 1290q209-89 437-41t634-42" stroke-width="4" opacity=".5"/>
+<path d="M240 1108V1008l32-23 33 23v100m-61-78h55M745 1120v-98l37-31 36 31v98m-64-78h57" stroke-width="2.7" opacity=".58"/>
+</g>
+<g opacity=".24" fill="url(#hatch)"><path d="M80 1120l160-455 165 455zM620 1117l160-459 169 459zM0 1150q260-85 505-15T1024 1100v400H0z"/></g>
+<g fill="#a42927" stroke="#30231f" stroke-width="2" opacity=".78">
+<path d="M248 558l41 14-41 14z M782 560l-40 13 40 13z"/>
+</g>
+<g fill="#bb953d" stroke="#352a20" stroke-width="2" opacity=".66"><circle cx="248" cy="560" r="7"/><circle cx="781" cy="560" r="7"/></g>
+<!-- Cut-paper heraldic scroll curls, subdued and intentionally still -->
+<g fill="none" stroke="#3e3128" stroke-width="2.3" opacity=".33">
+<path d="M151 481q20-33 42-3t-13 39q-24 5-22-15m715-24q-20-33-42-3t13 39q24 5 22-15"/>
+<path d="M405 454q103 32 203 0M437 461q75 12 149 0" stroke-width="1.5"/>
+<path d="M168 1218q48-42 98-5m501-5q54-46 107 3"/>
+</g></svg>
