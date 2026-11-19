@@ -1,39 +1,158 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Guild theatre | review only</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="theme-color" content="#32251d">
+<title>Cat v. Canary — Quill's private review theatre</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#cdb88f;color:#302115;font-family:Georgia,serif}
-#stage{position:fixed;inset:0;overflow:hidden;background:#e6d2ab}
-.scene{position:absolute;inset:0;display:grid;place-items:center;padding:20vh 18vw 25vh;text-align:center;background:radial-gradient(ellipse,#f3e5c6,#bda079);transform:translateX(110%);visibility:hidden}
-.scene.active{transform:translateX(0);visibility:visible}.scene h1{font-size:clamp(1.6rem,5vw,3.5rem);font-variant:small-caps;font-weight:normal}.scene p{max-width:520px;line-height:1.5}
-.scene.enter{visibility:visible;animation:enter 1.2s cubic-bezier(.6,.05,.25,1) both}.scene.exit{visibility:visible;animation:exit 1.2s cubic-bezier(.6,.05,.25,1) both}
-@keyframes enter{from{transform:translateX(110%)}to{transform:translateX(0)}}@keyframes exit{from{transform:translateX(0)}to{transform:translateX(-110%)}}
-#sign{position:fixed;z-index:3;top:19%;left:50%;transform:translateX(-50%);background:#e6cf9b;border:4px double #422a1b;padding:8px 22px;font-variant:small-caps;font-size:clamp(1rem,2.4vw,2rem);white-space:nowrap}
-#sign:before,#sign:after{content:"";position:absolute;top:-80px;width:2px;height:76px;background:#5b432c}#sign:before{left:12px}#sign:after{right:12px}
-#sign.retract{animation:retract .42s ease-in both}#sign.deploy{animation:deploy .9s ease-out both}
-@keyframes retract{to{transform:translate(-50%,-250%) rotate(10deg)}}
-@keyframes deploy{0%{transform:translate(-50%,-250%) rotate(-9deg)}55%{transform:translate(-50%,9%) rotate(6deg)}75%{transform:translate(-50%,-8%) rotate(-4deg)}90%{transform:translate(-50%,3%) rotate(2deg)}100%{transform:translate(-50%,0) rotate(0)}}
-#frame{position:fixed;inset:0;z-index:5;pointer-events:none}#frame picture,#frame img{width:100%;height:100%;display:block}#frame img{object-fit:fill}
-nav{position:fixed;z-index:7;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;padding:7px;background:#302115ed;border-radius:30px}button{background:#ebd4a1;border:1px solid #c09c55;color:#302115;padding:9px 13px;border-radius:20px;cursor:pointer}button[aria-current=true]{background:#9c2c25;color:white}
-#asset-warning{position:fixed;top:0;left:0;right:0;z-index:10;background:#fff5db;color:#412a19;padding:8px;text-align:center;font-size:12px;display:none}
-@media(max-width:650px){.scene{padding:24vh 15vw 26vh}#sign{top:22%;font-size:1.1rem;padding:5px 10px}nav{bottom:5px}button{padding:8px;font-size:12px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition:none!important}}
-</style></head><body>
-<div id="stage">
-<section class="scene active" data-sign="Welcome!"><div><h1>Come, Play a While</h1><p>The Cat v. Canary Guild welcomes you to a traveling house of ancient games.</p></div></section>
-<section class="scene" data-sign="Games!"><div><h1>The Games</h1><p>Senet, the Royal Game of Ur, Hnefatafl, Nine Men's Morris and more.</p></div></section>
-<section class="scene" data-sign="The Guild!"><div><h1>Our Guild</h1><p>Living history, curiosity, and a place at the table for everyone.</p></div></section>
-<section class="scene" data-sign="Support!"><div><h1>Keep the Games Alive</h1><p>Help preserve and teach the games of the past.</p></div></section>
+:root{--ink:#352519;--ruby:#921f20;--gold:#c39a38;--parchment:#ecd9b2;--light:#fff1cd;--duration:1400ms}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{font:16px/1.45 Georgia,'Times New Roman',serif;background:#bb9f72;color:var(--ink);overflow:hidden}button{font:inherit}
+button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-offset:3px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.paper-world{position:fixed;inset:0;overflow:hidden;background:radial-gradient(ellipse at center,#f1e5cc 0,#d7be92 70%,#a18a67 100%);isolation:isolate}
+.paper-world:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 9px,#2b24130a 10px),repeating-linear-gradient(79deg,transparent 0 17px,#352d1908 19px);pointer-events:none;z-index:2}
+.panorama{position:absolute;inset:-12% -10%;background-size:cover;opacity:.44;will-change:transform}
+.panorama svg{width:100%;height:100%;display:block}.panorama.preparing{animation:world-reel 1.42s cubic-bezier(.7,.04,.23,1) both}
+@keyframes world-reel{0%{transform:translateX(0)}45%{transform:translateX(-13%)}100%{transform:translateX(-31%)}}
+.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 52% 45%,transparent 36%,#533c174d 100%)}
+/* This proportional stage preserves the unaltered desktop frame; no stretching of the figures. */
+.theatre{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(99.6vw,143vh);aspect-ratio:3 / 2;z-index:2;isolation:isolate;overflow:hidden}
+.frame-desktop{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;object-fit:contain;filter:drop-shadow(0 3px 4px #21160c66)}
+.frame-mobile{display:none}
+.scenery-track{position:absolute;inset:0;z-index:0;overflow:hidden}
+.scene{position:absolute;inset:0;display:block;visibility:hidden;transform:translateX(110%);background:linear-gradient(170deg,#f0e0bd,#c7a97b);overflow:hidden;will-change:transform}
+.scene[data-scene="games"]{background:linear-gradient(150deg,#ecdfbf,#d6bd92)}
+.scene[data-scene="guild"]{background:linear-gradient(160deg,#f4e7c9,#d0ae7d)}
+.scene[data-scene="visit"]{background:linear-gradient(160deg,#e5d1a5,#bdb087)}
+.scene[data-scene="support"]{background:linear-gradient(160deg,#f2e5c5,#cdb181)}
+.scene.is-current{visibility:visible;transform:translateX(0)}.scene.is-entering{visibility:visible;animation:scene-in 1.3s cubic-bezier(.66,.04,.24,1) both}.scene.is-leaving{visibility:visible;animation:scene-out 1.3s cubic-bezier(.66,.04,.24,1) both}
+@keyframes scene-in{0%{transform:translateX(106%)}100%{transform:translateX(0)}}@keyframes scene-out{0%{transform:translateX(0)}100%{transform:translateX(-106%)}}
+.scene .engraving{position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply}.engraving svg{width:100%;height:100%}
+.scene:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background:repeating-linear-gradient(6deg,transparent 0 8px,#70563408 9px,#6149270a 10px)}
+.scene-panel{position:absolute;z-index:2;left:32%;width:36%;top:52%;height:26%;padding:0 6px;text-align:center;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#9c744b transparent}
+.scene-panel h1{font-variant:small-caps;font-size:clamp(20px,2.45vw,39px);line-height:1.06;letter-spacing:.015em;font-weight:normal;margin:0 0 .4em;color:#4a2920;text-shadow:0 1px #f9e8c4}
+.scene-panel p{font-size:clamp(12px,1.15vw,17px);line-height:1.35;margin:0 auto .55em;max-width:28em}
+.scene-panel small{font-style:italic;font-size:.86em;color:#5d4935}.scene-panel .accents{font-size:1.7em;letter-spacing:.27em;color:#9e2b22;line-height:1.2;margin:0 0 .35em}
+/* All action props are children of the fixed proscenium, NOT part of the frame artwork. */
+.stage-props{position:absolute;z-index:5;inset:0;pointer-events:none}
+.banner-title{position:absolute;top:39%;left:50%;transform:translate(-50%,0);padding:6px 19px;background:linear-gradient(#f6e1af,#d8b477);border:4px double #5a321c;box-shadow:0 6px 0 #65452128;text-align:center;white-space:nowrap;font-variant:small-caps;letter-spacing:.03em;font-size:clamp(16px,2.3vw,31px);color:#552a21;pointer-events:none}
+.banner-title:before,.banner-title:after{content:"";position:absolute;width:2px;height:135px;bottom:calc(100% + 3px);background:#57402b}
+.banner-title:before{left:15px}.banner-title:after{right:15px}
+.banner-title.withdraw{animation:prop-up 390ms cubic-bezier(.6,.02,.9,.52) both}.banner-title.arrive{animation:prop-in 820ms cubic-bezier(.22,1.25,.4,1) both}
+@keyframes prop-up{0%{transform:translate(-50%,0) rotate(0)}100%{transform:translate(-50%,-240%) rotate(6deg)}}
+@keyframes prop-in{0%{opacity:0;transform:translate(-50%,-210%) scale(.86) rotate(-9deg)}25%{opacity:1}56%{transform:translate(-50%,8%) scale(1.04) rotate(5deg)}72%{transform:translate(-50%,-7%) rotate(-4deg)}86%{transform:translate(-50%,3%) rotate(2deg)}100%{transform:translate(-50%,0) scale(1) rotate(0)}}
+.stage-nav{position:absolute;z-index:7;top:30.8%;left:50%;width:54%;transform:translateX(-50%);display:flex;justify-content:center;align-items:start;gap:5px;padding:0;margin:0;list-style:none}
+.stage-nav li{flex:1;min-width:0;transform-origin:top center;pointer-events:auto}
+.stage-nav li.exit{animation:nav-rise .37s ease-in both}.stage-nav li.enter{animation:nav-drop .86s cubic-bezier(.22,1.25,.43,1) both}
+.stage-nav li:nth-child(2){animation-delay:45ms}.stage-nav li:nth-child(3){animation-delay:90ms}.stage-nav li:nth-child(4){animation-delay:135ms}.stage-nav li:nth-child(5){animation-delay:180ms}
+@keyframes nav-rise{to{transform:translateY(-180%) rotate(7deg);opacity:0}}@keyframes nav-drop{0%{opacity:0;transform:translateY(-170%) rotate(-9deg) scale(.75)}25%{opacity:1}55%{transform:translateY(9%) rotate(5deg)}73%{transform:translateY(-8%) rotate(-4deg)}89%{transform:translateY(2%) rotate(1deg)}100%{transform:translateY(0) rotate(0) scale(1)}}
+.nav-sign{width:100%;min-height:38px;padding:6px 3px 5px;border:2px solid #57321e;box-shadow:1px 3px 0 #3b271f4b;background:#e8d2a2;color:#40271a;border-radius:2px 2px 7px 7px;font-variant:small-caps;font-size:clamp(12px,1.1vw,17px);font-weight:bold;cursor:pointer;line-height:1.1}
+.nav-sign:before{content:"";display:block;position:absolute;top:-12px;left:50%;height:11px;border-left:1px solid #654024}
+.nav-sign[aria-current="page"]{background:#a12c23;color:#fff3d7;border-color:#49301e}.nav-sign:hover{background:#c59e57}.nav-sign[aria-current="page"]:hover{background:#a12c23}
+/* A permanent stationary pavilion overlays everything. */
+.frame-mobile-parts{display:none}
+.badge-preview{position:fixed;right:12px;top:12px;z-index:12;background:#2c2018d9;color:#fff0cf;border:1px solid #b39965;padding:5px 10px;font:11px/1.1 system-ui,sans-serif;letter-spacing:.08em;border-radius:3px;pointer-events:none}
+.instructions{position:fixed;bottom:6px;right:10px;z-index:11;color:#3c2f1f;background:#eadabbc9;border:1px solid #b9a477;border-radius:3px;font-size:11px;padding:3px 6px;text-align:right}
+@media(max-width:720px),(max-aspect-ratio:3/4){
+ body{min-height:100svh}.theatre{width:100%;height:100dvh;aspect-ratio:auto;top:0;left:0;transform:none}.frame-desktop{display:none}
+ .frame-mobile-parts{display:block;position:absolute;inset:0;z-index:8;pointer-events:none;filter:drop-shadow(0 2px 3px #33231077)}
+ .frame-mobile-parts .top{position:absolute;top:0;left:0;width:100%;aspect-ratio:1024/490;background:url('assets/Q-mobile-top.png') top center / 100% 100% no-repeat}
+ .frame-mobile-parts .rails{position:absolute;left:0;right:0;top:calc(100vw * 490 / 1024 - 1px);bottom:calc(100vw * 546 / 1024 - 1px);background:url('assets/Q-mobile-rails.png') top left / 100% auto repeat-y}
+ .frame-mobile-parts .bottom{position:absolute;bottom:0;left:0;width:100%;aspect-ratio:1024/546;background:url('assets/Q-mobile-bottom.png') bottom center / 100% 100% no-repeat}
+ .scene-panel{top:43%;height:29%;left:19%;width:62%;padding:0 5px}.scene-panel h1{font-size:clamp(21px,5.8vw,29px);margin-bottom:9px}.scene-panel p{font-size:clamp(13px,3.6vw,17px);line-height:1.4}
+ .banner-title{top:33%;padding:5px 12px;font-size:clamp(17px,5vw,25px)}.banner-title:before,.banner-title:after{height:80px}
+ .stage-nav{top:24%;width:77%;gap:3px}.nav-sign{font-size:clamp(10px,2.5vw,13px);min-height:34px;padding:7px 1px 4px}
+ .badge-preview{right:6px;top:calc(100vw * 490 / 1024);padding:3px 6px;font-size:9px}.instructions{right:6px;bottom:6px;font-size:9px}
+}
+@media(max-width:350px){.scene-panel{top:46%;height:25%}.stage-nav{width:82%}.banner-title{top:36%}}
+@media(max-height:580px) and (min-width:721px){.scene-panel{top:50%;height:29%}.nav-sign{min-height:30px;font-size:11px}.banner-title{font-size:16px;padding:3px 8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}.panorama{transform:none!important}.scene{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="sr-only" href="#scene-panel">Skip to the current scene</a>
+<div class="paper-world" aria-hidden="true"><div class="panorama" id="panorama">
+<svg viewBox="0 0 1700 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<g stroke="#5b4833" stroke-width="3.5" stroke-linejoin="round" fill="none" opacity=".38">
+<path d="M0 720 Q300 520 560 720T1100 700T1700 650 M0 770 Q330 600 660 760T1350 680T1700 780"/>
+<path d="M30 700V400l105-95 105 95v300m-189-265h170M60 500h142m-122 0v196m83-196v196M83 404l38 43 38-43M850 690V350l155-92 164 92v340M880 392h260m-250 40h245m-206 0v253m155-253v253M932 350l76 42 76-42"/>
+<path d="M1350 720V450l95-83 120 83v270m-177-228h155m-135 0v210m78-210v210 M310 675v-260l84-62 91 62v260m-154-215h133m-113 0v180m74-180v180"/>
+</g><g fill="#8d7050" opacity=".1"><circle cx="245" cy="168" r="145"/><circle cx="1500" cy="110" r="110"/></g>
+</svg></div><div class="vignette"></div></div>
+<main class="theatre" aria-label="Cat v. Canary illustrated theatre, staging review" id="theatre">
+<div class="scenery-track" id="scenery-track">
+<section class="scene is-current" data-scene="home" aria-label="Home scene"><div class="engraving" aria-hidden="true">
+<svg viewBox="0 0 1500 1000" preserveAspectRatio="xMidYMid slice"><g stroke="#66513b" stroke-width="2" fill="none" opacity=".8"><path d="M0 780 Q230 600 500 820T1100 780T1500 730M0 860Q280 670 550 890T1200 850"/><path d="M80 690V385l115-93 125 93v305m-220-265h200M119 520h162M146 425l49 55 49-55M1160 680V360l100-92 135 92v320m-206-278h178M1230 402v258m66-258v258"/><path d="M350 850l110-235 105 235M1010 850l90-270 110 270"/></g></svg></div>
+<div class="scene-panel" id="scene-panel" tabindex="0"><h1>Come, play a while</h1><p>Step inside a traveling house of games older than kingdoms.</p><p>Curious travelers welcome. No experience required.</p><small>A little friendly rivalry is customary.</small></div></section>
+<section class="scene" data-scene="games" aria-label="Games scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#6b513c" stroke-width="3"><path d="M-30 820 Q220 750 500 820T1100 820T1530 770 M30 350h260v350H30z M40 370l240 310M280 370L40 680M40 510h240M160 370v310M1250 340h220v365h-220z M1265 350l190 340M1455 350l-190 340M1265 530h190M1360 350v340"/><circle cx="150" cy="425" r="14"/><circle cx="1360" cy="470" r="16"/><path d="M600 915l50-85h200l50 85 M650 830h200"/></g></svg></div>
+<div class="scene-panel" tabindex="0"><div class="accents">⚄ ❖ ⚅</div><h1>Games older than kingdoms</h1><p>Senet · Royal Game of Ur · Duodecim Scripta · Xiangqi · Hnefatafl · Brandubh · Nine Men's Morris · Alquerque · Puluc · Liar’s Dice</p><small>We teach by playing, and explain which rules are reconstructed.</small></div></section>
+<section class="scene" data-scene="guild" aria-label="Guild scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#574532" stroke-width="3"><path d="M0 680L300 370L650 680M810 680l320-310 380 310M100 660V370l200-90 250 90v290 M125 420h408M160 425v225m100-225v225m100-225v225m100-225v225M910 680V340l230-96 228 96v340m-420-320h390m-345 0v285m160-285v285"/><path d="M-30 830Q320 715 650 835T1510 790"/></g></svg></div>
+<div class="scene-panel" tabindex="0"><div class="accents">❦</div><h1>The traveling Guild</h1><p>A volunteer-led educational nonprofit bringing ancient games to life at Renaissance events.</p><p>Pull up a chair; there is room at the table.</p><small>Washington State · Cat v. Canary Foundation</small></div></section>
+<section class="scene" data-scene="visit" aria-label="Visit scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#634b35" stroke-width="3"><path d="M0 825Q280 790 560 840T1130 815T1500 790 M-10 570l170-140 190 140 145-150 190 150 175-130 185 130 170-165 215 165"/><path d="M130 750l150-250 150 250M260 750l130-180 125 180M1030 780l170-260 160 260"/><path d="M120 320q70-60 150 0m780-70q60-40 160 0"/></g></svg></div>
+<div class="scene-panel" tabindex="0"><div class="accents">✣</div><h1>Find us beneath the canvas</h1><p>Join us at Washington historical events, including the Washington Midsummer Renaissance Faire near Monroe.</p><small>Check the organizer's schedule for current appearances.</small></div></section>
+<section class="scene" data-scene="support" aria-label="Support scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#685039" stroke-width="3"><path d="M-20 800Q230 690 440 810T860 800T1520 780"/><path d="M190 820V350h180v470 M210 380h140M235 380v420m90-420v420 M1240 820V330h190v490 M1260 360h145 M1290 360v450m90-450v450"/><path d="M200 340c0-110 165-110 165 0m880-15c0-110 180-110 180 0M235 465h100v130H235zm1020-22h100v150h-100z"/></g></svg></div>
+<div class="scene-panel" tabindex="0"><div class="accents">❖</div><h1>Keep the games alive</h1><p>Donations help care for historic game sets, our traveling pavilion, and free hands-on teaching.</p><small>The Foundation is a 501(c)(3) educational nonprofit.</small></div></section>
 </div>
-<div id="sign">Welcome!</div>
-<div id="frame" aria-hidden="true"><picture><source media="(max-width:650px)" srcset="assets/Q-approved-mobile-frame.png"><img src="assets/Q-approved-desktop-frame.png" alt=""></picture></div>
-<div id="asset-warning">Approved frame images have not yet been committed to this review branch. This is a motion-only staging page until the exact locked artwork is attached.</div>
-<nav aria-label="Theatre scenes"><button data-scene="0" aria-current="true">Home</button><button data-scene="1">Games</button><button data-scene="2">Guild</button><button data-scene="3">Support</button></nav>
+<div class="stage-props" aria-hidden="true"><div class="banner-title" id="banner-title">Enter the Pavilion</div></div>
+<nav class="stage-nav" aria-label="Change theatrical scene"><li><button class="nav-sign" data-index="0" aria-current="page">Home</button></li><li><button class="nav-sign" data-index="1">Games</button></li><li><button class="nav-sign" data-index="2">Guild</button></li><li><button class="nav-sign" data-index="3">Visit</button></li><li><button class="nav-sign" data-index="4">Support</button></li></nav>
+<img class="frame-desktop" src="assets/Q-approved-desktop-frame.png" alt="" aria-hidden="true" draggable="false">
+<div class="frame-mobile-parts" aria-hidden="true"><div class="top"></div><div class="rails"></div><div class="bottom"></div></div>
+</main>
+<div class="badge-preview">QUILL · STAGING ONLY</div>
+<div class="instructions">Select a hanging sign to change scenes. Scroll scene text if needed.</div>
+<div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
 <script>
-const scenes=[...document.querySelectorAll('.scene')],buttons=[...document.querySelectorAll('button[data-scene]')],sign=document.getElementById('sign');let current=0,busy=false;
-document.querySelector('#frame img').addEventListener('error',()=>document.querySelector('#asset-warning').style.display='block');
-function change(next){if(busy||next===current)return;busy=true;const old=scenes[current],fresh=scenes[next];sign.className='retract';old.classList.remove('active');old.classList.add('exit');fresh.classList.add('enter');buttons.forEach((b,i)=>b.setAttribute('aria-current',String(i===next)));current=next;
-setTimeout(()=>{sign.textContent=fresh.dataset.sign;sign.className='';void sign.offsetWidth;sign.className='deploy'},530);
-setTimeout(()=>{old.classList.remove('exit');fresh.classList.remove('enter');fresh.classList.add('active');sign.className='';busy=false},1550)}
-buttons.forEach(b=>b.addEventListener('click',()=>change(Number(b.dataset.scene))));
-</script></body></html>
+(()=>{
+'use strict';
+const sceneNodes=[...document.querySelectorAll('.scene')];
+const signs=[...document.querySelectorAll('.nav-sign')];
+const signWrappers=[...document.querySelectorAll('.stage-nav li')];
+const title=document.getElementById('banner-title');
+const panorama=document.getElementById('panorama');
+const announcer=document.getElementById('announcer');
+const titles=['Enter the Pavilion','The Gaming Tables','Our Traveling Guild','Find Our Pavilion','Keep the Games Alive'];
+const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+let current=0,transitioning=false;
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function setCurrent(i){
+  sceneNodes.forEach((scene,index)=>{
+    const active=index===i;
+    scene.classList.toggle('is-current',active);
+    scene.classList.remove('is-entering','is-leaving');
+    scene.toggleAttribute('inert',!active);
+    scene.setAttribute('aria-hidden',String(!active));
+  });
+  signs.forEach((button,index)=>{
+    if(index===i)button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current');
+  });
+  title.textContent=titles[i];announcer.textContent=titles[i]+' scene ready.';current=i;
+}
+async function change(next){
+  if(transitioning||next===current||next<0||next>=sceneNodes.length)return;
+  transitioning=true;const prior=current;
+  signs.forEach(s=>s.disabled=true);
+  if(motion.matches){setCurrent(next);signs.forEach(s=>s.disabled=false);transitioning=false;return;}
+  title.classList.remove('arrive');title.classList.add('withdraw');
+  signWrappers.forEach(w=>{w.classList.remove('enter');w.classList.add('exit');});
+  await wait(400);
+  const departing=sceneNodes[prior],incoming=sceneNodes[next];
+  departing.classList.remove('is-current');departing.classList.add('is-leaving');
+  incoming.classList.add('is-entering');incoming.removeAttribute('inert');incoming.setAttribute('aria-hidden','false');
+  panorama.classList.add('preparing');
+  await wait(500);
+  title.textContent=titles[next];title.classList.remove('withdraw');void title.offsetWidth;title.classList.add('arrive');
+  signWrappers.forEach(w=>{w.classList.remove('exit');void w.offsetWidth;w.classList.add('enter');});
+  await wait(920);
+  panorama.classList.remove('preparing');
+  title.classList.remove('arrive');signWrappers.forEach(w=>w.classList.remove('enter'));
+  setCurrent(next);
+  signs.forEach(s=>s.disabled=false);transitioning=false;
+}
+sceneNodes.forEach((s,i)=>{if(i!==0){s.setAttribute('aria-hidden','true');s.setAttribute('inert','');}});
+signs.forEach(button=>button.addEventListener('click',()=>change(Number(button.dataset.index))));
+document.addEventListener('keydown',e=>{if(e.altKey&&e.key==='ArrowRight'){e.preventDefault();change((current+1)%sceneNodes.length);}else if(e.altKey&&e.key==='ArrowLeft'){e.preventDefault();change((current-1+sceneNodes.length)%sceneNodes.length);}});
+window.__guildTheatreTest={getCurrent:()=>current,isTransitioning:()=>transitioning,change};
+})();
+</script>
+</body></html>
