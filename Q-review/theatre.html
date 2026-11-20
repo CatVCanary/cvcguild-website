@@ -71,14 +71,14 @@ button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-
 @media(max-height:580px) and (min-width:721px){.scene-panel{top:50%;height:29%}.nav-sign{min-height:30px;font-size:11px}.banner-title{font-size:16px;padding:3px 8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}.panorama{transform:none!important}.scene{transition:none!important}}
 
-/* Q REVISION 19 NOV — remove the beige slab; quiet, high-contrast theatrical woodcuts. */
+/* Q REVISION 19 NOV — Removed invented backgrounds pending recovery of Director-approved original asset. Do NOT substitute new scenery; provisional ivory backdrop only. */
 html,body{background:#f9f6ed}
 .paper-world{background:#f8f6ed}
 .paper-world:before{opacity:.30}
-.panorama{opacity:.25}
+.panorama{opacity:.08}
 .vignette{background:radial-gradient(ellipse at center,transparent 42%,#3b2d1b1b 100%)}
 .scene,.scene[data-scene="games"],.scene[data-scene="guild"],.scene[data-scene="visit"],.scene[data-scene="support"]{
- background:#faf8ef url('assets/Q-woodcut-panorama.svg') center center/100% 100% no-repeat!important;
+ background:#fdfbf6!important;
 }
 .scene .engraving{opacity:.34;mix-blend-mode:multiply}
 .scene:after{opacity:.13}
@@ -94,7 +94,7 @@ html,body{background:#f9f6ed}
  .frame-mobile-parts .bottom{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 22px,#000 100%)}
  .frame-mobile-parts .rails{top:calc(100vw * 550 / 1024 - 22px);bottom:calc(100vw * 590 / 1024 - 22px)}
  .scene,.scene[data-scene="games"],.scene[data-scene="guild"],.scene[data-scene="visit"],.scene[data-scene="support"]{
-  background:#faf8f0 url('assets/Q-portrait-woodcut-scene.svg') center center/100% 100% no-repeat!important;
+  background:#fdfbf6!important;
  }
  .scene .engraving{opacity:.17}
  .scene-panel{top:43%;height:29%;}
@@ -104,6 +104,8 @@ html,body{background:#f9f6ed}
  .badge-preview,.instructions{display:none}
 }
 </style>
+
+<!-- SOURCE / APPROVAL GATE: Director states the background was previously approved. The exact artwork has not been positively identified in GitHub assets, Guild Drive Website Working Assets, earlier project files, or accessible saved images. The line-drawn house backdrops were unauthorized and have been removed; this ivory fallback is NOT the approved background. Never label this scenery complete or publish it until the exact approved background is located, visually verified and integrated as a separate image layer under the fixed frames. -->
 </head>
 <body>
 <a class="sr-only" href="#scene-panel">Skip to the current scene</a>
