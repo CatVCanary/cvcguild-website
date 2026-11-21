@@ -103,6 +103,12 @@ html,body{background:#f9f6ed}
  .banner-title{background:#f8e9c9}
  .badge-preview,.instructions{display:none}
 }
+
+/* The frame assets are Director-locked. They are never reconstructed by tiling, cropping, or drawing extra rails. */
+.frame-mobile-parts{display:none!important}
+.frame-mobile-locked{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;object-fit:fill;z-index:8;filter:drop-shadow(0 3px 4px #21160c66)}
+.frame-desktop{object-fit:fill}
+@media(max-width:720px),(max-aspect-ratio:3/4){.frame-desktop{display:none!important}.frame-mobile-locked{display:block!important}}
 </style>
 
 <!-- SOURCE / APPROVAL GATE: Director states the background was previously approved. The exact artwork has not been positively identified in GitHub assets, Guild Drive Website Working Assets, earlier project files, or accessible saved images. The line-drawn house backdrops were unauthorized and have been removed; this ivory fallback is NOT the approved background. Never label this scenery complete or publish it until the exact approved background is located, visually verified and integrated as a separate image layer under the fixed frames. -->
@@ -133,8 +139,8 @@ html,body{background:#f9f6ed}
 </div>
 <div class="stage-props" aria-hidden="true"><div class="banner-title" id="banner-title">Enter the Pavilion</div></div>
 <nav class="stage-nav" aria-label="Change theatrical scene"><li><button class="nav-sign" data-index="0" aria-current="page">Home</button></li><li><button class="nav-sign" data-index="1">Games</button></li><li><button class="nav-sign" data-index="2">Guild</button></li><li><button class="nav-sign" data-index="3">Visit</button></li><li><button class="nav-sign" data-index="4">Support</button></li></nav>
-<img class="frame-desktop" src="assets/Q-approved-desktop-frame.png" alt="" aria-hidden="true" draggable="false">
-<div class="frame-mobile-parts" aria-hidden="true"><div class="top"></div><div class="rails"></div><div class="bottom"></div></div>
+<img class="frame-desktop" src="../Q-LOCKED/frames/desktop-web.png" alt="" aria-hidden="true" draggable="false">
+<img class="frame-mobile-locked" src="../Q-LOCKED/frames/mobile-original.png" alt="" aria-hidden="true" draggable="false">
 </main>
 <div class="badge-preview">QUILL · STAGING ONLY</div>
 <div class="instructions">Select a hanging sign to change scenes. Scroll scene text if needed.</div>

@@ -1,0 +1,27 @@
+{
+  "status": "DIRECTOR-LOCKED | DO NOT SUBSTITUTE",
+  "last_approved": "2026-11-20",
+  "desktop": {
+    "approved_master": "Q-LOCKED/frames/desktop-original.png",
+    "sha256": "39b9afee0359464f36e2bcc0608bdeaed97f42506880652586808e8122be5349",
+    "dimensions": "1536x1024",
+    "web_render_only": "Q-LOCKED/frames/desktop-web.png",
+    "web_sha256": "f38a4c76415ee1634ace54378a96a5e5da139760883f160a9b22ba134f3a7f62",
+    "note": "Web PNG differs only by transparency mask: no artwork is redrawn. The approved RGB source contains a printed checkered placeholder that is NOT true transparency."
+  },
+  "mobile": {
+    "approved_master": "Q-LOCKED/frames/mobile-original.png",
+    "sha256": "80f305a1cde9ec57340248cd5b9630c982bfd71ad97265c031516d278fc15121",
+    "dimensions": "941x1672",
+    "note": "Director-approved full-height frame. Never rebuild using three slices or repeated strips."
+  },
+  "canonical_google_drive_folder": "https://drive.google.com/drive/folders/1Z4zVytpecOkim0wR5ZOTpf34t_8r98_o",
+  "use_rules": [
+    "Use ONLY these master assets for desktop and mobile; do not choose from filenames, search hits, old branches or chat previews.",
+    "Do not redraw, change expressions, typography, tassels, daggs, side posts, table or props.",
+    "Frame remains fixed; only scene layers behind it move following explicit navigation.",
+    "Retired frame iterations are deleted from this branch's current tree, with an archival record in Guild Q Trash.",
+    "Do not publish or merge without Director approval."
+  ],
+  "scope": "Canonical frame identity only; does not assert an approved scene background was found."
+}
