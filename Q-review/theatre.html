@@ -2,220 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#32251d">
-<title>Cat v. Canary — Quill's private review theatre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Cat v. Canary | Pavilion Theatre — Director Review</title>
+<meta name="description" content="An unpublished visual review of Cat v. Canary's traveling historical game house.">
 <style>
-:root{--ink:#352519;--ruby:#921f20;--gold:#c39a38;--parchment:#ecd9b2;--light:#fff1cd;--duration:1400ms}
-*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{font:16px/1.45 Georgia,'Times New Roman',serif;background:#bb9f72;color:var(--ink);overflow:hidden}button{font:inherit}
-button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-offset:3px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.paper-world{position:fixed;inset:0;overflow:hidden;background:radial-gradient(ellipse at center,#f1e5cc 0,#d7be92 70%,#a18a67 100%);isolation:isolate}
-.paper-world:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 9px,#2b24130a 10px),repeating-linear-gradient(79deg,transparent 0 17px,#352d1908 19px);pointer-events:none;z-index:2}
-.panorama{position:absolute;inset:-12% -10%;background-size:cover;opacity:.44;will-change:transform}
-.panorama svg{width:100%;height:100%;display:block}.panorama.preparing{animation:world-reel 1.42s cubic-bezier(.7,.04,.23,1) both}
-@keyframes world-reel{0%{transform:translateX(0)}45%{transform:translateX(-13%)}100%{transform:translateX(-31%)}}
-.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 52% 45%,transparent 36%,#533c174d 100%)}
-/* This proportional stage preserves the unaltered desktop frame; no stretching of the figures. */
-.theatre{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(99.6vw,143vh);aspect-ratio:3 / 2;z-index:2;isolation:isolate;overflow:hidden}
-.frame-desktop{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8;object-fit:contain;filter:drop-shadow(0 3px 4px #21160c66)}
-.frame-mobile{display:none}
-.scenery-track{position:absolute;inset:0;z-index:0;overflow:hidden}
-.scene{position:absolute;inset:0;display:block;visibility:hidden;transform:translateX(110%);background:linear-gradient(170deg,#f0e0bd,#c7a97b);overflow:hidden;will-change:transform}
-.scene[id="scene-games" data-scene="games"]{background:linear-gradient(150deg,#ecdfbf,#d6bd92)}
-.scene[id="scene-guild" data-scene="guild"]{background:linear-gradient(160deg,#f4e7c9,#d0ae7d)}
-.scene[id="scene-visit" data-scene="visit"]{background:linear-gradient(160deg,#e5d1a5,#bdb087)}
-.scene[id="scene-support" data-scene="support"]{background:linear-gradient(160deg,#f2e5c5,#cdb181)}
-.scene.is-current{visibility:visible;transform:translateX(0)}.scene.is-entering{visibility:visible;animation:scene-in 1.3s cubic-bezier(.66,.04,.24,1) both}.scene.is-leaving{visibility:visible;animation:scene-out 1.3s cubic-bezier(.66,.04,.24,1) both}
-@keyframes scene-in{0%{transform:translateX(106%)}100%{transform:translateX(0)}}@keyframes scene-out{0%{transform:translateX(0)}100%{transform:translateX(-106%)}}
-.scene .engraving{position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply}.engraving svg{width:100%;height:100%}
-.scene:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background:repeating-linear-gradient(6deg,transparent 0 8px,#70563408 9px,#6149270a 10px)}
-.scene-panel{position:absolute;z-index:2;left:32%;width:36%;top:52%;height:26%;padding:0 6px;text-align:center;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#9c744b transparent}
-.scene-panel h1{font-variant:small-caps;font-size:clamp(20px,2.45vw,39px);line-height:1.06;letter-spacing:.015em;font-weight:normal;margin:0 0 .4em;color:#4a2920;text-shadow:0 1px #f9e8c4}
-.scene-panel p{font-size:clamp(12px,1.15vw,17px);line-height:1.35;margin:0 auto .55em;max-width:28em}
-.scene-panel small{font-style:italic;font-size:.86em;color:#5d4935}.scene-panel .accents{font-size:1.7em;letter-spacing:.27em;color:#9e2b22;line-height:1.2;margin:0 0 .35em}
-/* All action props are children of the fixed proscenium, NOT part of the frame artwork. */
-.stage-props{position:absolute;z-index:5;inset:0;pointer-events:none}
-.banner-title{position:absolute;top:39%;left:50%;transform:translate(-50%,0);padding:6px 19px;background:linear-gradient(#f6e1af,#d8b477);border:4px double #5a321c;box-shadow:0 6px 0 #65452128;text-align:center;white-space:nowrap;font-variant:small-caps;letter-spacing:.03em;font-size:clamp(16px,2.3vw,31px);color:#552a21;pointer-events:none}
-.banner-title:before,.banner-title:after{content:"";position:absolute;width:2px;height:135px;bottom:calc(100% + 3px);background:#57402b}
-.banner-title:before{left:15px}.banner-title:after{right:15px}
-.banner-title.withdraw{animation:prop-up 390ms cubic-bezier(.6,.02,.9,.52) both}.banner-title.arrive{animation:prop-in 820ms cubic-bezier(.22,1.25,.4,1) both}
-@keyframes prop-up{0%{transform:translate(-50%,0) rotate(0)}100%{transform:translate(-50%,-240%) rotate(6deg)}}
-@keyframes prop-in{0%{opacity:0;transform:translate(-50%,-210%) scale(.86) rotate(-9deg)}25%{opacity:1}56%{transform:translate(-50%,8%) scale(1.04) rotate(5deg)}72%{transform:translate(-50%,-7%) rotate(-4deg)}86%{transform:translate(-50%,3%) rotate(2deg)}100%{transform:translate(-50%,0) scale(1) rotate(0)}}
-.stage-nav{position:absolute;z-index:7;top:30.8%;left:50%;width:54%;transform:translateX(-50%);display:flex;justify-content:center;align-items:start;gap:5px;padding:0;margin:0;list-style:none}
-.stage-nav li{flex:1;min-width:0;transform-origin:top center;pointer-events:auto}
-.stage-nav li.exit{animation:nav-rise .37s ease-in both}.stage-nav li.enter{animation:nav-drop .86s cubic-bezier(.22,1.25,.43,1) both}
-.stage-nav li:nth-child(2){animation-delay:45ms}.stage-nav li:nth-child(3){animation-delay:90ms}.stage-nav li:nth-child(4){animation-delay:135ms}.stage-nav li:nth-child(5){animation-delay:180ms}
-@keyframes nav-rise{to{transform:translateY(-180%) rotate(7deg);opacity:0}}@keyframes nav-drop{0%{opacity:0;transform:translateY(-170%) rotate(-9deg) scale(.75)}25%{opacity:1}55%{transform:translateY(9%) rotate(5deg)}73%{transform:translateY(-8%) rotate(-4deg)}89%{transform:translateY(2%) rotate(1deg)}100%{transform:translateY(0) rotate(0) scale(1)}}
-.nav-sign{width:100%;min-height:38px;padding:6px 3px 5px;border:2px solid #57321e;box-shadow:1px 3px 0 #3b271f4b;background:#e8d2a2;color:#40271a;border-radius:2px 2px 7px 7px;font-variant:small-caps;font-size:clamp(12px,1.1vw,17px);font-weight:bold;cursor:pointer;line-height:1.1}
-.nav-sign:before{content:"";display:block;position:absolute;top:-12px;left:50%;height:11px;border-left:1px solid #654024}
-.nav-sign[aria-current="page"]{background:#a12c23;color:#fff3d7;border-color:#49301e}.nav-sign:hover{background:#c59e57}.nav-sign[aria-current="page"]:hover{background:#a12c23}
-/* A permanent stationary pavilion overlays everything. */
-.frame-mobile-parts{display:none}
-.badge-preview{position:fixed;right:12px;top:12px;z-index:12;background:#2c2018d9;color:#fff0cf;border:1px solid #b39965;padding:5px 10px;font:11px/1.1 system-ui,sans-serif;letter-spacing:.08em;border-radius:3px;pointer-events:none}
-.instructions{position:fixed;bottom:6px;right:10px;z-index:11;color:#3c2f1f;background:#eadabbc9;border:1px solid #b9a477;border-radius:3px;font-size:11px;padding:3px 6px;text-align:right}
+:root{--ink:#35281e;--red:#84201f;--gold:#ae7f28;--paper:#f7f0db;--bright:#fff9ec;--border:#61462b}
+*{box-sizing:border-box}
+html{min-height:100%;background:#e6d8b9}
+body{margin:0;min-height:100vh;color:var(--ink);font:16px/1.42 Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 51% 45%,#f4eddc 0%,#e2d3b2 78%,#bbaa83 100%)}
+body::before{position:fixed;inset:0;content:"";pointer-events:none;opacity:.13;background-image:repeating-linear-gradient(14deg,transparent 0 27px,#49381e 28px,transparent 29px),repeating-linear-gradient(100deg,transparent 0 43px,#7b5e34 44px,transparent 45px)}
+a{color:var(--red)}
+button,a{touch-action:manipulation}
+a:focus-visible{outline:3px solid #ad311f;outline-offset:3px}
+.skip{position:fixed;top:-100px;left:1rem;padding:.6rem 1rem;z-index:70;background:white}.skip:focus{top:1rem}
+.review-label{position:fixed;top:10px;right:10px;z-index:50;padding:6px 9px;border:1px solid #7b6240;background:#fff8e9e8;color:#43301f;border-radius:3px;font:600 10px/1.25 system-ui,sans-serif;letter-spacing:.045em}
+.viewport{width:100%;min-height:100svh;display:grid;place-items:center;padding:22px 0 16px;position:relative}
+.theatre{position:relative;width:min(99.4vw,143vh);aspect-ratio:1536/1024;isolation:isolate;overflow:hidden;flex:none;filter:drop-shadow(0 10px 9px #3e2c203b)}
+.paper{position:absolute;inset:0;background:radial-gradient(ellipse at 52% 51%,#fff9ec 0%,#f4e8ce 65%,#dbc49e 100%);z-index:0}
+.paper:before{position:absolute;inset:0;content:"";opacity:.2;background:repeating-linear-gradient(100deg,transparent 0 24px,#7357330c 25px,transparent 26px)}
+.frame{position:absolute;inset:0;width:100%;height:100%;z-index:20;pointer-events:none;object-fit:contain}
+.frame.mobile{display:none}
+.nav{position:absolute;top:31.6%;left:31%;width:38%;z-index:23;display:flex;justify-content:center;align-items:stretch;gap:4px}
+.nav a{display:block;min-width:0;flex:1;padding:7px 0 6px;background:#f5e3b9;border:2px solid #6b3f2a;border-radius:2px 2px 8px 8px;color:#513225;text-align:center;text-decoration:none;font:700 clamp(10px,1.2vw,17px)/1.1 Georgia,serif;box-shadow:0 4px 1px #64422b2c;transform-origin:top center}
+.nav a:hover{background:#ffe8b3}.nav a[aria-current="page"]{background:var(--red);border-color:#54291e;color:#fff4d3}
+@keyframes swing{0%,100%{transform:rotate(-.7deg)}50%{transform:rotate(.7deg)}}
+.scene-surface{position:absolute;left:31.2%;top:41%;width:37.6%;height:39%;z-index:5;overflow:hidden}
+.scene{position:absolute;inset:0;display:none;text-align:center;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:4px 12px 12px;outline-offset:-3px}
+.scene[data-scene="home"]{display:block}
+body:has(.scene:target) .scene:not(:target){display:none}
+.scene:target{display:block;animation:reveal .52s ease both}
+@keyframes reveal{from{opacity:.45;transform:translateX(15%)}to{opacity:1;transform:translateX(0)}}
+.eyebrow{display:block;color:#87622b;font:600 clamp(10px,1.05vw,14px)/1.2 Georgia,serif;letter-spacing:.09em;text-transform:uppercase;margin:0 0 .55em}
+.scene h1{font-size:clamp(24px,2.75vw,39px);font-variant:small-caps;line-height:1.05;font-weight:normal;color:#54291f;margin:.1em 0 .35em}
+.scene p{font-size:clamp(13px,1.24vw,17px);line-height:1.4;margin:0 0 .6em}
+.scene .charm{color:#a02221;font-size:clamp(15px,1.6vw,23px);line-height:1;margin:0 0 .4em}
+.scene .note{font-size:clamp(11px,1vw,14px);font-style:italic;color:#654a35}
+.scene .readmore{display:inline-block;padding:5px 12px;border:1px solid #6b4c33;color:#4e251b;background:#f5e4b8;border-radius:3px;text-decoration:none;font-size:clamp(12px,1.13vw,15px);font-weight:bold}
+.scene .readmore:hover{background:#ffe7a7}.scene .game-list{font-size:clamp(12px,1.16vw,15px);line-height:1.55}
+.scene .small{font-size:clamp(11px,1.02vw,13px)}
+.brandnote{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);font:11px/1.4 system-ui,sans-serif;color:#615039;text-align:center;pointer-events:none}
 @media(max-width:720px),(max-aspect-ratio:3/4){
- body{min-height:100svh}.theatre{width:100%;height:100dvh;aspect-ratio:auto;top:0;left:0;transform:none}.frame-desktop{display:none}
- .frame-mobile-parts{display:block;position:absolute;inset:0;z-index:8;pointer-events:none;filter:drop-shadow(0 2px 3px #33231077)}
- /* Exact approved source artwork is cropped at the top and bottom: no rescaling of faces, no repeated frame rails. */
- .frame-mobile-parts{mix-blend-mode:multiply}
- .frame-mobile-parts .top{position:absolute;top:0;left:0;width:100%;height:calc(100vw * 550 / 1024 + 4px);background-image:url('assets/Q-approved-mobile-frame.png');background-position:top center;background-size:100% auto;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 10px),transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 10px),transparent 100%)}
- .frame-mobile-parts .rails{position:absolute;left:0;right:0;top:calc(100vw * 550 / 1024 - 10px);bottom:calc(100vw * 590 / 1024 - 10px);background-image:url('assets/Q-continuous-carved-rails.svg');background-position:center;background-size:100% 100%;background-repeat:no-repeat}
- .frame-mobile-parts .bottom{position:absolute;bottom:0;left:0;width:100%;height:calc(100vw * 590 / 1024 + 4px);background-image:url('assets/Q-approved-mobile-frame.png');background-position:bottom center;background-size:100% auto;background-repeat:no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 10px,#000 100%)}
- .scene-panel{top:43%;height:29%;left:19%;width:62%;padding:0 5px}.scene-panel h1{font-size:clamp(21px,5.8vw,29px);margin-bottom:9px}.scene-panel p{font-size:clamp(13px,3.6vw,17px);line-height:1.4}
- .banner-title{top:33%;padding:5px 12px;font-size:clamp(17px,5vw,25px)}.banner-title:before,.banner-title:after{height:80px}
- .stage-nav{top:24%;width:77%;gap:3px}.nav-sign{font-size:clamp(10px,2.5vw,13px);min-height:34px;padding:7px 1px 4px}
- .badge-preview{display:none}.instructions{display:none}
+ .viewport{min-height:100svh;padding:5px 0}
+ .theatre{width:min(100vw,calc(100svh * 941 / 1672));aspect-ratio:941/1672;filter:drop-shadow(0 5px 6px #3e2c204a)}
+ .frame.desktop{display:none}.frame.mobile{display:block}
+ .nav{top:23.3%;left:13.6%;width:72.8%;gap:2px}
+ .nav a{padding:7px 0 7px;font-size:clamp(9px,2.75vw,12px);border-width:1px;border-radius:2px 2px 5px 5px}
+ .scene-surface{left:16.6%;top:35.4%;width:66.8%;height:39.3%}
+ .scene{padding:3px 3px 8px}
+ .eyebrow{font-size:clamp(9px,2.5vw,12px);margin:0 0 .7em}
+ .scene h1{font-size:clamp(21px,5.3vw,28px);line-height:1.04;margin:.1em 0 .35em}
+ .scene p{font-size:clamp(12px,3.3vw,15px);line-height:1.37;margin-bottom:.6em}
+ .scene .charm{font-size:20px}.scene .note{font-size:clamp(10px,2.7vw,12px)}
+ .scene .readmore{font-size:clamp(11px,3vw,13px);padding:5px 8px}
+ .scene .game-list{font-size:clamp(11px,3vw,14px)}
+ .scene .small{font-size:11px}
+ .review-label{font-size:9px;max-width:155px}
+ .brandnote{font-size:9px;bottom:2px}
 }
-@media(max-width:350px){.scene-panel{top:46%;height:25%}.stage-nav{width:82%}.banner-title{top:36%}}
-@media(max-height:580px) and (min-width:721px){.scene-panel{top:50%;height:29%}.nav-sign{min-height:30px;font-size:11px}.banner-title{font-size:16px;padding:3px 8px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}.panorama{transform:none!important}.scene{transition:none!important}}
-
-/* Q REVISION 19 NOV — Removed invented backgrounds pending recovery of Director-approved original asset. Do NOT substitute new scenery; provisional ivory backdrop only. */
-html,body{background:#f9f6ed}
-.paper-world{background:#f8f6ed}
-.paper-world:before{opacity:.30}
-.panorama{opacity:.08}
-.vignette{background:radial-gradient(ellipse at center,transparent 42%,#3b2d1b1b 100%)}
-.scene,.scene[data-scene="games"],.scene[data-scene="guild"],.scene[data-scene="visit"],.scene[data-scene="support"]{
- background:#fdfbf6!important;
-}
-.scene .engraving{opacity:.34;mix-blend-mode:multiply}
-.scene:after{opacity:.13}
-.scene-panel h1{color:#32251c;text-shadow:0 2px 0 #fff9ed,0 0 14px #fffdf7}
-.scene-panel p{color:#2d2722;text-shadow:0 0 8px #fffefa,0 1px 0 #fff7}
-.scene-panel small{color:#5c4035;text-shadow:0 1px 0 #fff7}
-.banner-title{background:#f3e7cd;border-color:#483020;color:#532d21;box-shadow:0 4px 0 #21181332}
-.nav-sign{background:#f9edcd;color:#38251b;border-color:#5a3424}
-.nav-sign[aria-current="page"]{background:#902822;color:#ffefc8}
-@media(max-width:720px),(max-aspect-ratio:3/4){
- .frame-mobile-parts{mix-blend-mode:normal;filter:drop-shadow(0 2px 2px #3f2b1a55)}
- .frame-mobile-parts .top{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 22px),transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 22px),transparent 100%)}
- .frame-mobile-parts .bottom{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 22px,#000 100%)}
- .frame-mobile-parts .rails{top:calc(100vw * 550 / 1024 - 22px);bottom:calc(100vw * 590 / 1024 - 22px)}
- .scene,.scene[data-scene="games"],.scene[data-scene="guild"],.scene[data-scene="visit"],.scene[data-scene="support"]{
-  background:#fdfbf6!important;
- }
- .scene .engraving{opacity:.17}
- .scene-panel{top:43%;height:29%;}
- .scene-panel h1{color:#30221b;text-shadow:0 1px #fff,0 0 15px #fffefa}
- .scene-panel p{color:#30251c;text-shadow:0 0 11px #fffdf6,0 1px #fff}
- .banner-title{background:#f8e9c9}
- .badge-preview,.instructions{display:none}
-}
-
-/* The frame assets are Director-locked. They are never reconstructed by tiling, cropping, or drawing extra rails. */
-.frame-mobile-parts{display:none!important}
-.frame-mobile-locked{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;object-fit:fill;z-index:8;filter:drop-shadow(0 3px 4px #21160c66)}
-.frame-desktop{object-fit:fill}
-@media(max-width:720px),(max-aspect-ratio:3/4){.frame-desktop{display:none!important}.frame-mobile-locked{display:block!important}}
-
-/* Q REVIEW FIX 2026-11-23: preserve the locked artwork's full proportions on every phone,
-   instead of stretching the 941×1672 original to arbitrary tall displays. */
-@media (max-width:720px),(max-aspect-ratio:3/4) {
-  .theatre {
-    top:50%; left:50%; transform:translate(-50%,-50%);
-    width:min(100vw,calc(100dvh * 941 / 1672));
-    height:auto; max-height:100dvh; aspect-ratio:941 / 1672;
-    overflow:hidden;
-  }
-  .frame-mobile-locked {object-fit:contain}
-  .scene-panel {top:43%;height:29%;left:19%;width:62%}
-  .scene-panel .scene-link {font-size:12px}
-}
-.scene-panel .scene-link{display:inline-block;margin:.25rem auto .3rem;padding:.18rem .45rem;background:#fff6e2de;border:1px solid #805939;border-radius:2px;color:#53281f;font-size:clamp(11px,1.05vw,15px);font-weight:bold;text-decoration:underline;text-underline-offset:2px}
-.scene-panel .scene-link:hover,.scene-panel .scene-link:focus-visible{background:#e9d0a0;outline:2px solid #a22b24;outline-offset:1px}
-.scene-panel:focus-visible{outline:2px dashed #96501e;outline-offset:-2px}
-
-/* Native links keep the scene selector usable even when an external preview strips scripts. */
-.nav-sign{display:block;text-align:center;text-decoration:none}
-.nav-sign[aria-disabled="true"]{pointer-events:none;cursor:wait}
-.theatre:has(.scene:target) .scene.is-current:not(:target){visibility:hidden!important;pointer-events:none!important}
-.theatre .scene:target{visibility:visible!important;transform:translateX(0)!important;z-index:3;animation:none!important;pointer-events:auto}
+@media(max-width:360px){.nav{top:23.6%}.scene-surface{top:36%;height:38%}.scene h1{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
-
-<!-- SOURCE / APPROVAL GATE: Director states the background was previously approved. The exact artwork has not been positively identified in GitHub assets, Guild Drive Website Working Assets, earlier project files, or accessible saved images. The line-drawn house backdrops were unauthorized and have been removed; this ivory fallback is NOT the approved background. Never label this scenery complete or publish it until the exact approved background is located, visually verified and integrated as a separate image layer under the fixed frames. -->
 </head>
 <body>
-<a class="sr-only" href="#scene-panel">Skip to the current scene</a>
-<div class="paper-world" aria-hidden="true"><div class="panorama" id="panorama">
-</div><div class="vignette"></div></div>
-<main class="theatre" aria-label="Cat v. Canary illustrated theatre, staging review" id="theatre">
-<div class="scenery-track" id="scenery-track">
-<section class="scene is-current" id="scene-home" data-scene="home" aria-label="Home scene">
-<div class="scene-panel" id="scene-panel" tabindex="0"><h1>Come, play a while</h1><p>Step inside a traveling house of games older than kingdoms.</p><p>Curious travelers welcome. No experience required.</p><small>A little friendly rivalry is customary.</small><div><a class="scene-link" href="../about.html">Meet the Guild</a></div></div></section>
-<section class="scene" data-scene="games" aria-label="Games scene">
-<div class="scene-panel" tabindex="0"><div class="accents">⚄ ❖ ⚅</div><h1>Games older than kingdoms</h1><p>Senet · Royal Game of Ur · Duodecim Scripta · Xiangqi · Hnefatafl · Brandubh · Nine Men's Morris · Alquerque · Puluc · Liar’s Dice</p><small>We teach by playing, and explain which rules are reconstructed.</small><div><a class="scene-link" href="../programs.html">Explore the games</a></div></div></section>
-<section class="scene" data-scene="guild" aria-label="Guild scene">
-<div class="scene-panel" tabindex="0"><div class="accents">❦</div><h1>The traveling Guild</h1><p>A volunteer-led educational nonprofit bringing ancient games to life at Renaissance events.</p><p>Pull up a chair; there is room at the table.</p><small>Washington State · Cat v. Canary Foundation</small><div><a class="scene-link" href="../about.html">About the Foundation</a></div></div></section>
-<section class="scene" data-scene="visit" aria-label="Visit scene">
-<div class="scene-panel" tabindex="0"><div class="accents">✣</div><h1>Find us beneath the canvas</h1><p>Join us at Washington historical events, including the Washington Midsummer Renaissance Faire near Monroe.</p><small>Check the organizer's schedule for current appearances.</small><div><a class="scene-link" href="../contact.html">Contact the Guild</a></div></div></section>
-<section class="scene" data-scene="support" aria-label="Support scene">
-<div class="scene-panel" tabindex="0"><div class="accents">❖</div><h1>Keep the games alive</h1><p>Donations help care for historic game sets, our traveling pavilion, and free hands-on teaching.</p><small>The Foundation is a 501(c)(3) educational nonprofit.</small><div><a class="scene-link" href="../support.html">Donation options</a></div></div></section>
+<a href="#home" class="skip">Skip to the Guild's introduction</a>
+<div class="review-label">DIRECTOR REVIEW · NOT PUBLISHED</div>
+<main class="viewport"><div class="theatre" aria-label="Cat v. Canary pavilion theatre">
+<div class="paper" aria-hidden="true"></div>
+<div class="scene-surface" id="stage-content">
+ <section id="home" class="scene" data-scene="home" tabindex="-1"><span class="eyebrow">Welcome, curious traveler</span><div class="charm">✦ ❦ ✦</div><h1>Come, play a while</h1><p>Step inside a traveling house of games older than kingdoms.</p><p>Pull up a chair. No experience required.</p><p class="note">A little friendly rivalry is customary.</p><a href="#games" class="readmore">Explore the games</a></section>
+ <section id="games" class="scene" data-scene="games" tabindex="-1"><span class="eyebrow">The traveling chest</span><h1>Games old &amp; wondrous</h1><p class="game-list">Senet · Royal Game of Ur · Duodecim Scripta · Xiangqi · Puluc · Hnefatafl · Brandubh · Nine Men's Morris · Alquerque · Liar’s Dice</p><p class="note">We explain when surviving evidence leaves a game's rules uncertain.</p><a href="#guild" class="readmore">How we teach</a></section>
+ <section id="guild" class="scene" data-scene="guild" tabindex="-1"><span class="eyebrow">The people behind the play</span><h1>A guild for everyone</h1><p>Cat v. Canary Foundation is a volunteer-led Washington 501(c)(3) educational nonprofit.</p><p>We research, recreate, and teach historical games at public living-history events.</p><p class="note">No dues, no admission charge to visit our games, and no experience needed.</p><a href="mailto:cvcguild@gmail.com?subject=Hello%20Cat%20v.%20Canary" class="readmore">Write to the Guild</a></section>
+ <section id="visit" class="scene" data-scene="visit" tabindex="-1"><span class="eyebrow">A summons to the curious</span><h1>Find the pavilion</h1><p>Visit our traveling game house at Washington historical events, including the Washington Midsummer Renaissance Faire near Monroe.</p><p class="note">Confirm current dates and attendance with the event organizers.</p><a href="mailto:cvcguild@gmail.com?subject=Visiting%20the%20Guild" class="readmore">Ask about a visit</a></section>
+ <section id="support" class="scene" data-scene="support" tabindex="-1"><span class="eyebrow">Keep another chair at the table</span><h1>Support living history</h1><p>Help preserve ancient-game teaching, accessible seating, and our traveling pavilion.</p><p>Donations and in-kind support keep educational play free for guests.</p><a href="https://venmo.com/code?user_id=3312769638072320934" target="_blank" rel="noopener noreferrer" class="readmore">Donate with Venmo</a><p class="note small">Or email cvcguild@gmail.com for other ways to help.</p></section>
 </div>
-<div class="stage-props" aria-hidden="true"><div class="banner-title" id="banner-title">Enter the Pavilion</div></div>
-<nav class="stage-nav" aria-label="Change theatrical scene"><li><a class="nav-sign" href="#scene-home" data-index="0" aria-current="page">Home</a></li><li><a class="nav-sign" href="#scene-games" data-index="1">Games</a></li><li><a class="nav-sign" href="#scene-guild" data-index="2">Guild</a></li><li><a class="nav-sign" href="#scene-visit" data-index="3">Visit</a></li><li><a class="nav-sign" href="#scene-support" data-index="4">Support</a></li></nav>
-<img class="frame-desktop" src="../Q-LOCKED/frames/desktop-web.png" alt="" aria-hidden="true" draggable="false">
-<img class="frame-mobile-locked" src="../Q-LOCKED/frames/mobile-original.png" alt="" aria-hidden="true" draggable="false">
-</main>
-<div class="badge-preview">UNPUBLISHED REVIEW · SCENERY NOT YET APPROVED</div>
-<div class="instructions">Select a hanging sign to change scenes. Scroll scene text if needed.</div>
-<div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
+<nav class="nav" aria-label="Theatre scenes">
+ <a href="#home" data-nav="home" aria-current="page">Home</a><a href="#games" data-nav="games">Games</a><a href="#guild" data-nav="guild">Guild</a><a href="#visit" data-nav="visit">Visit</a><a href="#support" data-nav="support">Donate</a>
+</nav>
+<img class="frame desktop" src="../Q-LOCKED/frames/desktop-web.png" alt="" aria-hidden="true" draggable="false">
+<img class="frame mobile" src="../Q-LOCKED/frames/mobile-original.png" alt="" aria-hidden="true" draggable="false">
+</div></main>
+<div class="brandnote">An unpublished visual review. The approved pavilion art has not been altered.</div>
 <script>
-(()=>{
-'use strict';
-const sceneNodes=[...document.querySelectorAll('.scene')];
-const signs=[...document.querySelectorAll('.nav-sign')];
-const signWrappers=[...document.querySelectorAll('.stage-nav li')];
-const title=document.getElementById('banner-title');
-const panorama=document.getElementById('panorama');
-const announcer=document.getElementById('announcer');
-const titles=['Enter the Pavilion','The Gaming Tables','Our Traveling Guild','Find Our Pavilion','Keep the Games Alive'];
-const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
-let current=0,transitioning=false;
-const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-function setCurrent(i){
-  sceneNodes.forEach((scene,index)=>{
-    const active=index===i;
-    scene.classList.toggle('is-current',active);
-    scene.classList.remove('is-entering','is-leaving');
-    scene.toggleAttribute('inert',!active);
-    scene.setAttribute('aria-hidden',String(!active));
-  });
-  signs.forEach((button,index)=>{
-    if(index===i)button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current');
-  });
-  title.textContent=titles[i];announcer.textContent=titles[i]+' scene ready.';current=i;
-}
-async function change(next){
-  if(transitioning||next===current||next<0||next>=sceneNodes.length)return;
-  transitioning=true;const prior=current;
-  signs.forEach(s=>s.setAttribute('aria-disabled','true'));
-  if(motion.matches){setCurrent(next);signs.forEach(s=>s.removeAttribute('aria-disabled'));transitioning=false;return;}
-  title.classList.remove('arrive');title.classList.add('withdraw');
-  signWrappers.forEach(w=>{w.classList.remove('enter');w.classList.add('exit');});
-  await wait(400);
-  const departing=sceneNodes[prior],incoming=sceneNodes[next];
-  departing.classList.remove('is-current');departing.classList.add('is-leaving');
-  incoming.classList.add('is-entering');incoming.removeAttribute('inert');incoming.setAttribute('aria-hidden','false');
-  panorama.classList.add('preparing');
-  await wait(500);
-  title.textContent=titles[next];title.classList.remove('withdraw');void title.offsetWidth;title.classList.add('arrive');
-  signWrappers.forEach(w=>{w.classList.remove('exit');void w.offsetWidth;w.classList.add('enter');});
-  await wait(920);
-  panorama.classList.remove('preparing');
-  title.classList.remove('arrive');signWrappers.forEach(w=>w.classList.remove('enter'));
-  setCurrent(next);
-  signs.forEach(s=>s.removeAttribute('aria-disabled'));transitioning=false;
-}
-sceneNodes.forEach((s,i)=>{if(i!==0){s.setAttribute('aria-hidden','true');s.setAttribute('inert','');}});
-signs.forEach(link=>link.addEventListener('click',event=>{event.preventDefault();change(Number(link.dataset.index));}));
-window.addEventListener('hashchange',()=>{
-  const requested=sceneNodes.findIndex(scene=>('#'+scene.id)===location.hash);
-  if(requested>=0&&!transitioning)setCurrent(requested);
-});
-document.addEventListener('keydown',e=>{if(e.altKey&&e.key==='ArrowRight'){e.preventDefault();change((current+1)%sceneNodes.length);}else if(e.altKey&&e.key==='ArrowLeft'){e.preventDefault();change((current-1+sceneNodes.length)%sceneNodes.length);}});
-window.__guildTheatreTest={getCurrent:()=>current,isTransitioning:()=>transitioning,change};
+(()=>{const ids=new Set(['home','games','guild','visit','support']); const links=[...document.querySelectorAll('[data-nav]')];const pages=[...document.querySelectorAll('.scene')];
+ const update=()=>{const id=location.hash.slice(1);const valid=ids.has(id)?id:'home';links.forEach(a=>{if(a.dataset.nav===valid)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});if(!ids.has(id)&&location.hash){history.replaceState(null,'',location.pathname+location.search+'#home')}document.title='Cat v. Canary — '+(valid==='support'?'Donate':valid[0].toUpperCase()+valid.slice(1))+' — Director Review';};
+ window.addEventListener('hashchange',update);update();
+ document.addEventListener('keydown',e=>{if(e.altKey&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){e.preventDefault();let at=links.findIndex(a=>a.getAttribute('aria-current')==='page');at=(at+(e.key==='ArrowRight'?1:links.length-1))%links.length;location.hash=links[at].getAttribute('href')}});
 })();
 </script>
 </body></html>
