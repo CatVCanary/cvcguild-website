@@ -1,31 +1,31 @@
-# Q — WEBSITE REPAIR STATE (2026-11-23)
+# Cat v. Canary website repair — Director review status
 
-## Current review
-- Branch: `quill/theatre-private-review` (NOT merged or published).
-- Visual browser preview: https://htmlpreview.github.io/?https://github.com/CatVCanary/cvcguild-website/blob/quill/theatre-private-review/Q-review/theatre.html
-- Mobile QA preview: https://htmlpreview.github.io/?https://github.com/CatVCanary/cvcguild-website/blob/quill/theatre-private-review/Q-review/mobile-check.html
-- Review file: `Q-review/theatre.html`; mobile QA file: `Q-review/mobile-check.html`.
+**Date:** 2026-11-23
+**Status:** UNPUBLISHED director review, not a production launch.
 
-## Changes actually committed this session
-1. Preserved both unmodified Director-locked frames from `Q-LOCKED/frames/`; corrected mobile layout to preserve 941×1672 artwork proportions.
-2. Removed five unauthorized scene SVG drawings and one invented panorama drawing. Neutral ivory staging canvas remains temporary.
-3. Added direct information-page links inside each of the five theatre scene panels.
-4. Changed the five stage-navigation signs to actual hash links, with CSS `:target` fallback when a third-party HTML preview strips JavaScript. The JS-enhanced animated scene switch remains in place.
-5. Corrected the mobile QA text for the single, full-height approved image.
-6. Fixed a nonexistent `photos/8.jpg` link in unpublished `index.html` with existing `photos/26.jpg` (actual Guild game-playing photo inspected visually).
-7. Audited all 13 HTML pages on this branch: no unresolved relative href/src references after repair.
+## Completed and verified
+- Replaced the previous unreliable theatrical review page with a tested, responsive version at `Q-review/theatre.html`.
+- Approved frame assets remain untouched: `Q-LOCKED/frames/desktop-web.png` and `Q-LOCKED/frames/mobile-original.png`. Their SHA-256 values match `Q-LOCKED/frames/LOCKED_MANIFEST.json`.
+- Five working theatre scenes (Home, Games, Guild, Visit, Donate) with native anchor links, CSS-only navigation fallback, and enhanced transitions.
+- Removed the unauthorized scenery drawings; uses a neutral ivory interim stage. No invented alternative to the missing approved landscape scene.
+- Repaired the missing `photos/8.jpg` homepage image reference to the verified `photos/26.jpg`.
+- Repo-wide static check of 13 HTML files found no broken relative `href` or `src` references in this branch.
+- A locally created **self-contained HTML review** (including original locked PNGs) passed **12 browser tests**: viewport sizes 1440×900, 1024×768, 768×1024, 393×852, 375×812, and 320×700, each with JavaScript ON and OFF. Tests covered all five navigation scenes, image decoding, no horizontal overflow, no runtime errors.
+- Browser-generated desktop and phone preview screenshots were captured and supplied to the Director.
 
-## Hard rules
-- Use exact canonical assets from `Q-LOCKED/frames/LOCKED_MANIFEST.json`. Never redraw or swap either frame.
-- Do not substitute the unapproved scene background, use invented human artwork, or apply a generic redesign.
-- Do not merge to main, change deployment/DNS, publish to `cvcguild.com`, or resubmit Ad Grants without explicit approval.
-- Preserve the approved Guild banner and source art.
+## Review access
+- Source page: https://github.com/CatVCanary/cvcguild-website/blob/quill/theatre-private-review/Q-review/theatre.html
+- **Do not use `htmlpreview.github.io` as the only preview route.** Its link produced an empty page for the Director. A fully self-contained local review file with inlined images was created and tested instead.
+- A short-name branch `quill-director-review` was also created for browsing the source without affecting `main`. It is a snapshot, not auto-synchronized with later review branch updates.
 
-## Verified vs unverified
-- Verified: GitHub commits applied to review branch; target asset files exist; initial third-party preview loaded rendered HTML rather than showing GitHub code.
-- Unverified: full 393×852 mobile visual QA after latest changes, final interactive menu check after CSS-only fallback, complete cross-browser accessibility and form testing.
-- Outstanding: exact approved scene-background asset still not positively identified; fallback must not be represented as final approval.
-- Broader theatrical scene system for all page content and finished launch-level QA remains unfinished. Do not state site is launch-ready.
+## Unresolved / must not falsely report complete
+1. Exact approved parchment-and-landscape scenery artwork remains unidentified; only the design direction is established, not a verified exact file. Do not fabricate a replacement.
+2. Production launch/merge, cvcguild.com DNS, GitHub Pages configuration, and Google Ad Grants resubmission require explicit Director approval and remain unchanged.
+3. Existing privacy, programs, and gallery pages still need end-to-end human publication-permission and content review before launch.
+4. A visual preview and code QA are not substitutes for review of approved artwork and final site publication readiness.
 
-## User-facing next step
-Use the visual preview link above, not the GitHub code page. Keep working from this branch until design, behavior, and mobile review are approved.
+## Locked instructions
+- Never redraw or replace the approved pavilion frames, banner, or Guild identity.
+- Kingthings treatment of approved banner is image-owned and never to be retypeset.
+- No AI-generated human illustrations; no dominant tree or foreground grass.
+- Do not merge/publish anything until the Director explicitly approves.
