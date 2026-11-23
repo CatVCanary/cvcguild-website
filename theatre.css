@@ -97,3 +97,99 @@ body.home .scene-message p{
   body.home .scene-message h1{font-size:16px}
   .pavilion-link{top:10%;height:25%}
 }
+
+/* Use the locked, vertically composed Guild art on phones. It is not
+   cropped from the desktop illustration, redrawn, or distorted. */
+body.home .pavilion-art{display:block;position:relative;z-index:1;width:100%}
+body.home .pavilion-art .pavilion-frame{display:block;width:100%;height:auto}
+.pavilion-label{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+}
+@media(max-width:700px){
+  body.home .scene{
+    min-height:0;
+    background:radial-gradient(ellipse at center,#f7e9c8 0%,#e6d4aa 77%,#d5bb8b 100%);
+  }
+  body.home .scene-message{
+    top:34%;
+    left:17%;
+    right:17%;
+    max-height:none;
+    transform:translateY(-50%);
+  }
+  body.home .scene-message .welcome{
+    display:block;
+    font-size:clamp(13px,3.6vw,17px);
+    line-height:1.12;
+    margin-bottom:6px;
+  }
+  body.home .scene-message h1{
+    font-size:clamp(21px,6vw,31px);
+    line-height:1.04;
+  }
+  body.home .scene-message p{
+    display:block;
+    font-size:clamp(12px,3.3vw,16px);
+    line-height:1.17;
+    margin:7px auto 0;
+  }
+  body.home .pavilion-nav{
+    position:absolute;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    top:46%;
+    bottom:auto;
+    left:17%;
+    right:17%;
+    width:auto;
+    height:auto;
+    padding:0;
+    margin:0;
+    pointer-events:auto;
+  }
+  body.home .pavilion-nav .pavilion-link{
+    position:relative;
+    top:auto;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    width:100%;
+    height:auto;
+    min-height:62px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px 5px 16px;
+    border:1px solid #73522f;
+    border-radius:0;
+    clip-path:polygon(0 0,100% 0,100% 84%,50% 100%,0 84%);
+    background:linear-gradient(90deg,#d6bd8e 0%,#fff0c9 14%,#f2dfb5 82%,#caae79 100%);
+    color:#672934;
+    text-align:center;
+    text-decoration:none;
+    font:700 clamp(15px,4vw,19px)/1.03 'Cormorant Unicase',Georgia,serif;
+    text-shadow:0 1px #fff5d9;
+    box-shadow:none;
+    transform:none;
+  }
+  body.home .pavilion-nav .pavilion-link:hover,
+  body.home .pavilion-nav .pavilion-link:focus-visible{
+    background:#fff1ce;
+    outline:2px solid #89293a;
+    outline-offset:2px;
+  }
+  body.home .pavilion-label{
+    position:static;
+    width:auto;
+    height:auto;
+    overflow:visible;
+    clip:auto;
+    white-space:normal;
+  }
+}
