@@ -109,6 +109,23 @@ html,body{background:#f9f6ed}
 .frame-mobile-locked{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;object-fit:fill;z-index:8;filter:drop-shadow(0 3px 4px #21160c66)}
 .frame-desktop{object-fit:fill}
 @media(max-width:720px),(max-aspect-ratio:3/4){.frame-desktop{display:none!important}.frame-mobile-locked{display:block!important}}
+
+/* Q REVIEW FIX 2026-11-23: preserve the locked artwork's full proportions on every phone,
+   instead of stretching the 941×1672 original to arbitrary tall displays. */
+@media (max-width:720px),(max-aspect-ratio:3/4) {
+  .theatre {
+    top:50%; left:50%; transform:translate(-50%,-50%);
+    width:min(100vw,calc(100dvh * 941 / 1672));
+    height:auto; max-height:100dvh; aspect-ratio:941 / 1672;
+    overflow:hidden;
+  }
+  .frame-mobile-locked {object-fit:contain}
+  .scene-panel {top:43%;height:29%;left:19%;width:62%}
+  .scene-panel .scene-link {font-size:12px}
+}
+.scene-panel .scene-link{display:inline-block;margin:.25rem auto .3rem;padding:.18rem .45rem;background:#fff6e2de;border:1px solid #805939;border-radius:2px;color:#53281f;font-size:clamp(11px,1.05vw,15px);font-weight:bold;text-decoration:underline;text-underline-offset:2px}
+.scene-panel .scene-link:hover,.scene-panel .scene-link:focus-visible{background:#e9d0a0;outline:2px solid #a22b24;outline-offset:1px}
+.scene-panel:focus-visible{outline:2px dashed #96501e;outline-offset:-2px}
 </style>
 
 <!-- SOURCE / APPROVAL GATE: Director states the background was previously approved. The exact artwork has not been positively identified in GitHub assets, Guild Drive Website Working Assets, earlier project files, or accessible saved images. The line-drawn house backdrops were unauthorized and have been removed; this ivory fallback is NOT the approved background. Never label this scenery complete or publish it until the exact approved background is located, visually verified and integrated as a separate image layer under the fixed frames. -->
@@ -116,33 +133,26 @@ html,body{background:#f9f6ed}
 <body>
 <a class="sr-only" href="#scene-panel">Skip to the current scene</a>
 <div class="paper-world" aria-hidden="true"><div class="panorama" id="panorama">
-<svg viewBox="0 0 1700 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-<g stroke="#5b4833" stroke-width="3.5" stroke-linejoin="round" fill="none" opacity=".38">
-<path d="M0 720 Q300 520 560 720T1100 700T1700 650 M0 770 Q330 600 660 760T1350 680T1700 780"/>
-<path d="M30 700V400l105-95 105 95v300m-189-265h170M60 500h142m-122 0v196m83-196v196M83 404l38 43 38-43M850 690V350l155-92 164 92v340M880 392h260m-250 40h245m-206 0v253m155-253v253M932 350l76 42 76-42"/>
-<path d="M1350 720V450l95-83 120 83v270m-177-228h155m-135 0v210m78-210v210 M310 675v-260l84-62 91 62v260m-154-215h133m-113 0v180m74-180v180"/>
-</g><g fill="#8d7050" opacity=".1"><circle cx="245" cy="168" r="145"/><circle cx="1500" cy="110" r="110"/></g>
-</svg></div><div class="vignette"></div></div>
+</div><div class="vignette"></div></div>
 <main class="theatre" aria-label="Cat v. Canary illustrated theatre, staging review" id="theatre">
 <div class="scenery-track" id="scenery-track">
-<section class="scene is-current" data-scene="home" aria-label="Home scene"><div class="engraving" aria-hidden="true">
-<svg viewBox="0 0 1500 1000" preserveAspectRatio="xMidYMid slice"><g stroke="#66513b" stroke-width="2" fill="none" opacity=".8"><path d="M0 780 Q230 600 500 820T1100 780T1500 730M0 860Q280 670 550 890T1200 850"/><path d="M80 690V385l115-93 125 93v305m-220-265h200M119 520h162M146 425l49 55 49-55M1160 680V360l100-92 135 92v320m-206-278h178M1230 402v258m66-258v258"/><path d="M350 850l110-235 105 235M1010 850l90-270 110 270"/></g></svg></div>
-<div class="scene-panel" id="scene-panel" tabindex="0"><h1>Come, play a while</h1><p>Step inside a traveling house of games older than kingdoms.</p><p>Curious travelers welcome. No experience required.</p><small>A little friendly rivalry is customary.</small></div></section>
-<section class="scene" data-scene="games" aria-label="Games scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#6b513c" stroke-width="3"><path d="M-30 820 Q220 750 500 820T1100 820T1530 770 M30 350h260v350H30z M40 370l240 310M280 370L40 680M40 510h240M160 370v310M1250 340h220v365h-220z M1265 350l190 340M1455 350l-190 340M1265 530h190M1360 350v340"/><circle cx="150" cy="425" r="14"/><circle cx="1360" cy="470" r="16"/><path d="M600 915l50-85h200l50 85 M650 830h200"/></g></svg></div>
-<div class="scene-panel" tabindex="0"><div class="accents">⚄ ❖ ⚅</div><h1>Games older than kingdoms</h1><p>Senet · Royal Game of Ur · Duodecim Scripta · Xiangqi · Hnefatafl · Brandubh · Nine Men's Morris · Alquerque · Puluc · Liar’s Dice</p><small>We teach by playing, and explain which rules are reconstructed.</small></div></section>
-<section class="scene" data-scene="guild" aria-label="Guild scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#574532" stroke-width="3"><path d="M0 680L300 370L650 680M810 680l320-310 380 310M100 660V370l200-90 250 90v290 M125 420h408M160 425v225m100-225v225m100-225v225m100-225v225M910 680V340l230-96 228 96v340m-420-320h390m-345 0v285m160-285v285"/><path d="M-30 830Q320 715 650 835T1510 790"/></g></svg></div>
-<div class="scene-panel" tabindex="0"><div class="accents">❦</div><h1>The traveling Guild</h1><p>A volunteer-led educational nonprofit bringing ancient games to life at Renaissance events.</p><p>Pull up a chair; there is room at the table.</p><small>Washington State · Cat v. Canary Foundation</small></div></section>
-<section class="scene" data-scene="visit" aria-label="Visit scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#634b35" stroke-width="3"><path d="M0 825Q280 790 560 840T1130 815T1500 790 M-10 570l170-140 190 140 145-150 190 150 175-130 185 130 170-165 215 165"/><path d="M130 750l150-250 150 250M260 750l130-180 125 180M1030 780l170-260 160 260"/><path d="M120 320q70-60 150 0m780-70q60-40 160 0"/></g></svg></div>
-<div class="scene-panel" tabindex="0"><div class="accents">✣</div><h1>Find us beneath the canvas</h1><p>Join us at Washington historical events, including the Washington Midsummer Renaissance Faire near Monroe.</p><small>Check the organizer's schedule for current appearances.</small></div></section>
-<section class="scene" data-scene="support" aria-label="Support scene" inert><div class="engraving" aria-hidden="true"><svg viewBox="0 0 1500 1000"><g fill="none" stroke="#685039" stroke-width="3"><path d="M-20 800Q230 690 440 810T860 800T1520 780"/><path d="M190 820V350h180v470 M210 380h140M235 380v420m90-420v420 M1240 820V330h190v490 M1260 360h145 M1290 360v450m90-450v450"/><path d="M200 340c0-110 165-110 165 0m880-15c0-110 180-110 180 0M235 465h100v130H235zm1020-22h100v150h-100z"/></g></svg></div>
-<div class="scene-panel" tabindex="0"><div class="accents">❖</div><h1>Keep the games alive</h1><p>Donations help care for historic game sets, our traveling pavilion, and free hands-on teaching.</p><small>The Foundation is a 501(c)(3) educational nonprofit.</small></div></section>
+<section class="scene is-current" data-scene="home" aria-label="Home scene">
+<div class="scene-panel" id="scene-panel" tabindex="0"><h1>Come, play a while</h1><p>Step inside a traveling house of games older than kingdoms.</p><p>Curious travelers welcome. No experience required.</p><small>A little friendly rivalry is customary.</small><div><a class="scene-link" href="../about.html">Meet the Guild</a></div></div></section>
+<section class="scene" data-scene="games" aria-label="Games scene" inert>
+<div class="scene-panel" tabindex="0"><div class="accents">⚄ ❖ ⚅</div><h1>Games older than kingdoms</h1><p>Senet · Royal Game of Ur · Duodecim Scripta · Xiangqi · Hnefatafl · Brandubh · Nine Men's Morris · Alquerque · Puluc · Liar’s Dice</p><small>We teach by playing, and explain which rules are reconstructed.</small><div><a class="scene-link" href="../programs.html">Explore the games</a></div></div></section>
+<section class="scene" data-scene="guild" aria-label="Guild scene" inert>
+<div class="scene-panel" tabindex="0"><div class="accents">❦</div><h1>The traveling Guild</h1><p>A volunteer-led educational nonprofit bringing ancient games to life at Renaissance events.</p><p>Pull up a chair; there is room at the table.</p><small>Washington State · Cat v. Canary Foundation</small><div><a class="scene-link" href="../about.html">About the Foundation</a></div></div></section>
+<section class="scene" data-scene="visit" aria-label="Visit scene" inert>
+<div class="scene-panel" tabindex="0"><div class="accents">✣</div><h1>Find us beneath the canvas</h1><p>Join us at Washington historical events, including the Washington Midsummer Renaissance Faire near Monroe.</p><small>Check the organizer's schedule for current appearances.</small><div><a class="scene-link" href="../contact.html">Contact the Guild</a></div></div></section>
+<section class="scene" data-scene="support" aria-label="Support scene" inert>
+<div class="scene-panel" tabindex="0"><div class="accents">❖</div><h1>Keep the games alive</h1><p>Donations help care for historic game sets, our traveling pavilion, and free hands-on teaching.</p><small>The Foundation is a 501(c)(3) educational nonprofit.</small><div><a class="scene-link" href="../support.html">Donation options</a></div></div></section>
 </div>
 <div class="stage-props" aria-hidden="true"><div class="banner-title" id="banner-title">Enter the Pavilion</div></div>
 <nav class="stage-nav" aria-label="Change theatrical scene"><li><button class="nav-sign" data-index="0" aria-current="page">Home</button></li><li><button class="nav-sign" data-index="1">Games</button></li><li><button class="nav-sign" data-index="2">Guild</button></li><li><button class="nav-sign" data-index="3">Visit</button></li><li><button class="nav-sign" data-index="4">Support</button></li></nav>
 <img class="frame-desktop" src="../Q-LOCKED/frames/desktop-web.png" alt="" aria-hidden="true" draggable="false">
 <img class="frame-mobile-locked" src="../Q-LOCKED/frames/mobile-original.png" alt="" aria-hidden="true" draggable="false">
 </main>
-<div class="badge-preview">QUILL · STAGING ONLY</div>
+<div class="badge-preview">UNPUBLISHED REVIEW · SCENERY NOT YET APPROVED</div>
 <div class="instructions">Select a hanging sign to change scenes. Scroll scene text if needed.</div>
 <div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
 <script>
