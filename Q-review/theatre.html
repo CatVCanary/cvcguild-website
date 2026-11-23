@@ -22,10 +22,10 @@ button:focus-visible,.read-more:focus-visible{outline:3px solid #f1b950;outline-
 .frame-mobile{display:none}
 .scenery-track{position:absolute;inset:0;z-index:0;overflow:hidden}
 .scene{position:absolute;inset:0;display:block;visibility:hidden;transform:translateX(110%);background:linear-gradient(170deg,#f0e0bd,#c7a97b);overflow:hidden;will-change:transform}
-.scene[data-scene="games"]{background:linear-gradient(150deg,#ecdfbf,#d6bd92)}
-.scene[data-scene="guild"]{background:linear-gradient(160deg,#f4e7c9,#d0ae7d)}
-.scene[data-scene="visit"]{background:linear-gradient(160deg,#e5d1a5,#bdb087)}
-.scene[data-scene="support"]{background:linear-gradient(160deg,#f2e5c5,#cdb181)}
+.scene[id="scene-games" data-scene="games"]{background:linear-gradient(150deg,#ecdfbf,#d6bd92)}
+.scene[id="scene-guild" data-scene="guild"]{background:linear-gradient(160deg,#f4e7c9,#d0ae7d)}
+.scene[id="scene-visit" data-scene="visit"]{background:linear-gradient(160deg,#e5d1a5,#bdb087)}
+.scene[id="scene-support" data-scene="support"]{background:linear-gradient(160deg,#f2e5c5,#cdb181)}
 .scene.is-current{visibility:visible;transform:translateX(0)}.scene.is-entering{visibility:visible;animation:scene-in 1.3s cubic-bezier(.66,.04,.24,1) both}.scene.is-leaving{visibility:visible;animation:scene-out 1.3s cubic-bezier(.66,.04,.24,1) both}
 @keyframes scene-in{0%{transform:translateX(106%)}100%{transform:translateX(0)}}@keyframes scene-out{0%{transform:translateX(0)}100%{transform:translateX(-106%)}}
 .scene .engraving{position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply}.engraving svg{width:100%;height:100%}
@@ -126,6 +126,12 @@ html,body{background:#f9f6ed}
 .scene-panel .scene-link{display:inline-block;margin:.25rem auto .3rem;padding:.18rem .45rem;background:#fff6e2de;border:1px solid #805939;border-radius:2px;color:#53281f;font-size:clamp(11px,1.05vw,15px);font-weight:bold;text-decoration:underline;text-underline-offset:2px}
 .scene-panel .scene-link:hover,.scene-panel .scene-link:focus-visible{background:#e9d0a0;outline:2px solid #a22b24;outline-offset:1px}
 .scene-panel:focus-visible{outline:2px dashed #96501e;outline-offset:-2px}
+
+/* Native links keep the scene selector usable even when an external preview strips scripts. */
+.nav-sign{display:block;text-align:center;text-decoration:none}
+.nav-sign[aria-disabled="true"]{pointer-events:none;cursor:wait}
+.theatre:has(.scene:target) .scene.is-current:not(:target){visibility:hidden!important;pointer-events:none!important}
+.theatre .scene:target{visibility:visible!important;transform:translateX(0)!important;z-index:3;animation:none!important;pointer-events:auto}
 </style>
 
 <!-- SOURCE / APPROVAL GATE: Director states the background was previously approved. The exact artwork has not been positively identified in GitHub assets, Guild Drive Website Working Assets, earlier project files, or accessible saved images. The line-drawn house backdrops were unauthorized and have been removed; this ivory fallback is NOT the approved background. Never label this scenery complete or publish it until the exact approved background is located, visually verified and integrated as a separate image layer under the fixed frames. -->
@@ -136,19 +142,19 @@ html,body{background:#f9f6ed}
 </div><div class="vignette"></div></div>
 <main class="theatre" aria-label="Cat v. Canary illustrated theatre, staging review" id="theatre">
 <div class="scenery-track" id="scenery-track">
-<section class="scene is-current" data-scene="home" aria-label="Home scene">
+<section class="scene is-current" id="scene-home" data-scene="home" aria-label="Home scene">
 <div class="scene-panel" id="scene-panel" tabindex="0"><h1>Come, play a while</h1><p>Step inside a traveling house of games older than kingdoms.</p><p>Curious travelers welcome. No experience required.</p><small>A little friendly rivalry is customary.</small><div><a class="scene-link" href="../about.html">Meet the Guild</a></div></div></section>
-<section class="scene" data-scene="games" aria-label="Games scene" inert>
+<section class="scene" data-scene="games" aria-label="Games scene">
 <div class="scene-panel" tabindex="0"><div class="accents">⚄ ❖ ⚅</div><h1>Games older than kingdoms</h1><p>Senet · Royal Game of Ur · Duodecim Scripta · Xiangqi · Hnefatafl · Brandubh · Nine Men's Morris · Alquerque · Puluc · Liar’s Dice</p><small>We teach by playing, and explain which rules are reconstructed.</small><div><a class="scene-link" href="../programs.html">Explore the games</a></div></div></section>
-<section class="scene" data-scene="guild" aria-label="Guild scene" inert>
+<section class="scene" data-scene="guild" aria-label="Guild scene">
 <div class="scene-panel" tabindex="0"><div class="accents">❦</div><h1>The traveling Guild</h1><p>A volunteer-led educational nonprofit bringing ancient games to life at Renaissance events.</p><p>Pull up a chair; there is room at the table.</p><small>Washington State · Cat v. Canary Foundation</small><div><a class="scene-link" href="../about.html">About the Foundation</a></div></div></section>
-<section class="scene" data-scene="visit" aria-label="Visit scene" inert>
+<section class="scene" data-scene="visit" aria-label="Visit scene">
 <div class="scene-panel" tabindex="0"><div class="accents">✣</div><h1>Find us beneath the canvas</h1><p>Join us at Washington historical events, including the Washington Midsummer Renaissance Faire near Monroe.</p><small>Check the organizer's schedule for current appearances.</small><div><a class="scene-link" href="../contact.html">Contact the Guild</a></div></div></section>
-<section class="scene" data-scene="support" aria-label="Support scene" inert>
+<section class="scene" data-scene="support" aria-label="Support scene">
 <div class="scene-panel" tabindex="0"><div class="accents">❖</div><h1>Keep the games alive</h1><p>Donations help care for historic game sets, our traveling pavilion, and free hands-on teaching.</p><small>The Foundation is a 501(c)(3) educational nonprofit.</small><div><a class="scene-link" href="../support.html">Donation options</a></div></div></section>
 </div>
 <div class="stage-props" aria-hidden="true"><div class="banner-title" id="banner-title">Enter the Pavilion</div></div>
-<nav class="stage-nav" aria-label="Change theatrical scene"><li><button class="nav-sign" data-index="0" aria-current="page">Home</button></li><li><button class="nav-sign" data-index="1">Games</button></li><li><button class="nav-sign" data-index="2">Guild</button></li><li><button class="nav-sign" data-index="3">Visit</button></li><li><button class="nav-sign" data-index="4">Support</button></li></nav>
+<nav class="stage-nav" aria-label="Change theatrical scene"><li><a class="nav-sign" href="#scene-home" data-index="0" aria-current="page">Home</a></li><li><a class="nav-sign" href="#scene-games" data-index="1">Games</a></li><li><a class="nav-sign" href="#scene-guild" data-index="2">Guild</a></li><li><a class="nav-sign" href="#scene-visit" data-index="3">Visit</a></li><li><a class="nav-sign" href="#scene-support" data-index="4">Support</a></li></nav>
 <img class="frame-desktop" src="../Q-LOCKED/frames/desktop-web.png" alt="" aria-hidden="true" draggable="false">
 <img class="frame-mobile-locked" src="../Q-LOCKED/frames/mobile-original.png" alt="" aria-hidden="true" draggable="false">
 </main>
@@ -184,8 +190,8 @@ function setCurrent(i){
 async function change(next){
   if(transitioning||next===current||next<0||next>=sceneNodes.length)return;
   transitioning=true;const prior=current;
-  signs.forEach(s=>s.disabled=true);
-  if(motion.matches){setCurrent(next);signs.forEach(s=>s.disabled=false);transitioning=false;return;}
+  signs.forEach(s=>s.setAttribute('aria-disabled','true'));
+  if(motion.matches){setCurrent(next);signs.forEach(s=>s.removeAttribute('aria-disabled'));transitioning=false;return;}
   title.classList.remove('arrive');title.classList.add('withdraw');
   signWrappers.forEach(w=>{w.classList.remove('enter');w.classList.add('exit');});
   await wait(400);
@@ -200,10 +206,14 @@ async function change(next){
   panorama.classList.remove('preparing');
   title.classList.remove('arrive');signWrappers.forEach(w=>w.classList.remove('enter'));
   setCurrent(next);
-  signs.forEach(s=>s.disabled=false);transitioning=false;
+  signs.forEach(s=>s.removeAttribute('aria-disabled'));transitioning=false;
 }
 sceneNodes.forEach((s,i)=>{if(i!==0){s.setAttribute('aria-hidden','true');s.setAttribute('inert','');}});
-signs.forEach(button=>button.addEventListener('click',()=>change(Number(button.dataset.index))));
+signs.forEach(link=>link.addEventListener('click',event=>{event.preventDefault();change(Number(link.dataset.index));}));
+window.addEventListener('hashchange',()=>{
+  const requested=sceneNodes.findIndex(scene=>('#'+scene.id)===location.hash);
+  if(requested>=0&&!transitioning)setCurrent(requested);
+});
 document.addEventListener('keydown',e=>{if(e.altKey&&e.key==='ArrowRight'){e.preventDefault();change((current+1)%sceneNodes.length);}else if(e.altKey&&e.key==='ArrowLeft'){e.preventDefault();change((current-1+sceneNodes.length)%sceneNodes.length);}});
 window.__guildTheatreTest={getCurrent:()=>current,isTransitioning:()=>transitioning,change};
 })();
