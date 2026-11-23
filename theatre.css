@@ -1,3 +1,345 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Unicase:wght@500;700&family=UnifrakturCook:wght@700&family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 :root{--ink:#32291e;--red:#8c2638;--gold:#b48a2c;--parchment:#edddb6;--paper:#f7ebce}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gradient(ellipse at 10% 15%,#fff4d6a6,transparent 48%),radial-gradient(ellipse at 90% 65%,#c7ae7b44,transparent 48%),repeating-linear-gradient(105deg,#0000 0 22px,#725e2d0b 23px 24px),linear-gradient(115deg,#d6c297,#f0e2bf 24%,#e3d0a5 68%,#f1e2bb);color:var(--ink);font:19px/1.55 'IM Fell English',Georgia,serif}a{color:#772838}a:focus-visible,button:focus-visible{outline:3px solid #a82d42;outline-offset:3px}img{max-width:100%;height:auto}h1,h2,h3{font-family:'Cormorant Unicase',Georgia,serif;line-height:1.08}h1{font-size:clamp(2.1rem,7vw,5rem)}h2{font-size:clamp(1.8rem,4.5vw,3.6rem)}p{margin:0 0 1.1em}.skip{position:absolute;left:-100vw}.skip:focus{left:12px;top:12px;z-index:100;background:#fff;padding:10px}.site-shell{max-width:1450px;margin:auto;position:relative}.scene{position:relative;min-height:min(70vw,850px);margin:auto;background:radial-gradient(ellipse at 55% 40%,#e9dcbd 0%,#c6b88f 62%,#9c9a7c 100%);overflow:hidden}.scene:before{content:'❧';position:absolute;top:7%;left:10%;font:clamp(90px,16vw,230px) Georgia;color:#5d604523;transform:rotate(-22deg)}.scene:after{content:'❧';position:absolute;bottom:4%;right:8%;font:clamp(100px,17vw,240px) Georgia;color:#5d604523;transform:rotate(120deg)}.pavilion-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:3;pointer-events:none}.scene-message{position:absolute;z-index:2;left:25%;right:25%;top:30%;text-align:center}.scene-message .welcome{font:italic clamp(15px,2.1vw,30px) 'IM Fell English',serif;color:#654b2c}.scene-message h1{font:700 clamp(23px,4.1vw,62px)/1 'Cormorant Unicase',serif;color:#5d302b;text-shadow:1px 1px #f4e6bf}.scene-message p{font-size:clamp(12px,1.5vw,22px)}.scene-nav{position:relative;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding:5px 15px 20px;margin-top:-2%;}.scene-nav a,.paper-tab{display:inline-block;min-height:44px;padding:9px 16px;color:#4d251f;text-decoration:none;background:linear-gradient(90deg,#ddc18a,#f7e8c2 20%,#ead3a0 82%,#c6a46d);border:1px solid #8c683b;box-shadow:3px 4px 0 #7d674e55;font:700 20px 'Cormorant Unicase',serif;transform:rotate(-1.5deg)}.scene-nav a:nth-child(even){transform:rotate(1.5deg)}.scene-nav a:hover{background:#fff1c6}.brand-ribbon{max-width:650px;margin:-3% auto 0;position:relative;z-index:4;text-align:center;padding:12px}.brand-ribbon .name{display:block;font:700 clamp(29px,6vw,78px) 'Cormorant Unicase',Georgia,serif;letter-spacing:.035em;background:linear-gradient(#b68b22 0 46%,#1e1a15 46% 49%,#f4e2b5 49% 51%,#92283a 51% 100%);color:transparent;background-clip:text;-webkit-background-clip:text;filter:drop-shadow(1px 1px #422a1c)}.brand-ribbon small{display:block;font:italic 20px 'IM Fell English',serif}.section-stage{position:relative;max-width:1250px;margin:25px auto 110px;padding:25px 4%}.stage-heading{text-align:center;max-width:650px;margin:0 auto -10px;padding:28px 25px;position:relative;z-index:3;transform:rotate(-2deg);background:linear-gradient(105deg,#d5b985,#fff0cd 16%,#ead6a8 85%,#c9aa74);box-shadow:7px 10px 18px #62482e55;clip-path:polygon(2% 0,97% 2%,100% 10%,98% 100%,4% 97%,0 89%)}.stage-heading .overline,.overline{font:700 14px 'Cormorant Unicase',serif;letter-spacing:.16em}.stage-heading h2{margin:8px 0}.collage{display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:start;padding:55px 2% 30px}.folio{position:relative;padding:clamp(25px,4vw,55px);background:linear-gradient(93deg,#d4b98a,#f6e8c8 8%,#f0deb7 90%,#d0b284);border:2px solid #a88c60;box-shadow:7px 9px 0 #8c744d66,12px 20px 28px #5a432d33}.folio:before{content:'';position:absolute;inset:12px;border:1px solid #9a7b4d;pointer-events:none}.folio:nth-child(1){transform:rotate(-2deg)}.folio:nth-child(2){transform:rotate(2deg);margin-top:110px}.folio h3{font-size:clamp(29px,3.4vw,45px);margin:10px 0 25px;text-align:center}.folio p{font-size:clamp(19px,1.9vw,24px)}.drop{float:left;font:700 82px/.85 'Cormorant Unicase',serif;color:var(--red);margin:5px 9px 0 0}.aside-hand{font:italic 23px 'IM Fell English',serif;color:#822c3b;border-top:1px solid #a6885b;border-bottom:1px solid #a6885b;padding:10px 4px;margin:25px 0;transform:rotate(-2deg)}.fabric{display:inline-block;background:repeating-linear-gradient(0deg,#fff1 0 2px,#0000 2px 5px),linear-gradient(95deg,#62202d,#b54856 26%,#872a3b 75%,#571e2b);color:#fff0cb;padding:12px 28px;font:700 25px 'Cormorant Unicase',serif;clip-path:polygon(3% 0,97% 3%,100% 18%,97% 100%,3% 96%,0 79%);transform:rotate(-3deg);text-shadow:1px 1px #401d1d}.collage .illustration{width:85%;margin:-20px auto 10px;display:block;transform:rotate(-3deg);border:7px solid #d5ba87;box-shadow:7px 10px 20px #45352044}.game-scene{max-width:1300px;margin:0 auto 80px;padding:35px 5%;position:relative}.game-scene:before{content:'';position:absolute;inset:0;background:#f6e7c48c;transform:rotate(-1deg);border:1px solid #b99c70}.game-scene>*{position:relative}.game-scene h2{text-align:center}.games-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.game-tile{padding:24px;background:#f6e8c7;border:1px solid #9f845a;box-shadow:4px 6px 0 #a28a6288;transform:rotate(-1deg)}.game-tile:nth-child(2n){transform:rotate(1.5deg)}.game-tile h3{font-size:30px;margin:5px 0}.game-tile p{font-size:18px}.real-guild{position:relative;max-width:1000px;margin:40px auto 95px;padding:55px 9%;background:linear-gradient(95deg,#d3b889,#fff1d3 10%,#f1dfb7 90%,#d5bb8e);border:1px solid #ae9061;box-shadow:9px 13px 0 #8e734a66;transform:rotate(1deg)}.real-guild .fabric{margin-top:-80px}.real-guild p{font:18px/1.65 'Atkinson Hyperlegible',Arial,sans-serif}.real-guild h2{color:#7f2b3c}.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:25px auto}.photo-strip img{width:100%;height:230px;object-fit:cover;border:7px solid #f8ebcb;box-shadow:4px 7px 0 #8e795d55}.photo-strip img:nth-child(2){transform:rotate(2deg)}.photo-strip img:nth-child(3){transform:rotate(-2deg)}.visit-letter{max-width:900px;margin:35px auto 90px;padding:40px 8%;background:#f6e7c6;border:2px solid #9b7a4b;box-shadow:8px 10px 0 #957f5a66;text-align:center}.visit-letter p{font-size:21px}.visit-letter a,.action-link{display:inline-block;padding:12px 22px;background:#872b3b;color:#fff0c9;text-decoration:none;font:700 20px 'Cormorant Unicase',serif;margin:7px;min-height:44px}.site-footer{padding:35px 20px;text-align:center;background:#ead5aa;border-top:3px double #9e7b46;font:16px 'Atkinson Hyperlegible',sans-serif}.site-footer a{margin:0 8px}.subpage{max-width:1050px;margin:45px auto 100px;padding:55px clamp(20px,7vw,95px);background:linear-gradient(90deg,#d9c091,#f9edcf 7%,#f2e2bf 94%,#d7bd8e);box-shadow:9px 12px 0 #a08b6855;color:#32291e}.subpage h1,.subpage h2{color:#7b2938}.subpage p,.subpage li{font:18px/1.65 'Atkinson Hyperlegible',Arial,sans-serif}.subpage a{color:#762b3b}.subpage img{max-width:100%}.subnav{display:flex;gap:12px;flex-wrap:wrap;padding:20px;background:#e9d5a9;justify-content:center}.subnav a{font:700 19px 'Cormorant Unicase',serif;color:#6c2531}.subpage .cta{background:#8d2b3a;color:#fff0c8;padding:12px 20px;text-decoration:none}.subfoot{padding:25px;text-align:center;background:#e5d0a5;color:#38281e;font:15px 'Atkinson Hyperlegible',sans-serif}.subfoot a{color:#742b39}body:not(.home){background:linear-gradient(110deg,#d6c294,#f4e6c6 35%,#dbc59c 70%,#efe0b8)}@media(max-width:700px){.scene{min-height:100vw}.pavilion-frame{height:58vw;object-fit:fill}.scene-message{top:58%;left:7%;right:7%}.scene-message h1{font-size:clamp(28px,8vw,43px)}.scene-message p{font-size:18px}.brand-ribbon{margin:-1% auto 0}.brand-ribbon .name{font-size:clamp(31px,8vw,50px)}.scene-nav{gap:5px;padding:8px}.scene-nav a{flex:1 1 29%;text-align:center;padding:8px 5px;font-size:16px}.section-stage{padding:12px 7px;margin-bottom:40px}.stage-heading{width:94%;padding:22px 16px}.collage{display:flex;flex-direction:column;gap:22px;padding:24px 10px}.folio{width:96%;margin:auto;padding:36px 25px}.folio:nth-child(2){margin-top:0}.folio p{font-size:21px}.folio h3{font-size:33px}.drop{font-size:70px}.games-grid{grid-template-columns:1fr;gap:15px}.game-scene{margin:0 10px 60px}.real-guild{margin:30px 17px 70px;padding:55px 25px 30px}.real-guild .fabric{font-size:18px}.photo-strip{grid-template-columns:1fr 1fr}.photo-strip img{height:155px}.photo-strip img:nth-child(3){display:none}.visit-letter{margin:20px 15px 60px;padding:25px}.subpage{margin:15px 9px 60px;padding:30px 22px}.subnav{gap:10px}.subnav a{font-size:17px}}@media(prefers-reduced-motion:no-preference){.scene:before{animation:float 18s ease-in-out infinite alternate}@keyframes float{to{transform:translate(12px,8px) rotate(-19deg)}}}
 @font-face{font-family:'Kingthings Versalis';src:url('assets/Kingthings-Versalis.ttf') format('truetype');font-display:swap}.brand-ribbon .name{font-family:'Kingthings Versalis',Georgia,serif;font-weight:400;text-transform:none;line-height:1.15;background:linear-gradient(to bottom,#d1a12d 0 44%,#221b16 44% 46%,#f4e8c6 46% 49%,#1f1b16 49% 51%,#9b273a 51% 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-stroke:.45px #392316}.drop-art{float:left;width:74px;height:92px;object-fit:contain;object-position:top;margin:0 10px 0 -5px}.collage{position:relative}.rivals{position:absolute;z-index:7;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-3deg);width:38%;display:flex;align-items:center;justify-content:center;gap:5px;padding:12px;background:radial-gradient(ellipse,#f4e5cadd 0%,#efddba99 65%,transparent 76%)}.rivals figure{margin:0;flex:1;text-align:center;min-width:0}.rivals img{display:block;width:100%;max-width:140px;margin:auto;filter:drop-shadow(2px 3px 1px #543d2966)}.rivals img.canary-face{transform:scaleX(-1)}.rivals figcaption{font:italic 17px 'IM Fell English',serif;background:#f3e4bfbb;transform:rotate(-4deg);padding:3px}.rivals-seal{font:700 13px/1.2 'Cormorant Unicase',serif;color:#8b2d3b;text-align:center}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}@media(max-width:700px){.brand-ribbon .name{font-size:clamp(33px,8.8vw,55px)}.drop-art{width:62px;height:79px}.rivals{position:relative;left:auto;top:auto;transform:rotate(-2deg);width:90%;margin:-10px auto 4px;min-height:110px}.rivals img{max-width:100px}.rivals figcaption{font-size:15px}}
+
+/* Homepage repair, 2026-11-23.
+   The approved illustration IS the navigation and masthead.
+   Do not stack a second logo or another navigation row below it. */
+body.home .scene{
+  width:100%;
+  aspect-ratio:auto;
+  height:auto;
+  min-height:0;
+  overflow:hidden;
+  background:#e8dab7;
+}
+body.home .scene::before,body.home .scene::after{display:none}
+body.home .pavilion-frame{
+  display:block;
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  z-index:1;
+  pointer-events:none;
+}
+body.home .scene-message{
+  position:absolute;
+  z-index:2;
+  top:52%;
+  left:22%;
+  right:22%;
+  max-height:39%;
+  transform:translateY(-50%);
+  margin:0;
+  text-align:center;
+  pointer-events:none;
+}
+body.home .scene-message .welcome{
+  display:block;
+  font-size:clamp(13px,1.65vw,24px);
+  margin:0 0 .25em;
+}
+body.home .scene-message h1{
+  font-family:'Cormorant Unicase',Georgia,serif;
+  font-size:clamp(21px,3.5vw,51px);
+  line-height:1.0;
+  margin:0;
+  color:#642d2e;
+  text-shadow:0 1px 0 #f9edcc;
+}
+body.home .scene-message p{
+  font-size:clamp(12px,1.45vw,21px);
+  margin:.5em 0 0;
+}
+.pavilion-nav{
+  position:absolute;
+  inset:0;
+  z-index:6;
+  margin:0;
+  padding:0;
+  pointer-events:none;
+}
+.pavilion-link{
+  display:block;
+  position:absolute;
+  top:11%;
+  height:23%;
+  min-height:44px;
+  background:transparent;
+  pointer-events:auto;
+  border-radius:3px;
+}
+.pavilion-about{left:11.5%;width:15%}
+.pavilion-games{left:26%;width:15%}
+.pavilion-events{left:59.8%;width:15.6%}
+.pavilion-donate{left:75.5%;width:16.5%}
+.pavilion-link:hover{outline:2px solid #8c2638aa;outline-offset:1px}
+.pavilion-link:focus-visible{outline:3px solid #8c2638;outline-offset:2px;background:#fff7df33}
+@media(max-width:700px){
+  body.home .scene{aspect-ratio:auto;min-height:0}
+  body.home .pavilion-frame{height:auto;object-fit:contain}
+  body.home .scene-message{
+    top:54%;
+    left:21%;
+    right:21%;
+    max-height:35%;
+    transform:translateY(-50%);
+  }
+  body.home .scene-message .welcome,
+  body.home .scene-message p{display:none}
+  body.home .scene-message h1{font-size:clamp(16px,4.6vw,25px);line-height:1.02}
+  .pavilion-link{top:11%;height:23%;min-height:44px}
+  body.home .real-guild{margin-top:26px}
+}
+@media(max-width:380px){
+  body.home .scene-message h1{font-size:16px}
+  .pavilion-link{top:10%;height:25%}
+}
+
+/* Use the locked, vertically composed Guild art on phones. It is not
+   cropped from the desktop illustration, redrawn, or distorted. */
+body.home .pavilion-art{display:block;position:relative;z-index:1;width:100%}
+body.home .pavilion-art .pavilion-frame{display:block;width:100%;height:auto}
+.pavilion-label{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+}
+@media(max-width:700px){
+  body.home .scene{
+    min-height:0;
+    background:radial-gradient(ellipse at center,#f7e9c8 0%,#e6d4aa 77%,#d5bb8b 100%);
+  }
+  body.home .scene-message{
+    top:34%;
+    left:17%;
+    right:17%;
+    max-height:none;
+    transform:translateY(-50%);
+  }
+  body.home .scene-message .welcome{
+    display:block;
+    font-size:clamp(13px,3.6vw,17px);
+    line-height:1.12;
+    margin-bottom:6px;
+  }
+  body.home .scene-message h1{
+    font-size:clamp(21px,6vw,31px);
+    line-height:1.04;
+  }
+  body.home .scene-message p{
+    display:block;
+    font-size:clamp(12px,3.3vw,16px);
+    line-height:1.17;
+    margin:7px auto 0;
+  }
+  body.home .pavilion-nav{
+    position:absolute;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    top:46%;
+    bottom:auto;
+    left:17%;
+    right:17%;
+    width:auto;
+    height:auto;
+    padding:0;
+    margin:0;
+    pointer-events:auto;
+  }
+  body.home .pavilion-nav .pavilion-link{
+    position:relative;
+    top:auto;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    width:100%;
+    height:auto;
+    min-height:62px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px 5px 16px;
+    border:1px solid #73522f;
+    border-radius:0;
+    clip-path:polygon(0 0,100% 0,100% 84%,50% 100%,0 84%);
+    background:linear-gradient(90deg,#d6bd8e 0%,#fff0c9 14%,#f2dfb5 82%,#caae79 100%);
+    color:#672934;
+    text-align:center;
+    text-decoration:none;
+    font:700 clamp(15px,4vw,19px)/1.03 'Cormorant Unicase',Georgia,serif;
+    text-shadow:0 1px #fff5d9;
+    box-shadow:none;
+    transform:none;
+  }
+  body.home .pavilion-nav .pavilion-link:hover,
+  body.home .pavilion-nav .pavilion-link:focus-visible{
+    background:#fff1ce;
+    outline:2px solid #89293a;
+    outline-offset:2px;
+  }
+  body.home .pavilion-label{
+    position:static;
+    width:auto;
+    height:auto;
+    overflow:visible;
+    clip:auto;
+    white-space:normal;
+  }
+}
+
+
+/* Q_REPAIR_2026_11_23: both locked Guild frames remain unaltered.
+   Navigation is four accessible banners INSIDE the artwork, not an extra row
+   or a second logo. This block intentionally wins over legacy styles. */
+body.home .scene {
+  width:100%;
+  height:auto;
+  min-height:0;
+  overflow:hidden;
+  background:radial-gradient(ellipse at center,#f7e9c8 0%,#e6d4aa 77%,#d5bb8b 100%);
+}
+body.home .pavilion-art {
+  position:relative;
+  display:block;
+  z-index:1;
+  width:100%;
+}
+body.home .pavilion-art .pavilion-frame {
+  position:relative;
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  pointer-events:none;
+}
+body.home .scene-message {
+  position:absolute;
+  z-index:2;
+  top:39%;
+  left:31%;
+  right:31%;
+  transform:translateY(-50%);
+  max-height:none;
+  margin:0;
+  text-align:center;
+  pointer-events:none;
+}
+body.home .scene-message .welcome {
+  display:block;
+  font:italic clamp(13px,1.6vw,23px)/1.12 'IM Fell English',Georgia,serif;
+  margin:0 0 4px;
+}
+body.home .scene-message h1 {
+  font:700 clamp(19px,2.75vw,40px)/1.02 'Cormorant Unicase',Georgia,serif;
+  margin:0;
+  color:#642d2e;
+  text-shadow:0 1px 0 #fff0c9;
+}
+body.home .scene-message p {
+  display:block;
+  font-size:clamp(11px,1.3vw,18px);
+  line-height:1.17;
+  margin:7px auto 0;
+}
+body.home .pavilion-nav {
+  position:absolute;
+  z-index:6;
+  inset:auto;
+  top:51%;
+  left:32%;
+  right:32%;
+  width:auto;
+  height:auto;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(8px,1.1vw,15px);
+  pointer-events:auto;
+}
+body.home .pavilion-nav .pavilion-link {
+  position:relative;
+  inset:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  height:auto;
+  min-height:clamp(44px,5.7vw,72px);
+  padding:8px 7px 15px;
+  border:1.5px solid #48331f;
+  border-radius:0;
+  clip-path:polygon(0 0,100% 0,100% 85%,50% 100%,0 85%);
+  text-align:center;
+  text-decoration:none;
+  background:linear-gradient(90deg,#d2b77d 0%,#fff0ce 17%,#f3e1b8 80%,#bfa16e 100%);
+  color:#632334;
+  font:700 clamp(14px,1.45vw,22px)/1.1 'Cormorant Unicase',Georgia,serif;
+  text-shadow:0 1px #fff5da;
+  box-shadow:none;
+  transform:none;
+  pointer-events:auto;
+}
+body.home .pavilion-nav .pavilion-link:hover,
+body.home .pavilion-nav .pavilion-link:focus-visible {
+  background:#fff2d5;
+  outline:3px solid #8f2d3b;
+  outline-offset:3px;
+}
+body.home .pavilion-label {
+  position:static;
+  display:block;
+  width:auto;
+  height:auto;
+  overflow:visible;
+  clip:auto;
+  white-space:normal;
+}
+@media(max-width:700px) {
+  body.home .scene-message {
+    top:34%;
+    left:17%;
+    right:17%;
+  }
+  body.home .scene-message .welcome {
+    display:block;
+    font-size:clamp(12px,3.4vw,17px);
+    line-height:1.12;
+    margin:0 0 6px;
+  }
+  body.home .scene-message h1 {
+    font-size:clamp(20px,5.6vw,31px);
+    line-height:1.04;
+  }
+  body.home .scene-message p {
+    display:block;
+    font-size:clamp(11px,3vw,15px);
+    line-height:1.17;
+    margin:7px auto 0;
+  }
+  body.home .pavilion-nav {
+    top:46%;
+    left:17%;
+    right:17%;
+    gap:9px;
+  }
+  body.home .pavilion-nav .pavilion-link {
+    min-height:62px;
+    padding:10px 5px 16px;
+    font-size:clamp(15px,3.7vw,19px);
+  }
+}
+@media(max-width:360px) {
+  body.home .pavilion-nav { gap:7px; }
+  body.home .pavilion-nav .pavilion-link {
+    min-height:54px;
+    padding:7px 4px 13px;
+  }
+}
