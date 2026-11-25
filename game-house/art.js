@@ -253,5 +253,33 @@ const GameArt = (() => {
     draw(canvas.getContext("2d"), canvas.width, canvas.height);
   }
 
-  return { drawBoard, printPlate };
+  function captureCue(layer, status) {
+    const duration = 2400;
+    let timer;
+
+    function clear() {
+      clearTimeout(timer);
+      layer.replaceChildren();
+      status.textContent = "";
+    }
+
+    function show(spots, message) {
+      clear();
+      for (const { left, top, size } of spots) {
+        const mark = document.createElement("span");
+        mark.className = "capture-marker";
+        mark.style.left = left;
+        mark.style.top = top;
+        if (size) mark.style.width = `clamp(24px, ${size}, 56px)`;
+        mark.style.animationDuration = duration + "ms";
+        layer.append(mark);
+      }
+      status.textContent = message;
+      timer = setTimeout(clear, duration);
+    }
+
+    return { show, clear };
+  }
+
+  return { drawBoard, printPlate, captureCue };
 })();

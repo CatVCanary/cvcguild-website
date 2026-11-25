@@ -42,6 +42,7 @@ const info = $("#info-dialog");
 const restart = $("#restart-dialog");
 const game = $("#game");
 const board = $("#board");
+const morrisCue = GameArt.captureCue($("#morris-captures"), $("#morris-capture-status"));
 const moveList = $("#keyboard-moves");
 let saved = readSave();
 let mode = saved.mode;
@@ -165,6 +166,10 @@ function selectPoint(index) {
 function commit(action) {
   const next = Morris.apply(state, action);
   if (next === state) return;
+  if (action.kind === "take") {
+    const { left, top } = points[action.at].style;
+    morrisCue.show([{ left, top }], names[state.turn] + " captured a piece at " + pointLabel(action.at) + ".");
+  }
   state = next;
   selection = null;
   save();
@@ -286,6 +291,7 @@ function route() {
   $(".skip").href = extra ? "#extra-title" : morris ? "#game-title" : "#main";
 
   if (!morris && previousView === "morris") {
+    morrisCue.clear();
     if (info.open) info.close();
     if (restart.open) restart.close();
   }
@@ -321,6 +327,7 @@ document.addEventListener("click", event => {
     showInfo(guide.title, guide.html);
   }
   if (target.dataset.mode && target.dataset.mode !== mode) {
+    morrisCue.clear();
     mode = target.dataset.mode;
     state = saved.matches[mode];
     selection = null;
@@ -335,6 +342,7 @@ $("#restart").addEventListener("click", () => {
   restart.showModal();
 });
 $("#confirm-restart").addEventListener("click", () => {
+  morrisCue.clear();
   state = Morris.start();
   selection = null;
   activePoint = 0;

@@ -431,6 +431,30 @@ button, a { touch-action: manipulation; }
   box-shadow: 0 3px 7px #10090170, inset 0 0 0 5px #9559294f;
 }
 #board-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+.capture-layer { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
+.capture-marker {
+  position: absolute; width: clamp(24px, 10%, 50px); aspect-ratio: 1;
+  translate: -50% -50%; border-radius: 50%;
+  border: 2px dashed #fff4cc;
+  background: #67243835;
+  box-shadow: 0 0 0 2px #782539, inset 0 0 0 1px #782539;
+  animation: capture-trace linear both;
+}
+.capture-marker::after {
+  content: "×"; position: absolute; top: -5px; right: -6px;
+  display: grid; place-items: center;
+  width: 17px; height: 17px; border: 1px solid #fff4cc; border-radius: 50%;
+  background: #782539; color: #fff4cc; font: 750 14px/1 var(--sans);
+}
+.capture-announcement {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+@keyframes capture-trace {
+  0% { transform: scale(1.18); }
+  12%, 76% { transform: scale(1); opacity: 1; }
+  100% { opacity: 0; }
+}
 .point {
   position: absolute; width: clamp(40px, 13.7%, 56px); aspect-ratio: 1; border-radius: 50%;
   padding: 0; border: 0; background: transparent; translate: -50% -50%;
@@ -498,6 +522,7 @@ dialog a { color: var(--red); text-underline-offset: .14em; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+  .capture-marker { animation-name: none; }
 }
 
 .stack-game { width: min(100% - 1.25rem, 1130px); }
@@ -647,11 +672,13 @@ dialog a { color: var(--red); text-underline-offset: .14em; }
   justify-content: center;
   align-items: center;
 }
-.extra-board-frame canvas { max-width: 100%; height: auto; border: 1px solid #3d2419; touch-action: manipulation; }
+.extra-board-surface { position: relative; min-width: 0; max-width: 100%; }
+.extra-board-surface .capture-layer { inset: 1px; }
+.extra-board-frame canvas { width: 100%; height: auto; border: 1px solid #3d2419; touch-action: manipulation; }
 .extra-board-frame canvas.has-destinations { cursor: crosshair; }
-.extra-board-frame[data-board="pachisi"] canvas, .extra-board-frame[data-board="chaupar"] canvas,
-.extra-board-frame[data-board="yut"] canvas { width: min(100%, 510px); }
-.extra-board-frame[data-board="hounds"] canvas { width: min(100%, 424px); }
+.extra-board-frame[data-board="pachisi"] .extra-board-surface, .extra-board-frame[data-board="chaupar"] .extra-board-surface,
+.extra-board-frame[data-board="yut"] .extra-board-surface { max-width: min(100%, 510px); }
+.extra-board-frame[data-board="hounds"] .extra-board-surface { max-width: min(100%, 424px); }
 .extra-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .05rem .85rem; padding: .24rem .1rem 0; }
 .extra-tools .text-link { font-size: 1.095rem; min-height: 46px; }
 .game-tally { padding: .92rem; }
