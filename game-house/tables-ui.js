@@ -8,6 +8,7 @@ const ExtraTables = (() => {
   const root = by("extra-game");
   const art = by("extra-canvas");
   const canvasFrame = by("extra-board-frame");
+  const captureCue = GameArt.captureCue(by("extra-captures"), by("extra-capture-status"));
   const handTray = by("extra-hand-tray");
   const dialog = by("extra-dialog");
   const dialogs = [dialog, by("extra-restart-dialog")];
@@ -294,8 +295,34 @@ const ExtraTables = (() => {
     }, key === "slahal" && state.phase === "reveal" ? 1600 : 640);
   }
 
+  function showCaptures(spec, action, next) {
+    if (action.type !== "move" || !spec.route || !boardLayout) return;
+    const tiles = new Set();
+    let count = 0;
+    for (const [side, pieces] of state.pieces.entries()) {
+      if (side === state.turn) continue;
+      for (const [index, piece] of pieces.entries()) {
+        const tile = spec.route(side, piece);
+        if (boardLayout.positions.has(tile) && spec.route(side, next.pieces[side][index]) === undefined) {
+          tiles.add(tile);
+          count++;
+        }
+      }
+    }
+    if (!count) return;
+    const spots = [...tiles].map(tile => {
+      const point = boardLayout.positions.get(tile);
+      return { left: 100 * point.x / boardLayout.width + "%", top: 100 * point.y / boardLayout.height + "%",
+        size: 100 * boardLayout.token / boardLayout.width + "%" };
+    });
+    captureCue.show(spots, (count === 1 ? "One piece captured. " : count + " pieces captured. ") + action.label + ".");
+  }
+
   function perform(action, focus) {
-    state = engine().apply(state, action);
+    const spec = engine();
+    const next = spec.apply(state, action);
+    showCaptures(spec, action, next);
+    state = next;
     highlighted = undefined;
     filter = undefined;
     save();
@@ -327,6 +354,7 @@ const ExtraTables = (() => {
     by("extra-restart-dialog").showModal();
   });
   by("extra-confirm-restart").addEventListener("click", () => {
+    captureCue.clear();
     state = engine().start();
     highlighted = undefined;
     filter = undefined;
@@ -339,6 +367,7 @@ const ExtraTables = (() => {
   dialogs.forEach(d => d.addEventListener("close", schedule));
   root.querySelectorAll("[data-extra-mode]").forEach(b => b.addEventListener("click", () => {
     if (b.dataset.extraMode === mode) return;
+    captureCue.clear();
     mode = b.dataset.extraMode;
     state = restore(key, mode);
     highlighted = undefined;
@@ -351,6 +380,7 @@ const ExtraTables = (() => {
     if (!engines[id]) return false;
     if (!visible || id !== key) {
       clearTimeout(timer);
+      captureCue.clear();
       key = id;
       mode = restoreMode(id);
       state = restore(id, mode);
@@ -373,6 +403,7 @@ const ExtraTables = (() => {
   function close() {
     visible = false;
     clearTimeout(timer);
+    captureCue.clear();
     root.hidden = true;
     for (const d of dialogs) if (d.open) d.close();
   }

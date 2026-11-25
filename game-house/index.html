@@ -8,16 +8,16 @@
   <meta name="theme-color" content="#fdfdfd">
   <meta name="description" content="A traveling game house from the Cat v. Canary Guild. Take a seat at ten historical games, from Senet to Yut Nori.">
   <title>The Traveling Game House · Cat v. Canary Guild</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script src="morris.js" defer></script>
-  <script src="art.js" defer></script>
+  <script src="art.js?v=2" defer></script>
   <script src="race-games.js" defer></script>
   <script src="track-games.js" defer></script>
   <script src="hand-games.js" defer></script>
   <script src="tables-content.js" defer></script>
   <script src="tables-render.js" defer></script>
-  <script src="tables-ui.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="tables-ui.js?v=2" defer></script>
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -165,8 +165,10 @@
           <div class="board-frame">
             <div id="board" role="group" aria-label="Morris board with 24 points">
               <canvas width="600" height="600" id="board-lines" aria-hidden="true"></canvas>
+              <div id="morris-captures" class="capture-layer" aria-hidden="true"></div>
             </div>
           </div>
+          <p id="morris-capture-status" class="capture-announcement" role="status"></p>
           <div class="board-tools">
             <button class="text-link" type="button" data-guide="quick">How to play</button>
             <button class="text-link" type="button" id="keyboard-moves" hidden>List legal moves</button>
@@ -219,8 +221,12 @@
             <p id="extra-notice" class="extra-notice" aria-live="polite" hidden></p>
           </section>
           <div id="extra-board-frame" class="extra-board-frame">
-            <canvas id="extra-canvas" aria-hidden="true"></canvas>
+            <div class="extra-board-surface">
+              <canvas id="extra-canvas" aria-hidden="true"></canvas>
+              <div id="extra-captures" class="capture-layer" aria-hidden="true"></div>
+            </div>
           </div>
+          <p id="extra-capture-status" class="capture-announcement" role="status"></p>
           <div id="extra-hand-tray" class="extra-hand-tray" hidden></div>
           <div class="board-tools extra-tools">
             <button class="text-link" type="button" id="extra-quick">How to play</button>
