@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="https://www.cvcguild.com/game-house/">
+  <link rel="icon" href="../crest.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fdfdfd">
+  <meta name="description" content="A traveling game house from the Cat v. Canary Guild. Take a seat at ten historical games, from Senet to Yut Nori.">
+  <title>The Traveling Game House · Cat v. Canary Guild</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="morris.js" defer></script>
+  <script src="art.js" defer></script>
+  <script src="race-games.js" defer></script>
+  <script src="track-games.js" defer></script>
+  <script src="hand-games.js" defer></script>
+  <script src="tables-content.js" defer></script>
+  <script src="tables-render.js" defer></script>
+  <script src="tables-ui.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="mast-inner">
+      <a class="brand" href="#" aria-label="Cat v. Canary Guild · Game House">
+        <img class="guild-banner" src="assets/guild-banner-linen.png" width="2172" height="724" alt="Cat v. Canary">
+      </a>
+      <nav class="mast-nav" aria-label="Main">
+        <a href="#collection">Games</a>
+        <a href="../index.html">Guild home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="house">
+      <section class="playbill" aria-labelledby="house-title">
+        <div class="wrap playbill-layout">
+          <div class="playbill-copy">
+            <h1 id="house-title">The Traveling <span>Game House</span></h1>
+            <p>Ten historical games. Two charming hosts. Neither likes to lose.</p>
+            <a class="playbill-link" href="#collection">Find a game</a>
+          </div>
+          <figure class="playbill-hosts">
+            <div class="host-print">
+              <img src="assets/cat-and-canary.png" width="426" height="186" alt="Cat and Canary sit across from each other at a game table.">
+            </div>
+            <figcaption><span>“A friendly game?”</span><span>“Define friendly.”</span></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="collection" class="collection wrap" aria-labelledby="collection-title">
+        <div class="collection-heading">
+          <h2 id="collection-title" tabindex="-1">Choose a game</h2>
+        </div>
+        <p id="play-notice" class="preview-note"><strong>JavaScript is required to play.</strong> Open the Game House in a web browser with JavaScript enabled.</p>
+
+        <ul class="opening-tables" aria-label="Game tables">
+          <li class="table-senet">
+            <a class="table-ticket" href="#play-senet" data-entry="senet">
+              <span class="table-print"><img src="assets/plate-senet.webp" width="660" height="300" alt=""></span>
+              <span class="game-caption"><strong>Senet</strong><small>Ancient Egypt</small><span class="ticket-summary">A race through thirty houses</span></span>
+              <span class="game-action">Play</span>
+            </a>
+          </li>
+          <li class="table-ur">
+            <a class="table-ticket" href="#play-ur" data-entry="ur">
+              <span class="table-print"><img src="assets/plate-ur.webp" width="500" height="300" alt=""></span>
+              <span class="game-caption"><strong>Royal Game of Ur</strong><small>Ancient Mesopotamia</small><span class="ticket-summary">A race along a path of rosettes</span></span>
+              <span class="game-action">Play</span>
+            </a>
+          </li>
+          <li class="table-morris">
+            <a class="table-ticket" href="#play">
+              <span class="table-print"><img src="assets/plate-morris.webp" width="630" height="300" alt=""></span>
+              <span class="game-caption"><strong>Nine Men’s Morris</strong><small>Medieval Europe</small><span class="ticket-summary">Make a line of three</span></span>
+              <span class="game-action" id="feature-play">Play</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="game-index">
+          <section class="index-section board-index" aria-labelledby="race-title">
+            <h2 id="race-title">More board games</h2>
+            <ul class="index-list">
+              <li><a href="#play-hounds" data-entry="hounds">
+                <span class="index-print"><img src="assets/plate-hounds.webp" width="214" height="230" alt=""></span>
+                <span class="game-caption"><strong>Hounds and Jackals</strong><small>Egypt and the Near East</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+              <li><a href="#play-ludus" data-entry="ludus">
+                <span class="index-print"><img src="assets/plate-ludus.webp" width="340" height="103" alt=""></span>
+                <span class="game-caption"><strong>Ludus Duodecim Scriptorum</strong><small>Roman world</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+              <li><a href="#play-pachisi" data-entry="pachisi">
+                <span class="index-print"><img src="assets/plate-pachisi.webp" width="230" height="230" alt=""></span>
+                <span class="game-caption"><strong>Pachisi</strong><small>Indian subcontinent</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+              <li><a href="#play-chaupar" data-entry="chaupar">
+                <span class="index-print"><img src="assets/plate-chaupar.webp" width="230" height="230" alt=""></span>
+                <span class="game-caption"><strong>Chaupar</strong><small>Indian subcontinent</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+              <li><a href="#play-yut" data-entry="yut">
+                <span class="index-print"><img src="assets/plate-yut.webp" width="230" height="230" alt=""></span>
+                <span class="game-caption"><strong>Yut Nori</strong><small>Korea</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+            </ul>
+          </section>
+          <section class="index-section bone-index" aria-labelledby="hand-title">
+            <h2 id="hand-title">Games with bones</h2>
+            <ul class="index-list">
+              <li><a href="#play-slahal" data-entry="slahal">
+                <span class="index-print"><img src="assets/plate-slahal.webp" width="301" height="230" alt=""></span>
+                <span class="game-caption"><strong>Slahal / Lahal</strong><small>Pacific Northwest</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+              <li><a href="#play-astragaloi" data-entry="astragaloi">
+                <span class="index-print"><img src="assets/plate-astragaloi.webp" width="301" height="230" alt=""></span>
+                <span class="game-caption"><strong>Astragaloi / Knucklebones</strong><small>Ancient Mediterranean</small></span>
+                <span class="game-action">Play</span>
+              </a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section id="guild" class="guild" aria-labelledby="guild-title">
+        <div class="wrap guild-inner">
+          <img src="assets/cat-and-canary-aside.png" width="318" height="188" alt="">
+          <div>
+            <h2 id="guild-title">Meet the Guild</h2>
+            <p>Cat v. Canary Guild is a nonprofit that teaches historical games through living history. At the faire or at home, pull up a chair and learn by playing.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="game" class="game-view wrap" aria-labelledby="game-title" hidden>
+      <a href="#collection" class="text-link back-link"><span aria-hidden="true">◆</span> Back to the collection</a>
+      <header class="game-heading">
+        <div>
+          <p class="eyebrow">Strategy · Two sides</p>
+          <h1 id="game-title" tabindex="-1">Nine Men’s Morris</h1>
+        </div>
+        <div class="mode-group" role="group" aria-label="Game mode">
+          <button type="button" data-mode="local">Two players</button>
+          <button type="button" data-mode="computer">Play Canary</button>
+        </div>
+      </header>
+
+      <div class="game-layout">
+        <div class="table">
+          <div class="turn-banner">
+            <i id="turn-token" class="token cat" aria-hidden="true"></i>
+            <div id="turn-live" role="status" aria-live="polite" aria-atomic="true">
+              <h2 id="turn-title">Cat’s turn</h2>
+              <p id="turn-instruction">Place a piece on an empty point.</p>
+            </div>
+          </div>
+          <div class="board-frame">
+            <div id="board" role="group" aria-label="Morris board with 24 points">
+              <canvas width="600" height="600" id="board-lines" aria-hidden="true"></canvas>
+            </div>
+          </div>
+          <div class="board-tools">
+            <button class="text-link" type="button" data-guide="quick">How to play</button>
+            <button class="text-link" type="button" id="keyboard-moves" hidden>List legal moves</button>
+            <button class="text-link" type="button" id="restart">Restart game</button>
+          </div>
+        </div>
+
+        <aside class="game-aside" aria-label="Score and field guide">
+          <section class="scorecard">
+            <h2>At the table</h2>
+            <div id="scores"></div>
+            <p id="save-status">Progress is saved on this device.</p>
+          </section>
+          <section class="field-guide">
+            <div class="guide-image"><img src="assets/canary-portrait.png" width="186" height="262" alt=""></div>
+            <p class="eyebrow">Canary’s field guide</p>
+            <h2>A mill, if you please.</h2>
+            <p>Three of your pieces in a straight, connected line make a mill. You may then take one of your rival’s pieces.</p>
+            <button class="button button-outline" type="button" data-guide="rules">Rules, history &amp; sources</button>
+          </section>
+        </aside>
+      </div>
+    </section>
+    <section id="extra-game" class="game-view stack-game wrap" aria-labelledby="extra-title" hidden>
+      <a href="#collection" class="text-link back-link"><span aria-hidden="true">◆</span> Back to the collection</a>
+      <header class="game-heading">
+        <div>
+          <p class="eyebrow" id="extra-subtitle"></p>
+          <h1 id="extra-title" tabindex="-1"></h1>
+        </div>
+        <div class="mode-group extra-mode-group" role="group" aria-label="Game mode">
+          <button type="button" id="extra-local" data-extra-mode="local"></button>
+          <button type="button" id="extra-computer" data-extra-mode="computer"></button>
+        </div>
+      </header>
+      <div class="extra-layout">
+        <div class="extra-main">
+          <section class="extra-console" aria-label="Turn and controls">
+            <div class="extra-turn-row" role="status" aria-live="polite" aria-atomic="true">
+              <i id="extra-turn-token" class="extra-disc" aria-hidden="true"></i>
+              <div>
+                <h2 id="extra-turn" tabindex="-1"></h2>
+                <p id="extra-instruction"></p>
+              </div>
+            </div>
+            <div id="extra-throw" class="extra-throw" aria-live="polite" hidden></div>
+            <p id="extra-choices-label" class="extra-choices-label" hidden></p>
+            <div id="extra-dice-options" class="extra-dice-options" role="group" aria-label="Choose dice" hidden></div>
+            <div id="extra-actions" class="extra-actions" role="group" aria-label="Available actions"></div>
+            <p id="extra-notice" class="extra-notice" aria-live="polite" hidden></p>
+          </section>
+          <div id="extra-board-frame" class="extra-board-frame">
+            <canvas id="extra-canvas" aria-hidden="true"></canvas>
+          </div>
+          <div id="extra-hand-tray" class="extra-hand-tray" hidden></div>
+          <div class="board-tools extra-tools">
+            <button class="text-link" type="button" id="extra-quick">How to play</button>
+            <button class="text-link" type="button" id="extra-rules">Rules &amp; history</button>
+            <button class="text-link" type="button" id="extra-restart">Restart</button>
+          </div>
+        </div>
+        <aside class="scorecard game-tally" aria-label="Scores">
+          <h2>At the table</h2>
+          <p id="extra-goal" class="extra-goal"></p>
+          <p id="extra-partners" class="extra-partners" hidden></p>
+          <div id="extra-score" class="extra-score"></div>
+          <p id="extra-save-note" class="extra-save-note"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Cat v. Canary Guild">
+    <span class="footer-ornament" aria-hidden="true">✦</span>
+    <span class="brand-type"><span class="brand-name">cat v<span class="brand-period">.</span> canary</span><small>guild</small></span>
+    <span class="footer-ornament" aria-hidden="true">✦</span>
+  </footer>
+
+  <dialog id="info-dialog" aria-labelledby="info-title">
+    <div class="dialog-head">
+      <h2 id="info-title"></h2>
+      <button class="close" data-close type="button" aria-label="Close">×</button>
+    </div>
+    <div id="info-body"></div>
+  </dialog>
+
+  <dialog id="restart-dialog" aria-labelledby="restart-title">
+    <div class="dialog-head">
+      <h2 id="restart-title">Restart this game?</h2>
+      <button class="close" data-close type="button" aria-label="Close">×</button>
+    </div>
+    <p>The current game in this mode will be cleared. Cat will take the first turn.</p>
+    <div class="dialog-actions">
+      <button class="button button-outline" data-close type="button" autofocus>Keep playing</button>
+      <button class="button button-red" id="confirm-restart" type="button">Restart game</button>
+    </div>
+  </dialog>
+
+  <dialog id="extra-dialog" aria-labelledby="extra-guide-title">
+    <div class="dialog-head">
+      <h2 id="extra-guide-title"></h2>
+      <button class="close" id="extra-guide-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div id="extra-guide-body"></div>
+    <button class="button button-outline" type="button" id="extra-full-guide">Full rules, history &amp; sources</button>
+  </dialog>
+  <dialog id="extra-restart-dialog" aria-labelledby="extra-restart-heading">
+    <div class="dialog-head"><h2 id="extra-restart-heading">Restart this game?</h2></div>
+    <p>The current match in this game mode will be cleared.</p>
+    <div class="dialog-actions">
+      <button class="button button-outline" type="button" id="extra-keep-playing" autofocus>Keep playing</button>
+      <button class="button button-red" type="button" id="extra-confirm-restart">Restart game</button>
+    </div>
+  </dialog>
+</body>
+</html>
