@@ -1,0 +1,1 @@
+(()=>{const b=document.querySelector('.menu-toggle'),n=document.querySelector('#primary-nav');if(b&&n){b.addEventListener('click',()=>{const on=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(on));n.classList.toggle('open',on)});} })();
