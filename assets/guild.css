@@ -26,3 +26,89 @@
 .more-nav a{color:#fff8df;text-decoration:none;border-bottom:1px solid #d9b371;padding:5px}
 .more-nav a:hover{color:#ffd777}
 @media(max-width:640px){.poster-wrap{width:100%}.more-nav{gap:8px 16px;padding:16px 8px;font-size:14px}.more-nav-label{width:100%;text-align:center}}
+
+
+/* CVC FINAL REVIEW — staged design continuity enhancements, 2026-11-25
+   The canonical theatre poster and Guild banner are locked: these rules never recolor or crop them. */
+:root { --ruby:#8f1538; --wine:#5f0926; --deep-wine:#360719; --true-gold:#b48c38; --soft-gold:#edd3a0; --engraving:#2f231f; --linen:#fff9ec; }
+html {scroll-padding-top:1.5rem}
+body {background:radial-gradient(ellipse at center,#faf3e4 0,#eee2c9 58%,#d9c19b 100%);color:#281a19}
+::selection{color:#fff9ed;background:#831b3c}
+.masthead {position:relative;isolation:isolate;background:
+  repeating-linear-gradient(104deg,transparent 0 26px,#a522401e 27px 44px,transparent 46px 89px),
+  linear-gradient(155deg,#2a0614,#73122e 45%,#350718);border-bottom:0;padding-bottom:9px}
+.masthead::after {content:"";position:absolute;bottom:0;left:0;right:0;height:9px;background:repeating-linear-gradient(45deg,#fff7e6 0 8px,#161215 8px 16px);border-block:1px solid #c9ad6b;z-index:1}
+.brand img {filter:drop-shadow(0 5px 8px #16030b77)}
+.main-nav a {background:#fcf4df;border-color:#ac8538;color:#3d1426;box-shadow:2px 3px 0 #1304098c;transition:background .17s ease,color .17s ease}
+.main-nav a:hover,.main-nav a[aria-current="page"] {background:#78112e;color:#fff9e7}
+.page-intro {position:relative;overflow:hidden;max-width:1080px;padding:clamp(32px,5vw,60px) clamp(25px,4vw,55px);background:linear-gradient(115deg,#e3c999 0,#fff9e8 12%,#fffaf0 88%,#dfc591 100%);border:2px solid #97733c;border-top:6px double #8a1738;border-bottom:6px double #8a1738;box-shadow:8px 12px 0 #542e1933}
+.page-intro::before,.page-intro::after{content:"";position:absolute;pointer-events:none;width:68px;height:68px;border-color:#5c0b2f;border-style:double;opacity:.7}
+.page-intro::before{top:13px;left:13px;border-width:5px 0 0 5px}
+.page-intro::after{bottom:13px;right:13px;border-width:0 5px 5px 0}
+.page-intro h1{font-weight:normal;letter-spacing:.01em;text-wrap:balance;color:#620c2a}
+.page-intro p{text-wrap:pretty}
+.page-body{max-width:1150px}
+.content-section{position:relative;background:linear-gradient(105deg,#f2e2c5 0,#fffaf0 5%,#fffaf0 95%,#f1dfbd 100%);border-color:#b39a6f;border-top-color:#720f2b;box-shadow:7px 9px 0 #4a251625}
+.content-section::before{content:"◆ ◇ ◆";font:12px Georgia,serif;letter-spacing:.15em;color:#723040;position:absolute;right:28px;top:18px;opacity:.62}
+.content-section h2,.invitation h2{text-wrap:balance;color:#6d0e2e}
+.section-label{color:#8d233e}
+.feature-card{background:linear-gradient(145deg,#fffdf7,#f2e4c8);border-top-color:#8a1638;box-shadow:5px 7px 0 #4b231926}
+.feature-card h3{color:#76142f}
+.button{font-size:19px;min-height:50px;background:#faf0d5;border-color:#b99344}
+.button:focus-visible{outline:4px solid #d1a343;outline-offset:4px}
+.invitation{position:relative;border-color:#b99652;background:linear-gradient(138deg,#36091b 0,#861436 53%,#370819 100%)}
+.invitation::before{content:"";position:absolute;left:14px;right:14px;top:12px;border-top:1px solid #f6d07e8a}
+.invitation h2{color:#fff4da}
+footer{background:linear-gradient(145deg,#2f0716,#62102a 61%,#330718)}
+.footer-end{display:flex;flex-wrap:wrap;gap:.3em;align-items:baseline}
+/* Donation page: an evocative but extremely legible public fundraising experience. */
+.donation-hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 72% 10%,#862443,#4c0922 66%,#2b0717);border:7px double #bf9b57;color:#fffaed;box-shadow:11px 15px 0 #32111b3a;padding:clamp(35px,5vw,72px);margin:20px auto 36px;isolation:isolate}
+.donation-hero::before{content:"";position:absolute;inset:12px;pointer-events:none;border:1px solid #e7c7838c}
+.donation-hero::after{content:"◆ ◇ ◆ ◇ ◆";position:absolute;right:-12px;top:22px;writing-mode:vertical-rl;color:#fff3b47c;letter-spacing:.55em;font-size:16px}
+.donation-hero .eyebrow{color:#f5d796;letter-spacing:.17em}
+.donation-hero h1{font:normal clamp(2.9rem,6vw,5.2rem)/1.04 'IM Fell English',Georgia,serif;max-width:860px;margin:13px 0 18px;color:#fff7e2;text-wrap:balance}
+.donation-hero .lead{font-size:clamp(1.22rem,2.4vw,1.65rem);max-width:690px;line-height:1.45}
+.donation-hero .pledge{font-size:1.12rem;max-width:700px;color:#f8e9ca}
+.donation-hero .button{border:2px solid #f4dd9d;box-shadow:3px 5px 0 #20010caa}
+.button.solid-gold{color:#2f0a18;background:linear-gradient(#f5e7b4,#d3a957)}
+.button.solid-gold:hover{background:#fff0bf}
+.button.wine-outline{color:#fff7e0;background:transparent;border-color:#ead6a0}
+.button.wine-outline:hover{background:#fff2c51c;color:#fff}
+.action-row{display:flex;align-items:stretch;flex-wrap:wrap;gap:14px;margin:22px 0}
+.support-lead{max-width:790px;font-size:clamp(1.18rem,2.3vw,1.48rem);line-height:1.55}
+.donation-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:-12px auto 25px;padding:8px}
+.donation-nav a{padding:10px 12px;font:700 16px Georgia,serif;border-bottom:2px solid #9b263e;text-decoration:none;background:#fffaf1;color:#51152a}
+.donation-nav a:hover{background:#fff1d2}
+.promise-band{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:22px 0 36px}
+.promise-band>div{background:#fff9ec;text-align:center;padding:23px 15px;border-top:6px solid #72112e;border-bottom:3px double #b99351}
+.promise-band strong{font:normal 2.1rem 'IM Fell English',Georgia,serif;color:#640c29;display:block}
+.promise-band span{font:16px/1.45 Georgia,serif;display:block;color:#382a27}
+.giving-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;margin:28px auto}
+.giving-panel{padding:clamp(24px,3vw,35px);background:#fffaf0;border:2px solid #b69a67;box-shadow:5px 7px 0 #492a1526}
+.giving-panel.primary{border-top:7px solid #831637}
+.giving-panel.secondary{border-top:7px solid #b48c38}
+.giving-panel h3{font:normal 2rem/1.15 'IM Fell English',serif;color:#650d2d;margin:0 0 12px}
+.giving-panel p{margin:0 0 16px}
+.giving-panel .button{width:100%;text-align:center;margin-top:6px}
+.giving-panel .small-caps{display:block;margin-bottom:12px}
+.donor-notice{padding:20px 23px;background:#f6eddb;border-left:5px solid #a67d34;font-size:17px;margin:22px auto}
+.impact-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:20px 0 34px}
+.impact-step{border:1px solid #b7a083;background:#fffdf7;padding:30px;box-shadow:4px 6px #5e2d1320}
+.impact-step h3{font:normal 1.9rem/1.2 'IM Fell English',serif;margin:0 0 15px;color:#6f0f2b}
+.impact-step p{margin-bottom:0}
+.impact-step .tag{font:700 12px Georgia,serif;letter-spacing:.18em;color:#8a6b37;text-transform:uppercase;display:block;margin-bottom:8px}
+.donor-faq details{margin:12px 0;background:#fffaf1;border:1px solid #ac8f61;padding:0 22px}
+.donor-faq summary{font:700 20px/1.35 'IM Fell English',Georgia,serif;padding:18px 5px;cursor:pointer;color:#5e102b}
+.donor-faq details p{padding:0 5px 20px;margin:0}
+.trust-ribbon{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;padding:24px;background:#f7ecda;border:1px solid #bca478;margin:28px 0;color:#4d2130;text-align:center}
+.trust-ribbon span{font:700 14px Georgia,serif;letter-spacing:.01em}
+.trust-ribbon span+span:before{content:'◆';font-size:10px;margin-right:18px;color:#b2853a}
+.mobile-quick-links{display:none}
+/* Accessibility, touch and zoom: readable controls instead of microscopic printed sign targets. */
+@media(max-width:900px){.donation-hero{margin:12px 12px 27px}.donation-hero h1{font-size:clamp(2.7rem,7vw,4.5rem)}}
+@media(max-width:640px){.donation-hero{padding:35px 24px;margin:10px 12px 21px}.donation-hero h1{font-size:clamp(2.6rem,11vw,3.6rem)}.donation-hero .lead{font-size:1.25rem}.donation-hero .button{width:100%;text-align:center}.giving-grid,.impact-steps,.promise-band{grid-template-columns:1fr}.trust-ribbon{display:block}.trust-ribbon span{display:block;margin:9px 0}.trust-ribbon span+span:before{display:none}.donation-nav{gap:4px;margin:0 0 18px}.donation-nav a{flex:1 1 40%;text-align:center}.mobile-quick-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:#3c091d;padding:15px 12px;border-top:4px solid #e9ca7d}.mobile-quick-links a{display:flex;align-items:center;justify-content:center;min-height:49px;text-align:center;color:#fff7e0;background:#74132f;border:1px solid #bd9553;text-decoration:none;font:700 16px Georgia,serif;padding:5px}.mobile-quick-links a:focus-visible{outline:4px solid #f4d584;outline-offset:2px}.poster-hotspots .hotspot{pointer-events:none}.more-nav{font-size:17px}.more-nav a{min-height:44px;display:flex;align-items:center}.donor-faq summary{font-size:19px}}
+@media(min-width:641px){.hotspot{transition:background-color .15s ease}}
+@media(prefers-reduced-motion:reduce){.main-nav a,.hotspot{transition:none}}
+
+/* Avoid redundant invisible focus targets over tiny printed signs on phones. */
+@media(max-width:640px){.poster-hotspots{display:none}}

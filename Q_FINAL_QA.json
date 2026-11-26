@@ -1,0 +1,1084 @@
+{
+  "results": {
+    "phone360/index": {
+      "title": "Welcome Travellers | Cat v. Canary Foundation",
+      "h1": [
+        "Welcome Travellers"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": false,
+      "posterLoaded": true,
+      "nav": [],
+      "firstDonationButton": null
+    },
+    "phone360/support": {
+      "title": "Donate | Keep History at the Table | Cat v. Canary Foundation",
+      "h1": [
+        "Keep history at the table."
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": {
+        "x": 43,
+        "y": 575.53125,
+        "width": 274,
+        "height": 55.75,
+        "top": 575.53125,
+        "right": 317,
+        "bottom": 631.28125,
+        "left": 43
+      }
+    },
+    "phone360/about": {
+      "title": "Our Guild & Foundation | Cat v. Canary Foundation",
+      "h1": [
+        "Our Guild & Foundation"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/games": {
+      "title": "Games Older Than Kingdoms | Cat v. Canary Foundation",
+      "h1": [
+        "Games Older Than Kingdoms"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/hospitality": {
+      "title": "More Than a Game House | Cat v. Canary Foundation",
+      "h1": [
+        "More Than a Game House"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/volunteer": {
+      "title": "Become Part of the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Become Part of the Guild"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/land": {
+      "title": "A Little Land, a Big Purpose | Cat v. Canary Foundation",
+      "h1": [
+        "A Little Land, a Big Purpose"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/photographs": {
+      "title": "Life at the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Life at the Guild"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/visit": {
+      "title": "Visit the Pavilion | Cat v. Canary Foundation",
+      "h1": [
+        "Visit the Pavilion"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/stories": {
+      "title": "Stories from Behind the Curtain | Cat v. Canary Foundation",
+      "h1": [
+        "Stories from Behind the Curtain"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/contact": {
+      "title": "Contact the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Contact the Guild"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/privacy": {
+      "title": "Privacy & Website Information | Cat v. Canary Foundation",
+      "h1": [
+        "Privacy & Website Information"
+      ],
+      "width": 360,
+      "viewport": 360,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone360/quicklinks": {
+      "count": 6,
+      "heights": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ]
+    },
+    "phone393/index": {
+      "title": "Welcome Travellers | Cat v. Canary Foundation",
+      "h1": [
+        "Welcome Travellers"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": false,
+      "posterLoaded": true,
+      "nav": [],
+      "firstDonationButton": null
+    },
+    "phone393/support": {
+      "title": "Donate | Keep History at the Table | Cat v. Canary Foundation",
+      "h1": [
+        "Keep history at the table."
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": {
+        "x": 43,
+        "y": 587.734375,
+        "width": 307,
+        "height": 55.75,
+        "top": 587.734375,
+        "right": 350,
+        "bottom": 643.484375,
+        "left": 43
+      }
+    },
+    "phone393/about": {
+      "title": "Our Guild & Foundation | Cat v. Canary Foundation",
+      "h1": [
+        "Our Guild & Foundation"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/games": {
+      "title": "Games Older Than Kingdoms | Cat v. Canary Foundation",
+      "h1": [
+        "Games Older Than Kingdoms"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/hospitality": {
+      "title": "More Than a Game House | Cat v. Canary Foundation",
+      "h1": [
+        "More Than a Game House"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/volunteer": {
+      "title": "Become Part of the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Become Part of the Guild"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/land": {
+      "title": "A Little Land, a Big Purpose | Cat v. Canary Foundation",
+      "h1": [
+        "A Little Land, a Big Purpose"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/photographs": {
+      "title": "Life at the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Life at the Guild"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/visit": {
+      "title": "Visit the Pavilion | Cat v. Canary Foundation",
+      "h1": [
+        "Visit the Pavilion"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/stories": {
+      "title": "Stories from Behind the Curtain | Cat v. Canary Foundation",
+      "h1": [
+        "Stories from Behind the Curtain"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/contact": {
+      "title": "Contact the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Contact the Guild"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/privacy": {
+      "title": "Privacy & Website Information | Cat v. Canary Foundation",
+      "h1": [
+        "Privacy & Website Information"
+      ],
+      "width": 393,
+      "viewport": 393,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "phone393/quicklinks": {
+      "count": 6,
+      "heights": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ]
+    },
+    "tablet768/index": {
+      "title": "Welcome Travellers | Cat v. Canary Foundation",
+      "h1": [
+        "Welcome Travellers"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": false,
+      "posterLoaded": true,
+      "nav": [],
+      "firstDonationButton": null
+    },
+    "tablet768/support": {
+      "title": "Donate | Keep History at the Table | Cat v. Canary Foundation",
+      "h1": [
+        "Keep history at the table."
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": {
+        "x": 57.390625,
+        "y": 533.125,
+        "width": 241.25,
+        "height": 55.75,
+        "top": 533.125,
+        "right": 298.640625,
+        "bottom": 588.875,
+        "left": 57.390625
+      }
+    },
+    "tablet768/about": {
+      "title": "Our Guild & Foundation | Cat v. Canary Foundation",
+      "h1": [
+        "Our Guild & Foundation"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/games": {
+      "title": "Games Older Than Kingdoms | Cat v. Canary Foundation",
+      "h1": [
+        "Games Older Than Kingdoms"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/hospitality": {
+      "title": "More Than a Game House | Cat v. Canary Foundation",
+      "h1": [
+        "More Than a Game House"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/volunteer": {
+      "title": "Become Part of the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Become Part of the Guild"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/land": {
+      "title": "A Little Land, a Big Purpose | Cat v. Canary Foundation",
+      "h1": [
+        "A Little Land, a Big Purpose"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/photographs": {
+      "title": "Life at the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Life at the Guild"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/visit": {
+      "title": "Visit the Pavilion | Cat v. Canary Foundation",
+      "h1": [
+        "Visit the Pavilion"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/stories": {
+      "title": "Stories from Behind the Curtain | Cat v. Canary Foundation",
+      "h1": [
+        "Stories from Behind the Curtain"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/contact": {
+      "title": "Contact the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Contact the Guild"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "tablet768/privacy": {
+      "title": "Privacy & Website Information | Cat v. Canary Foundation",
+      "h1": [
+        "Privacy & Website Information"
+      ],
+      "width": 768,
+      "viewport": 768,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/index": {
+      "title": "Welcome Travellers | Cat v. Canary Foundation",
+      "h1": [
+        "Welcome Travellers"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": false,
+      "posterLoaded": true,
+      "nav": [],
+      "firstDonationButton": null
+    },
+    "desktop1440/support": {
+      "title": "Donate | Keep History at the Table | Cat v. Canary Foundation",
+      "h1": [
+        "Keep history at the table."
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": {
+        "x": 79,
+        "y": 616.0625,
+        "width": 241.25,
+        "height": 55.75,
+        "top": 616.0625,
+        "right": 320.25,
+        "bottom": 671.8125,
+        "left": 79
+      }
+    },
+    "desktop1440/about": {
+      "title": "Our Guild & Foundation | Cat v. Canary Foundation",
+      "h1": [
+        "Our Guild & Foundation"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/games": {
+      "title": "Games Older Than Kingdoms | Cat v. Canary Foundation",
+      "h1": [
+        "Games Older Than Kingdoms"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/hospitality": {
+      "title": "More Than a Game House | Cat v. Canary Foundation",
+      "h1": [
+        "More Than a Game House"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/volunteer": {
+      "title": "Become Part of the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Become Part of the Guild"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/land": {
+      "title": "A Little Land, a Big Purpose | Cat v. Canary Foundation",
+      "h1": [
+        "A Little Land, a Big Purpose"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/photographs": {
+      "title": "Life at the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Life at the Guild"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/visit": {
+      "title": "Visit the Pavilion | Cat v. Canary Foundation",
+      "h1": [
+        "Visit the Pavilion"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/stories": {
+      "title": "Stories from Behind the Curtain | Cat v. Canary Foundation",
+      "h1": [
+        "Stories from Behind the Curtain"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/contact": {
+      "title": "Contact the Guild | Cat v. Canary Foundation",
+      "h1": [
+        "Contact the Guild"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    },
+    "desktop1440/privacy": {
+      "title": "Privacy & Website Information | Cat v. Canary Foundation",
+      "h1": [
+        "Privacy & Website Information"
+      ],
+      "width": 1440,
+      "viewport": 1440,
+      "bodyFont": "18px",
+      "bannerLoaded": true,
+      "posterLoaded": false,
+      "nav": [
+        "Home",
+        "The Guild",
+        "Games",
+        "Hospitality",
+        "Visit",
+        "Photographs",
+        "Donate",
+        "Contact"
+      ],
+      "firstDonationButton": null
+    }
+  },
+  "errors": [],
+  "note": "Offline DOM render with embedded CSS/assets; connected Guild photos not present in local package and not assessed visually."
+}
