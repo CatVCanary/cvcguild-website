@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://www.cvcguild.com/</loc></url><url><loc>https://www.cvcguild.com/game-house/</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.cvcguild.com/</loc></url>
+  <url><loc>https://www.cvcguild.com/about.html</loc></url>
+  <url><loc>https://www.cvcguild.com/programs.html</loc></url>
+  <url><loc>https://www.cvcguild.com/stories.html</loc></url>
+  <url><loc>https://www.cvcguild.com/photographs.html</loc></url>
+  <url><loc>https://www.cvcguild.com/support.html</loc></url>
+  <url><loc>https://www.cvcguild.com/contact.html</loc></url>
+  <url><loc>https://www.cvcguild.com/privacy.html</loc></url>
+  <url><loc>https://www.cvcguild.com/land.html</loc></url>
+  <url><loc>https://www.cvcguild.com/game-house/</loc></url>
+</urlset>
